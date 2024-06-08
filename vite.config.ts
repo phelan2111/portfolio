@@ -27,9 +27,7 @@ export default defineConfig({
 			pages: `${path.resolve(__dirname, './src/pages/')}`,
 		},
 	},
-	build: {
-		outDir: path.resolve(__dirname, 'build'),
-	},
+	build: {},
 	server: {
 		open: true,
 		port: 8000,
