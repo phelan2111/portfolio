@@ -10,7 +10,10 @@ function App() {
 	return (
 		<Provider store={store}>
 			<Suspense fallback={<>hehe</>}>
-				<RouterProvider router={router} />
+				<RouterProvider
+					router={router}
+					fallbackElement={<>Not Founds 404</>}
+				/>
 			</Suspense>
 		</Provider>
 	);
