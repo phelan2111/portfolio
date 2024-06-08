@@ -1,5 +1,5 @@
 import { createBrowserRouter } from 'react-router-dom';
-import { PATH } from './config';
+// import { PATH } from './config';
 import { lazy } from 'react';
 const SignInAndSignUp = lazy(
 	() => import('@/pages/mobile/kyc/signInAndSignUp'),
@@ -7,7 +7,7 @@ const SignInAndSignUp = lazy(
 
 const router = createBrowserRouter([
 	{
-		path: PATH.KYC._,
+		path: '/',
 		element: <SignInAndSignUp />,
 	},
 	{
