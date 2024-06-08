@@ -8,7 +8,7 @@ export interface ModalState {
 }
 
 const initialState: ModalState = {
-	data: 'wqeqweqwe',
+	data: '',
 	isOpen: false,
 };
 
@@ -19,7 +19,7 @@ export const modalSlice = createSlice({
 		onClose: (state) => {
 			state.isOpen = false;
 		},
-		onSetData: (state, action: PayloadAction<number>) => {
+		onSetData: (state, action: PayloadAction<ModalState>) => {
 			state.isOpen = true;
 			state.data = action.payload;
 		},

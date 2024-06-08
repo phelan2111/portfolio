@@ -1,2 +1,5 @@
 export enum ModalView {}
-export enum Redux {}
+export enum Langue {
+	vietNamese = 0,
+	english,
+}

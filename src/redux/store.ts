@@ -1,9 +1,11 @@
 import { configureStore } from '@reduxjs/toolkit';
 import modalReducer from './modal';
+import langueReducer from './langue';
 
 export const store = configureStore({
 	reducer: {
 		modal: modalReducer,
+		langue: langueReducer,
 	},
 });
 
