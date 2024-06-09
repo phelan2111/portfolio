@@ -11,4 +11,10 @@ export const dataLocalizeEN: Record<string, string> = {
 	SIGN_UP: 'Sign up',
 	DO_NOT_HAVE_ACCOUNT: "Don't have account?",
 	LET_GET_STARTED: "Let's start with the wonderful music space.",
+	ALL: 'All',
+	MUSIC: 'Music',
+	PODCAST: 'Podcasts',
+	HOME: 'Home',
+	SEARCH: 'Search',
+	YOUR_LIBRARY: 'Your library',
 };

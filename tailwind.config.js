@@ -13,7 +13,10 @@ export default {
       },
       boxShadow: {
         error: "0px 0px 1px 1px",
-        white: "0px 0px 1px 1px"
+        white: "0px 0px 1px 1px",
+        insetAllSide: '0 0 10px 0 rgba(0,0,0,0.45) inset',
+        bootstrapLarge: '0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23)',
+        insetTop: '0 20px 10px -20px rgba(0,0,0,0.45) inset'
       },
       minHeight: {
         screen: '100dvh'

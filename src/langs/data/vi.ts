@@ -11,4 +11,10 @@ export const dataLocalizeVI: Record<string, string> = {
 	SIGN_UP: 'Đăng ký',
 	DO_NOT_HAVE_ACCOUNT: 'Bạn chưa có tài khoản',
 	LET_GET_STARTED: 'Hãy bắt đầu với không gian âm nhạc tuyệt vời.',
+	ALL: 'Tất cả',
+	MUSIC: 'Nhạc',
+	PODCAST: 'Podcasts',
+	HOME: 'Trang chính',
+	SEARCH: 'Tìm kiếm',
+	YOUR_LIBRARY: 'Thư viện của bạn',
 };

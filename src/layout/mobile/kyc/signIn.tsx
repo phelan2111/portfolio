@@ -1,15 +1,17 @@
 import LogoComponent from '@/components/common/logo';
+import InputPassword from '@/components/input/password';
 import Button from '@/core/button';
 import Form from '@/core/form';
+import Checkbox from '@/core/inputs/checkbox';
 import TextField from '@/core/inputs/textField';
 import Localize from '@/langs';
 import { FcGoogle } from 'react-icons/fc';
 
-interface ISignUpProps {
-	onChangeSignIn: VoidFunction;
+interface ISignInMobileProps {
+	onRedirectSignUp: VoidFunction;
 }
 
-function SignUp(props: ISignUpProps) {
+function SignInMobile(props: ISignInMobileProps) {
 	return (
 		<div className='bg-white/10 px-6 py-4 rounded-md flex flex-col gap-10 min-w-[360px] select-none animate-translateRight'>
 			<div className='flex justify-center flex-col items-center'>
@@ -21,7 +23,7 @@ function SignUp(props: ISignUpProps) {
 				</div>
 			</div>
 			<div>
-				<h4 className='text-3xl font-bold'>{Localize('SIGN_UP')}</h4>
+				<h4 className='text-3xl font-bold'>{Localize('SIGN_IN')}</h4>
 				<p className='text-xs pt-2'>{Localize('LET_GET_STARTED')} </p>
 			</div>
 			<div className='px-4'>
@@ -35,8 +37,19 @@ function SignUp(props: ISignUpProps) {
 						return (
 							<div className='flex flex-col gap-4'>
 								<TextField label='USER_NAME' />
-								<TextField label='PASSWORD' />
-								<div className='pt-[26px] w-full'>
+								<InputPassword label='PASSWORD' />
+								<div className='flex justify-between items-center'>
+									<Checkbox
+										label={{
+											direction: 'horizontal',
+											text: 'REMEMBER_FOR_30DAYS',
+										}}
+									/>
+									<p className='text-xs underline cursor-pointer hover:text-white/70 transition-colors duration-300'>
+										{Localize('FORGOT_PASSWORD')}
+									</p>
+								</div>
+								<div className='pt-6 w-full'>
 									<Button text='SIGN_IN' />
 								</div>
 							</div>
@@ -44,8 +57,8 @@ function SignUp(props: ISignUpProps) {
 					}}
 				/>
 				<p
+					onClick={props.onRedirectSignUp}
 					aria-hidden='true'
-					onClick={props.onChangeSignIn}
 					className='text-sm py-3 text-center underline cursor-pointer hover:text-white/60 transition-colors duration-300'>
 					<span>{Localize('DO_NOT_HAVE_ACCOUNT')}</span>{' '}
 					<span className='text-blue-200 hover:text-inherit'>
@@ -57,4 +70,4 @@ function SignUp(props: ISignUpProps) {
 	);
 }
 
-export default SignUp;
+export default SignInMobile;

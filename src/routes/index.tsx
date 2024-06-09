@@ -1,18 +1,44 @@
 import { createBrowserRouter } from 'react-router-dom';
 import { PATH } from './config';
 import { lazy } from 'react';
-const SignInAndSignUp = lazy(
-	() => import('@/pages/mobile/kyc/signInAndSignUp'),
-);
+import BasicWrapper from '@/components/wrapper/basic';
+import AuthWrapper from '@/components/wrapper/auth';
+const SignIn = lazy(() => import('@/pages/kyc/signIn'));
+const SignUp = lazy(() => import('@/pages/kyc/signUp'));
+const Home = lazy(() => import('@/pages/home'));
 
 const router = createBrowserRouter([
 	{
 		path: PATH.KYC._,
-		element: <SignInAndSignUp />,
+		element: <AuthWrapper />,
+		children: [
+			{
+				path: PATH.KYC.SIGN_IN,
+				element: <SignIn />,
+			},
+			{
+				path: PATH.KYC.SIGN_UP,
+				element: <SignUp />,
+			},
+		],
 	},
 	{
-		path: 'about',
-		element: <div>About</div>,
+		path: PATH.HOME,
+		element: <BasicWrapper />,
+		children: [
+			{
+				path: PATH.HOME,
+				element: <Home />,
+			},
+			{
+				path: PATH.SEARCH,
+				element: <Home />,
+			},
+			{
+				path: PATH.YOUR_LIBRARY,
+				element: <Home />,
+			},
+		],
 	},
 ]);
 

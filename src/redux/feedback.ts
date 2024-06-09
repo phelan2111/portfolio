@@ -2,32 +2,32 @@ import { createSlice } from '@reduxjs/toolkit';
 import type { PayloadAction } from '@reduxjs/toolkit';
 import { RootState } from './store';
 
-export interface ModalState {
+export interface IFeedBackState {
 	isOpen: boolean;
 	data: unknown;
 }
 
-const initialState: ModalState = {
+const initialState: IFeedBackState = {
 	data: '',
 	isOpen: false,
 };
 
-export const modalSlice = createSlice({
+export const feedbackSlice = createSlice({
 	name: 'modal',
 	initialState,
 	reducers: {
 		onClose: (state) => {
 			state.isOpen = false;
 		},
-		onSetData: (state, action: PayloadAction<ModalState>) => {
+		onSetData: (state, action: PayloadAction<IFeedBackState>) => {
 			state.isOpen = true;
 			state.data = action.payload;
 		},
 	},
 });
 
-export const { onClose, onSetData } = modalSlice.actions;
+export const { onClose, onSetData } = feedbackSlice.actions;
 
-export const dataModal = (state: RootState) => state.modal.data;
+export const dataModal = (state: RootState) => state.feedback.data;
 
-export default modalSlice.reducer;
+export default feedbackSlice.reducer;
