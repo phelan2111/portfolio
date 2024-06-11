@@ -9,6 +9,9 @@ export default {
       colors: {
         "primary_light": "#fbf8f3",
         "primary_dark": "#232323",
+        "primary_dark-10": "#2B2B2B",
+        "secondary": "#1AACAC",
+        "neutral": "#A9A9A9",
         "error": "#EE4E4E"
       },
       boxShadow: {

@@ -17,4 +17,7 @@ export const dataLocalizeVI: Record<string, string> = {
 	HOME: 'Trang chính',
 	SEARCH: 'Tìm kiếm',
 	YOUR_LIBRARY: 'Thư viện của bạn',
+	NEW_RELEASE_FROM: 'Bản phát hành mới từ',
+	SINGLE: 'Ca sĩ',
+	YOUR_TOP_MIX: 'Your top mix',
 };
