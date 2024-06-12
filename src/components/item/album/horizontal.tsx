@@ -5,7 +5,7 @@ export interface IHorizontalAlbumItemProps {
 
 function HorizontalAlbumItem(props: IHorizontalAlbumItemProps) {
 	return (
-		<div className='flex items-center gap-3 rounded-md overflow-hidden bg-primary_dark-10 hover:opacity-80 cursor-pointer transition-opacity duration-300'>
+		<div className='flex items-center gap-3 rounded-md overflow-hidden bg-primary_dark-10 hover:opacity-80 cursor-pointer transition-all duration-300 shadow-materialDesign'>
 			<img
 				className='w-12 h-12 object-cover'
 				src={props.cover}

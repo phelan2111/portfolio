@@ -6,7 +6,7 @@ function NewReleaseCard() {
 		<aside className='flex flex-col gap-3'>
 			<div className='flex gap-3'>
 				<img
-					className='w-12 h-12 object-cover rounded-full'
+					className='w-12 h-12 object-cover rounded-full shadow-bootstrapLarge'
 					src={data.avatar}
 					alt={data.avatar}
 				/>

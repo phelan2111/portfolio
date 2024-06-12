@@ -19,7 +19,9 @@ export default {
         white: "0px 0px 1px 1px",
         insetAllSide: '0 0 10px 0 rgba(0,0,0,0.45) inset',
         bootstrapLarge: '0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23)',
-        insetTop: '0 20px 10px -20px rgba(0,0,0,0.45) inset'
+        insetTop: '0 20px 10px -20px rgba(0,0,0,0.45) inset',
+        insetBotRight: '0 -20px 10px -20px rgba(0,0,0,0.45) inset, -20px 0 10px -20px rgba(0,0,0,0.45) inset',
+        materialDesign: '0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24)'
       },
       minHeight: {
         screen: '100dvh'

@@ -20,4 +20,9 @@ export const dataLocalizeVI: Record<string, string> = {
 	NEW_RELEASE_FROM: 'Bản phát hành mới từ',
 	SINGLE: 'Ca sĩ',
 	YOUR_TOP_MIX: 'Your top mix',
+	YOUR_FAVORITE_ARTISTS: 'Your favorite artists',
+	TODAY_BIGGEST_HITS: "Today's biggest hits",
+	RECOMMENDED_FOR_DAY: 'Recommended for day',
+	EPISODES_FOR_YOU: 'Episodes for you',
+	FRESH_NEW_MUSIC: 'Fresh new music',
 };

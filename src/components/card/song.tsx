@@ -10,7 +10,7 @@ interface ISongCardProps {
 
 function SongCard(props: ISongCardProps) {
 	return (
-		<div className='flex bg-primary_dark-10 rounded-md overflow-hidden'>
+		<div className='flex bg-primary_dark-10 rounded-md overflow-hidden shadow-materialDesign'>
 			<img
 				className='h-32 w-32 min-w-32 object-cover'
 				src={props.imageSong}
