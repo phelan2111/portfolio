@@ -1,0 +1,29 @@
+[
+	{
+		"name": "เพลงที่เพิ่งเขียนจบ (OUR SONG) Ost.แค่เพื่อนครับเพื่อน BAD BUDDY SERIES - NANON KORAPAT",
+		"nameSingle": "Nanon korapat",
+		"image": "https://i.pinimg.com/564x/f5/77/bf/f577bf5d5abace263f01d87d6efd7553.jpg",
+		"id": "nanonKorapat",
+		"type": 0
+	},
+	{
+		"name": "เทคะแนน (CANDIDATE)",
+		"nameSingle": "FOURTH",
+		"image": "https://i.pinimg.com/736x/af/97/aa/af97aab02f1688dff96c2ef87647acc1.jpg",
+		"id": "fourth",
+		"type": 0
+	},
+	{
+		"name": "LOI CHOI: The Neo Pop Punk",
+		"nameSingle": "GMMTV Album",
+		"album": [
+			"/src/assets/video/candidate.mp4",
+			"/src/assets/video/justBeingFriendly.mp4",
+			"/src/assets/video/justFriend.mp4",
+			"/src/assets/video/youveGotMaBack.mp4"
+		],
+		"id": "GMMTValbum",
+		"image": "https://i.pinimg.com/736x/d6/aa/59/d6aa595cb377af0641ebb70c141d7af6.jpg",
+		"type": 1
+	}
+]

@@ -10,6 +10,7 @@ export default {
         "primary_light": "#fbf8f3",
         "primary_dark": "#232323",
         "primary_dark-10": "#2B2B2B",
+        "primary_dark-20": "#191717",
         "secondary": "#1AACAC",
         "neutral": "#A9A9A9",
         "error": "#EE4E4E"
@@ -26,14 +27,35 @@ export default {
       minHeight: {
         screen: '100dvh'
       },
+      width: {
+        screen: '100dvw'
+      },
       keyframes: {
         translateRight: {
           '0%': { transform: 'translateX(-100px)', opacity: 0 },
           '100%': { transform: 'translateX(0px)', opacity: 1 },
+        },
+        translateToTry: {
+          '0%': { transform: 'translateX(-20px)', opacity: 0 },
+          '100%': { transform: 'translateX(0px)', opacity: 1 },
+        },
+        translateBottom: {
+          '0%': { transform: 'translateY(32px)', opacity: 0 },
+          '100%': { transform: 'translateY(0px)', opacity: 1 },
+        },
+        bgScale: {
+          '0%': { backgroundSize: '100%'},
+          '100%': { backgroundSize: '125%' },
         }
       },
       animation: {
+        translateBottom: 'translateBottom 0.4s  ease-in-out',
         translateRight: 'translateRight 1s ease-in-out',
+        bgScale: 'bgScale 1.5s  ease-in-out',
+        translateToTry: 'translateToTry 0.4s ease-in-out',
+      },
+      backgroundSize: {
+        '125%': '125%'
       }
     },
     },

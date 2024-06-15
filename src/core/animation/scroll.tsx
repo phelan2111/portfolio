@@ -1,26 +1,33 @@
 import { isIntoView } from '@/utils/helper';
-import { ReactNode, useEffect, useRef } from 'react';
+import { Fragment, ReactNode, useEffect } from 'react';
 
 interface IAnimationScrollProps {
 	children: ReactNode;
-	animation: string;
+	animation?: string;
+	id: string;
+	onScroll?: (isIntoView: boolean) => void;
 }
 
 function AnimationScroll(props: IAnimationScrollProps) {
-	const ref = useRef<HTMLDivElement>(null);
-
 	useEffect(() => {
+		const element = document.querySelector(`#${props.id}`);
 		window.addEventListener('scroll', () => {
-			const element = ref.current;
 			if (element) {
-				if (isIntoView(ref.current)) {
-					element.classList.add(props.animation);
+				if (props.animation) {
+					if (isIntoView(element)) {
+						element.classList.add(props.animation);
+					} else {
+						element.classList.remove(props.animation);
+					}
+				}
+				if (props.onScroll) {
+					props.onScroll(isIntoView(element));
 				}
 			}
 		});
-	}, [props.animation]);
+	}, [props]);
 
-	return <div ref={ref}>{props.children}</div>;
+	return <Fragment>{props.children}</Fragment>;
 }
 
 export default AnimationScroll;

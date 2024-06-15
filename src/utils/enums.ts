@@ -13,3 +13,7 @@ export const PATH_REDIRECT = {
 	SEARCH: '/search',
 	YOUR_LIBRARY: '/yourLibrary',
 };
+export enum TypeToTry {
+	single,
+	album,
+}
