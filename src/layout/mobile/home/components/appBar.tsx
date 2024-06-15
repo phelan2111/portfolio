@@ -22,7 +22,7 @@ const tabs: IItemTab<TabsEnum>[] = [
 
 function AppBar() {
 	return (
-		<header className='select-none flex gap-4 items-center sticky top-0 h-fit bg-primary_dark p-2 z-10'>
+		<header className='select-none flex gap-4 items-center sticky top-0 h-fit bg-primary_dark p-2 z-20'>
 			<Avatar src='https://i.pinimg.com/564x/91/a7/5b/91a75bb16f881c2211700a1e513ea98d.jpg' />
 			<Tabs tab={tabs[0]} tabs={tabs} />
 		</header>
