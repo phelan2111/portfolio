@@ -1,4 +1,3 @@
-import AnimationScroll from '@/core/animation/scroll';
 import PopperBottom from '@/core/popper';
 import Localize from '@/langs';
 import { CiVolumeMute } from 'react-icons/ci';
@@ -20,6 +19,7 @@ import { Fragment } from 'react/jsx-runtime';
 import { TypeToTry } from '@/utils/enums';
 import Video from '@/core/video/video';
 import { useCallback, useEffect, useState } from 'react';
+import AnimationScrollElement from '@/core/animation/scrollByElement';
 
 interface IToTryCardProps {
 	name: string;
@@ -166,10 +166,13 @@ function ToTryCard(props: IToTryCardProps) {
 	};
 	if (props.type === TypeToTry.album) {
 		return (
-			<AnimationScroll onScroll={handleScroll} id={props.id}>
+			<AnimationScrollElement
+				idElementScroll='homeMobile'
+				onScroll={handleScroll}
+				id={props.id}>
 				<div
 					id={props.id}
-					className='h-96 rounded-lg relative overflow-hidden'>
+					className='h-96 rounded-lg relative overflow-hidden snap-start'>
 					<div
 						key={indexSelectVideo.toString()}
 						className='absolute z-0 w-full h-full animate-translateToTry'>
@@ -196,23 +199,26 @@ function ToTryCard(props: IToTryCardProps) {
 						</div>
 					</div>
 				</div>
-			</AnimationScroll>
+			</AnimationScrollElement>
 		);
 	}
 
 	return (
-		<AnimationScroll animation='animate-bgScale' id={props.id}>
+		<AnimationScrollElement
+			idElementScroll='homeMobile'
+			animation='animate-bgScale'
+			id={props.id}>
 			<div
 				style={{
 					backgroundImage: `url(${props.image})`,
 				}}
 				id={props.id}
 				className={
-					'flex flex-col justify-between w-full bg-center rounded-lg transition-all duration-500 bg-125% h-96'
+					'flex flex-col justify-between w-full bg-center rounded-lg snap-start transition-all duration-500 bg-125% h-96'
 				}>
 				<ContentCardImage />
 			</div>
-		</AnimationScroll>
+		</AnimationScrollElement>
 	);
 }
 

@@ -3,7 +3,7 @@ import Localize from '@/langs';
 import data from '../../data/newRelease.json';
 function NewReleaseCard() {
 	return (
-		<aside className='flex flex-col gap-3'>
+		<aside className='flex flex-col gap-3 snap-start'>
 			<div className='flex gap-3'>
 				<img
 					className='w-12 h-12 object-cover rounded-full shadow-bootstrapLarge'

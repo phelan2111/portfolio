@@ -12,6 +12,7 @@ function AnimationScroll(props: IAnimationScrollProps) {
 	useEffect(() => {
 		const element = document.querySelector(`#${props.id}`);
 		window.addEventListener('scroll', () => {
+			console.log('element', element);
 			if (element) {
 				if (props.animation) {
 					if (isIntoView(element)) {

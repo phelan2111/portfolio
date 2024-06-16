@@ -4,13 +4,17 @@ import data from '../../data/yourTopMixes.json';
 
 function YourTopMixes() {
 	return (
-		<section className='flex flex-col gap-3'>
+		<section className='flex flex-col gap-3 snap-start'>
 			<h4 className='text-xl font-bold'>{Localize('YOUR_TOP_MIX')}</h4>
-			<div className='flex flex-nowrap gap-2 overflow-x-auto scrollHiddenX'>
+			<div className='flex flex-nowrap gap-2 overflow-x-auto scrollHiddenX snap-mandatory snap-x'>
 				{data.map((album) => (
 					<AlbumCard
 						{...album}
-						key={YourTopMixes.name + album.albumImage}
+						key={
+							album.albumName +
+							album.albumImage +
+							YourTopMixes.name
+						}
 					/>
 				))}
 			</div>

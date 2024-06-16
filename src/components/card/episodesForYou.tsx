@@ -7,7 +7,7 @@ interface IEpisodesForYouCardProps {
 
 function EpisodesForYouCard(props: IEpisodesForYouCardProps) {
 	return (
-		<div className='flex flex-col gap-1'>
+		<div className='flex flex-col gap-1 snap-end'>
 			<div className='relative'>
 				<img
 					className='w-40 h-40 rounded-lg shadow-bootstrapLarge object-cover'

@@ -9,7 +9,7 @@ function AlbumCard(props: IAlbumCardProps) {
 	const singersName = props.singersName.join(', ');
 
 	return (
-		<div className='h-fit min-w-36 flex flex-col gap-3'>
+		<div className='h-fit min-w-36 flex flex-col gap-3 snap-end'>
 			<div
 				style={{
 					borderColor: props.themeColor,

@@ -7,4 +7,5 @@ export const PATH = {
 	HOME: '/',
 	SEARCH: '/search',
 	YOUR_LIBRARY: '/yourLibrary',
+	ALBUM: '/album/:id',
 };

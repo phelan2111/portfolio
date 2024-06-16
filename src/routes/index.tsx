@@ -6,6 +6,7 @@ import AuthWrapper from '@/components/wrapper/auth';
 const SignIn = lazy(() => import('@/pages/kyc/signIn'));
 const SignUp = lazy(() => import('@/pages/kyc/signUp'));
 const Home = lazy(() => import('@/pages/home'));
+const Album = lazy(() => import('@/pages/album'));
 
 const router = createBrowserRouter([
 	{
@@ -37,6 +38,10 @@ const router = createBrowserRouter([
 			{
 				path: PATH.YOUR_LIBRARY,
 				element: <Home />,
+			},
+			{
+				path: PATH.ALBUM,
+				element: <Album />,
 			},
 		],
 	},

@@ -2,9 +2,10 @@ import LinkNavigateBottom, {
 	IItemLinkBottom,
 } from '@/components/link/navigateBottom';
 import { PATH } from '@/routes/config';
+import { useState } from 'react';
 import { HiOutlineHome, HiOutlineSearch } from 'react-icons/hi';
 import { IoLibraryOutline } from 'react-icons/io5';
-import { useLocation, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 const links: IItemLinkBottom[] = [
 	{
@@ -28,21 +29,26 @@ const links: IItemLinkBottom[] = [
 ];
 function BottomNavigate() {
 	const navigate = useNavigate();
-	const location = useLocation();
-	const itemActive = links.find((i) => i.path === location.pathname);
+	const [linkState, setLinkState] = useState<IItemLinkBottom>(links[0]);
+	const itemActive = links.find((i) => linkState.path === i.path);
+
+	const handleClick = (item: IItemLinkBottom) => {
+		setLinkState(item);
+		navigate(item.path);
+	};
 
 	return (
-		<div className='fixed bottom-0 w-full select-none bg-primary_light rounded-t-3xl z-40 shadow-insetTop'>
+		<div className='fixed bottom-0 w-full select-none bg-primary_light rounded-t-3xl z-40 shadow-insetTop flex md:hidden'>
 			<div className='flex gap-8 m-auto w-fit px-2 py-4 relative'>
 				<div
 					className={`w-12 h-12 absolute transition-all duration-300 -top-6 dark:bg-primary_dark rounded-full shadow-bootstrapLarge ${itemActive?.className}`}
 				/>
 				{links.map((link) => {
-					const isActive = location.pathname === link.path;
+					const isActive = link.path === linkState.path;
 					return (
 						<LinkNavigateBottom
 							onClick={() => {
-								navigate(link.path);
+								handleClick(link);
 							}}
 							key={BottomNavigate.name + link.text}
 							isActive={isActive}

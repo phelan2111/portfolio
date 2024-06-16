@@ -15,6 +15,9 @@ export default {
         "neutral": "#A9A9A9",
         "error": "#EE4E4E"
       },
+      backgroundImage: {
+        gradientCard: "linear-gradient(-45deg, #e81cff 0%, #40c9ff 100% )"
+      },
       boxShadow: {
         error: "0px 0px 1px 1px",
         white: "0px 0px 1px 1px",
@@ -29,6 +32,10 @@ export default {
       },
       width: {
         screen: '100dvw'
+      },
+      height: {
+        home: 'calc(100dvh - 160px)',
+        screen: '100dvh'
       },
       keyframes: {
         translateRight: {
@@ -56,7 +63,13 @@ export default {
       },
       backgroundSize: {
         '125%': '125%'
-      }
+      },
+      screen: {
+        sm: '425px',
+        md: '768px',
+        lg: '1024px',
+        xl: '1440px',
+    },
     },
     },
   darkMode: 'selector',
