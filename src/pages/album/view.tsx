@@ -1,7 +1,11 @@
 import AlbumMobile from '@/layout/mobile/album';
 
-function View() {
-	return <AlbumMobile />;
+interface IViewProps {
+	onRedirectHome: VoidFunction;
+}
+
+function View(props: IViewProps) {
+	return <AlbumMobile {...props} />;
 }
 
 export default View;

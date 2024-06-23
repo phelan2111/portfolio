@@ -36,4 +36,11 @@ export const dataLocalizeEN: Record<string, string> = {
 	SHARE: 'Share',
 	GO_TO_ALBUM_RADIO: 'Go to album radio',
 	SHOW_CODE: 'Show Code',
+	OTP: 'Verify OTP',
+	VERIFY: 'Verify',
+	OTP_DES: 'We have just send OTP code to',
+	CREATE_PROFILE: 'Create Profile',
+	GET_START: 'Get Start',
+	FIRST_NAME: 'First name',
+	LAST_NAME: 'Last name',
 };

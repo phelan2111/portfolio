@@ -35,6 +35,7 @@ export default {
       },
       height: {
         home: 'calc(100dvh - 160px)',
+        album: 'calc(100dvh - 80px)',
         screen: '100dvh'
       },
       keyframes: {

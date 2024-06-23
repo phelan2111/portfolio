@@ -4,13 +4,14 @@ interface IVideoProps {
 	controls?: boolean;
 	id?: string;
 	mute?: boolean;
+	autoPlay?: boolean;
 }
-function Video(props: IVideoProps) {
+function Video({ autoPlay = false, ...props }: IVideoProps) {
 	return (
 		<video
 			id={props.id}
 			muted={props.mute}
-			autoPlay={false}
+			autoPlay={autoPlay}
 			className='h-full w-full object-cover'
 			controls={props.controls}>
 			<source src={props.src} type='video/mp4' />
