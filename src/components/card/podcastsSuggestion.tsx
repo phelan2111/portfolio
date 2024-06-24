@@ -41,12 +41,14 @@ function PodcastsSuggestionCard(props: IPodcastsSuggestionCardProps) {
 						<WaveLoader />
 					</div>
 				</div>
-				<p className='flex gap-1 text-xs items-end pb-4 font-semibold'>
-					{props.item.createAt} <LuDot />{' '}
-					<span className='text-white/50'>
-						{props.item.lastComment}
-					</span>
-				</p>
+				<div className='py-4'>
+					<p className='text-xs font-semibold line-clamp-3'>
+						{props.item.createAt}{' '}
+						<span className='text-white/50'>
+							- {props.item.lastComment}
+						</span>
+					</p>
+				</div>
 				<div className='flex justify-between items-center'>
 					<div className='bg-primary_dark/70 cursor-pointer relative z-10 rounded-3xl font-semibold flex px-3 py-2 hover:bg-primary_dark/90 transition-colors duration-300 items-center gap-2'>
 						<CiVolumeMute className='text-lg' />
