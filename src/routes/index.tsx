@@ -7,6 +7,7 @@ const SignIn = lazy(() => import('@/pages/kyc/signIn'));
 const SignUp = lazy(() => import('@/pages/kyc/signUp'));
 const Home = lazy(() => import('@/pages/home'));
 const Album = lazy(() => import('@/pages/album'));
+const Podcasts = lazy(() => import('@/pages/podcasts'));
 
 const router = createBrowserRouter([
 	{
@@ -42,6 +43,10 @@ const router = createBrowserRouter([
 			{
 				path: PATH.ALBUM,
 				element: <Album />,
+			},
+			{
+				path: PATH.PODCASTS._,
+				element: <Podcasts />,
 			},
 		],
 	},

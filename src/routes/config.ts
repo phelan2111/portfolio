@@ -8,4 +8,7 @@ export const PATH = {
 	SEARCH: '/search',
 	YOUR_LIBRARY: '/yourLibrary',
 	ALBUM: '/album/:id',
+	PODCASTS: {
+		_: '/podcasts',
+	},
 };

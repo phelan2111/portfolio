@@ -1,4 +1,4 @@
-import { ReactNode, useState } from 'react';
+import { Fragment, ReactNode, useState } from 'react';
 
 interface IPropsRender {
 	onClose: VoidFunction;
@@ -21,9 +21,11 @@ function PopperBottom(props: IPopperBottomProps) {
 	};
 
 	return (
-		<div className='relative'>
-			<div aria-hidden onClick={handleOpen}>
-				{props.children}
+		<Fragment>
+			<div className='relative'>
+				<div aria-hidden onClick={handleOpen}>
+					{props.children}
+				</div>
 			</div>
 			{isOpen && (
 				<div
@@ -41,7 +43,7 @@ function PopperBottom(props: IPopperBottomProps) {
 					onOpen: handleOpen,
 				})}
 			</div>
-		</div>
+		</Fragment>
 	);
 }
 
