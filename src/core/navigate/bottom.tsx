@@ -2,10 +2,10 @@ import LinkNavigateBottom, {
 	IItemLinkBottom,
 } from '@/components/link/navigateBottom';
 import { PATH } from '@/routes/config';
-import { useState } from 'react';
+import { useLayoutEffect, useState } from 'react';
 import { HiOutlineHome, HiOutlineSearch } from 'react-icons/hi';
 import { IoLibraryOutline } from 'react-icons/io5';
-import { useNavigate } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 
 const links: IItemLinkBottom[] = [
 	{
@@ -29,6 +29,7 @@ const links: IItemLinkBottom[] = [
 ];
 function BottomNavigate() {
 	const navigate = useNavigate();
+	const location = useLocation();
 	const [linkState, setLinkState] = useState<IItemLinkBottom>(links[0]);
 	const itemActive = links.find((i) => linkState.path === i.path);
 
@@ -36,6 +37,13 @@ function BottomNavigate() {
 		setLinkState(item);
 		navigate(item.path);
 	};
+
+	useLayoutEffect(() => {
+		const linksActive = links.find((i) => i.path === location.pathname);
+		if (linksActive) {
+			setLinkState(linksActive);
+		}
+	}, [location.pathname]);
 
 	return (
 		<div className='fixed bottom-0 w-full select-none bg-primary_light rounded-t-3xl z-40 shadow-insetTop flex md:hidden'>

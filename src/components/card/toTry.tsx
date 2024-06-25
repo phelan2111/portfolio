@@ -1,4 +1,4 @@
-import PopperBottom from '@/core/popper';
+import PopperBottom from '@/core/popper/bottom';
 import Localize from '@/langs';
 import { CiVolumeMute } from 'react-icons/ci';
 import { FaPlayCircle, FaUserAstronaut } from 'react-icons/fa';

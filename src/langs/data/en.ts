@@ -43,4 +43,8 @@ export const dataLocalizeEN: Record<string, string> = {
 	GET_START: 'Get Start',
 	FIRST_NAME: 'First name',
 	LAST_NAME: 'Last name',
+	WHAT_DO_YOU_WANT: 'What do you want to listen to?',
+	RECENT_SEARCHES: 'Recent searches',
+	SONG: 'Song',
+	CLEAR_RECENT_SEARCHES: 'Clear Recent searches',
 };

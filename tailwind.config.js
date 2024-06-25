@@ -45,6 +45,10 @@ export default {
           '0%': { transform: 'translateX(-100px)', opacity: 0 },
           '100%': { transform: 'translateX(0px)', opacity: 1 },
         },
+        translateLeft: {
+          '0%': { transform: 'translateX(100px)', opacity: 0 },
+          '100%': { transform: 'translateX(0px)', opacity: 1 },
+        },
         translateToTry: {
           '0%': { transform: 'translateX(-20px)', opacity: 0 },
           '100%': { transform: 'translateX(0px)', opacity: 1 },
@@ -66,11 +70,13 @@ export default {
           '0%': { transform: 'translateY(0px)', opacity: 1},
           '50%': { transform: 'translateY(3px) translateX(3px)', opacity: 0.5},
           '100%': { transform: 'translateY(0px)', opacity: 1},
-        }
+        },
       },
       animation: {
         translateBottom: 'translateBottom 0.4s  ease-in-out',
         translateRight: 'translateRight 1s ease-in-out',
+        translateLeft_duration_2s: 'translateLeft 2s ease-in-out',
+        translateLeft_duration_2dot3s: 'translateLeft 2.3s ease-in-out',
         bgScale: 'bgScale 1.5s  ease-in-out',
         translateToTry: 'translateToTry 0.4s ease-in-out',
         waveColumnOld: 'waveColumn 1.5s infinite',

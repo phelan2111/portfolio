@@ -1,5 +1,5 @@
 import MenuIcon, { IItemIcon } from '@/components/menu/icon';
-import PopperBottom from '@/core/popper';
+import PopperBottom from '@/core/popper/bottom';
 import Video from '@/core/video/video';
 import {
 	BsBroadcast,

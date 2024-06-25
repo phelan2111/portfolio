@@ -1,7 +1,7 @@
 import Avatar from '@/core/image/avatar';
 import Tabs, { IItemTab } from '@/core/tabs';
 import { PATH_REDIRECT } from '@/utils/enums';
-import { useNavigate } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 
 const tabs: IItemTab<string>[] = [
 	{
@@ -20,15 +20,27 @@ const tabs: IItemTab<string>[] = [
 
 function AppBar() {
 	const navigate = useNavigate();
+	const location = useLocation();
 
 	const handleRedirect = (dataItem: IItemTab<unknown>) => {
 		navigate(dataItem.value as string);
+	};
+	const handleDefaultTab = (): IItemTab<string> => {
+		const tabActive = tabs.find((i) => i.value === location.pathname);
+		if (tabActive) {
+			return tabActive;
+		}
+		return tabs[0];
 	};
 
 	return (
 		<header className='select-none flex gap-4 items-center sticky top-0 h-fit bg-primary_dark p-4 z-20 snap-start'>
 			<Avatar src='https://i.pinimg.com/564x/91/a7/5b/91a75bb16f881c2211700a1e513ea98d.jpg' />
-			<Tabs onChange={handleRedirect} tabDefault={tabs[0]} tabs={tabs} />
+			<Tabs
+				onChange={handleRedirect}
+				tabDefault={handleDefaultTab()}
+				tabs={tabs}
+			/>
 		</header>
 	);
 }
