@@ -8,6 +8,7 @@ import Charts from './list/charts';
 
 interface IMusicMobileProps {
 	onGetInformationChart: (dataItem: unknown) => void;
+	onGetInformationAlbum: (dataItem: unknown) => void;
 }
 
 function MusicMobile(props: IMusicMobileProps) {
@@ -17,7 +18,7 @@ function MusicMobile(props: IMusicMobileProps) {
 			<div
 				id='homeMobile'
 				className='flex px-4 flex-col gap-6 overflow-y-auto h-home snap-mandatory snap-y'>
-				<FamiliarAlbum />
+				<FamiliarAlbum onClick={props.onGetInformationAlbum} />
 				<YourTopMixes />
 				<YourFavoriteArtists />
 				<BestOfArtists />

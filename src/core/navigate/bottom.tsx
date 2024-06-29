@@ -46,7 +46,7 @@ function BottomNavigate() {
 	}, [location.pathname]);
 
 	return (
-		<div className='fixed bottom-0 w-full select-none bg-primary_light rounded-t-3xl z-40 shadow-insetTop flex md:hidden'>
+		<div className='fixed bottom-0 w-full select-none bg-primary_light rounded-t-3xl z-40 shadow-insetTop flex lg:hidden'>
 			<div className='flex gap-8 m-auto w-fit px-2 py-4 relative'>
 				<div
 					className={`w-12 h-12 absolute transition-all duration-300 -top-6 dark:bg-primary_dark rounded-full shadow-bootstrapLarge ${itemActive?.className}`}
