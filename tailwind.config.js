@@ -16,7 +16,8 @@ export default {
         "error": "#EE4E4E"
       },
       backgroundImage: {
-        gradientCard: "linear-gradient(-45deg, #e81cff 0%, #40c9ff 100% )"
+        gradientCard: "linear-gradient(-45deg, #e81cff 0%, #40c9ff 100% )",
+        vietNam: "linear-gradient(to right, #cc2b5e, #753a88)"
       },
       boxShadow: {
         error: "0px 0px 1px 1px",
@@ -83,6 +84,7 @@ export default {
         waveColumnEven: 'waveColumn 1.5s 0.4s infinite',
         ring_delay_300: 'ring 5s 0.3s infinite',
         ring_delay_0: 'ring 5s infinite',
+        spin_dur_4s: 'spin 4s linear infinite'
       },
       backgroundSize: {
         '125%': '125%'

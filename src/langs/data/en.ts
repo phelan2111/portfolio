@@ -47,4 +47,8 @@ export const dataLocalizeEN: Record<string, string> = {
 	RECENT_SEARCHES: 'Recent searches',
 	SONG: 'Song',
 	CLEAR_RECENT_SEARCHES: 'Clear Recent searches',
+	BEST_OF_ARTIST: 'Best of artist',
+	CHARTS: 'Charts',
+	THIS_IS: 'This is',
+	TOP_50: 'Top 50',
 };

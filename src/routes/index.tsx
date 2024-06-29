@@ -9,6 +9,8 @@ const Home = lazy(() => import('@/pages/home'));
 const Album = lazy(() => import('@/pages/album'));
 const Podcasts = lazy(() => import('@/pages/podcasts'));
 const Search = lazy(() => import('@/pages/search'));
+const Music = lazy(() => import('@/pages/music'));
+const Chart = lazy(() => import('@/pages/chart'));
 
 const router = createBrowserRouter([
 	{
@@ -38,7 +40,7 @@ const router = createBrowserRouter([
 				element: <Home />,
 			},
 			{
-				path: PATH.ALBUM,
+				path: PATH.ALBUM._,
 				element: <Album />,
 			},
 			{
@@ -48,6 +50,14 @@ const router = createBrowserRouter([
 			{
 				path: PATH.SEARCH,
 				element: <Search />,
+			},
+			{
+				path: PATH.MUSIC._,
+				element: <Music />,
+			},
+			{
+				path: PATH.CHART._,
+				element: <Chart />,
 			},
 		],
 	},

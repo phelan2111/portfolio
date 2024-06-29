@@ -1,9 +1,9 @@
-interface IVerticalSingerProps {
+interface IVerticalSingerItemProps {
 	avatarSinger: string;
 	nameSinger: string;
 }
 
-function VerticalSinger(props: IVerticalSingerProps) {
+function VerticalSingerItem(props: IVerticalSingerItemProps) {
 	return (
 		<div className='w-fit flex flex-col gap-1 snap-end'>
 			<div className='shadow-bootstrapLarge rounded-full p-1'>
@@ -18,4 +18,4 @@ function VerticalSinger(props: IVerticalSingerProps) {
 	);
 }
 
-export default VerticalSinger;
+export default VerticalSingerItem;

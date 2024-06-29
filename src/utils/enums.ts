@@ -15,6 +15,9 @@ export const PATH_REDIRECT = {
 	ALBUM: '/album',
 	MUSIC: '/music',
 	PODCASTS: '/podcasts',
+	CHART: {
+		_: '/chart',
+	},
 };
 export enum TypeToTry {
 	single,

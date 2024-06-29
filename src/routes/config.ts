@@ -7,7 +7,15 @@ export const PATH = {
 	HOME: '/',
 	SEARCH: '/search',
 	YOUR_LIBRARY: '/yourLibrary',
-	ALBUM: '/album/:id',
+	ALBUM: {
+		_: '/album/:id',
+	},
+	CHART: {
+		_: '/chart/:id',
+	},
+	MUSIC: {
+		_: '/music',
+	},
 	PODCASTS: {
 		_: '/podcasts',
 	},
