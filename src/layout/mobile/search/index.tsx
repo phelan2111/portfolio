@@ -16,8 +16,7 @@ function SearchMobile() {
 			</header>
 			<article>
 				<InputSearch
-					render={(renderProps) => {
-						console.log('renderProps', renderProps);
+					render={() => {
 						return (
 							<div className='p-4 flex flex-col gap-4 animate-translateLeft_duration_2dot3s'>
 								<h4 className='text-lg'>

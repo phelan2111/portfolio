@@ -51,4 +51,7 @@ export const dataLocalizeVI: Record<string, string> = {
 	CHARTS: 'Charts',
 	THIS_IS: 'This is',
 	TOP_50: 'Top 50',
+	SEARCH_YOUR_LIBRARY: 'Search your library',
+	SEARCH_EVERYTHING_YOU_HAVE_SAVE:
+		"Search everything you've saved, followed, or created.",
 };

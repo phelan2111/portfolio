@@ -51,4 +51,8 @@ export const dataLocalizeEN: Record<string, string> = {
 	CHARTS: 'Charts',
 	THIS_IS: 'This is',
 	TOP_50: 'Top 50',
+	SEARCH_YOUR_LIBRARY: 'Search your library',
+	FIND_YOUR_FAVORITES: 'Find your favorites',
+	SEARCH_EVERYTHING_YOU_HAVE_SAVE:
+		"Search everything you've saved, followed, or created.",
 };
