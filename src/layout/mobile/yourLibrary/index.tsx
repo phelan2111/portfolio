@@ -1,14 +1,16 @@
+import YourLibraryAlbumItem from '@/components/item/yourLibrary/album';
 import TextField from '@/core/inputs/textField';
 import PopperBottomRight from '@/core/popper/bottomRight';
 import Localize from '@/langs';
 import { GoPlus } from 'react-icons/go';
 import { IoIosSearch } from 'react-icons/io';
 import { IoArrowBackOutline } from 'react-icons/io5';
+import data from './data/data.json';
 
 function YourLibraryMobile() {
 	return (
-		<div className='p-4 flex flex-col gap-4'>
-			<header className='flex items-center justify-between'>
+		<div className='flex flex-col'>
+			<header className='flex items-center justify-between p-4 sticky top-0 z-20'>
 				<div className='flex gap-3 items-center'>
 					<img
 						className='w-8 h-8 rounded-full object-cover'
@@ -72,7 +74,11 @@ function YourLibraryMobile() {
 					<GoPlus className='hover:text-3xl transition-all duration-500' />
 				</div>
 			</header>
-			<article>qweqwe</article>
+			<article className='flex flex-col gap-4 h-yourLibrary relative z-10 overflow-y-auto snap-mandatory snap-y p-4'>
+				{data.map((i) => {
+					return <YourLibraryAlbumItem key={i.image} {...i} />;
+				})}
+			</article>
 		</div>
 	);
 }

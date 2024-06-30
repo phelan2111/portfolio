@@ -55,4 +55,7 @@ export const dataLocalizeEN: Record<string, string> = {
 	FIND_YOUR_FAVORITES: 'Find your favorites',
 	SEARCH_EVERYTHING_YOU_HAVE_SAVE:
 		"Search everything you've saved, followed, or created.",
+	PLAYLIST: 'Playlist',
+	MADE_FOR: 'Made for',
+	ARTISTS: 'Artists',
 };

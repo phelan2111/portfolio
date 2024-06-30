@@ -22,7 +22,7 @@ function Avatar({ className = '', ...props }: IAvatarProps) {
 		<img
 			onClick={props.onClick}
 			aria-hidden
-			className={`h-10 w-10 rounded-full object-cover ${className}`}
+			className={`h-8 w-8 rounded-full object-cover ${className}`}
 			src={props.src}
 			alt={props.src}
 		/>

@@ -39,6 +39,7 @@ export default {
         home: 'calc(100dvh - 160px)',
         album: 'calc(100dvh - 80px)',
         podcasts: 'calc(100dvh - 230px)',
+        yourLibrary: 'calc(100dvh - 200px)',
         screen: '100dvh'
       },
       keyframes: {

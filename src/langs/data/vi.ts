@@ -54,4 +54,7 @@ export const dataLocalizeVI: Record<string, string> = {
 	SEARCH_YOUR_LIBRARY: 'Search your library',
 	SEARCH_EVERYTHING_YOU_HAVE_SAVE:
 		"Search everything you've saved, followed, or created.",
+	PLAYLIST: 'Playlist',
+	MADE_FOR: 'Made for',
+	ARTISTS: 'Artists',
 };
