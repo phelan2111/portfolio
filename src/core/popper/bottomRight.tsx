@@ -33,7 +33,7 @@ function PopperBottomRight(props: IPopperBottomRightProps) {
 				onOpen: handleOpen,
 			})}
 			<div
-				className={`fixed bottom-0 h-screen bg-primary_dark-20 left-0 z-50 transition-all duration-500 ${
+				className={`fixed bottom-0 h-screen bg-primary_dark-20 left-0 z-20 transition-all duration-500 ${
 					isOpenPopup
 						? 'translate-y-0 w-screen rounded-none'
 						: 'translate-y-full w-10 rounded-se-3xl'

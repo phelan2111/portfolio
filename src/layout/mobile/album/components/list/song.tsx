@@ -65,10 +65,12 @@ function SongOfAlbum(props: ISongOfAlbumProps) {
 	];
 
 	return (
-		<section className='flex flex-col gap-4 select-none'>
+		<section className='select-none'>
 			{props.data.map((item) => {
 				return (
-					<div key={item.idSong} className='flex gap-4'>
+					<div
+						key={item.idSong}
+						className='flex gap-4 snap-start pt-4'>
 						<img
 							className='min-w-12 max-w-12 h-12 object-cover rounded-sm'
 							src={item.image}

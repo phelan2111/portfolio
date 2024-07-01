@@ -6,7 +6,39 @@ import { GoPlus } from 'react-icons/go';
 import { IoIosSearch } from 'react-icons/io';
 import { IoArrowBackOutline } from 'react-icons/io5';
 import data from './data/data.json';
-
+import FilterChip, { IItemFilterChip } from '@/components/filter/chip';
+const filter: IItemFilterChip[] = [
+	{
+		label: 'Playlist',
+		value: 'Playlist',
+		children: [
+			{
+				label: 'Playlist',
+				value: 'Playlist',
+			},
+			{
+				label: 'By you',
+				value: 'By you',
+			},
+			{
+				label: 'By Cohesive',
+				value: 'By Cohesive',
+			},
+		],
+	},
+	{
+		label: 'Podcasts',
+		value: 'Podcasts',
+	},
+	{
+		label: 'Artist',
+		value: 'Artist',
+	},
+	{
+		label: 'Download',
+		value: 'Download',
+	},
+];
 function YourLibraryMobile() {
 	return (
 		<div className='flex flex-col'>
@@ -60,7 +92,7 @@ function YourLibraryMobile() {
 													'FIND_YOUR_FAVORITES',
 												)}
 											</h4>
-											<p className='text-sm'>
+											<p className='text-sm text-center'>
 												{Localize(
 													'SEARCH_EVERYTHING_YOU_HAVE_SAVE',
 												)}
@@ -74,6 +106,9 @@ function YourLibraryMobile() {
 					<GoPlus className='hover:text-3xl transition-all duration-500' />
 				</div>
 			</header>
+			<article className='px-4 pb-4'>
+				<FilterChip data={filter} />
+			</article>
 			<article className='flex flex-col gap-4 h-yourLibrary relative z-10 overflow-y-auto snap-mandatory snap-y p-4'>
 				{data.map((i) => {
 					return <YourLibraryAlbumItem key={i.image} {...i} />;

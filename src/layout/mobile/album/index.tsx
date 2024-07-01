@@ -66,74 +66,78 @@ function AlbumMobile(props: IAlbumMobileProps) {
 	];
 
 	return (
-		<div className='w-full flex flex-col gap-4  overflow-y-auto h-album'>
-			<div className='relative w-full flex justify-center items-center p-4 before:absolute before:w-full before:h-full before:bg-[url(https://i.pinimg.com/564x/e8/5e/bf/e85ebf981f08428d11b1cbd54e44357b.jpg)] before:bg-cover before:blur-xl'>
-				<div className='relative rounded-xl flex flex-col gap-2 p-1'>
-					<div className='bg-primary_dark relative overflow-hidden z-10 p-4 rounded-xl text-center flex flex-col justify-center items-center font-bold before:absolute before:h-[150%] before:w-20 before:animate-spin_dur_4s before:bg-gradient-to-t before:from-indigo-500 before:via-purple-500 before:to-pink-500 after:absolute after:bg-primary_dark after:inset-1 after:rounded-lg'>
-						<img
-							className='h-52 w-52 rounded-xl relative z-10'
-							src='https://i.pinimg.com/564x/e8/5e/bf/e85ebf981f08428d11b1cbd54e44357b.jpg'
-							alt='https://i.pinimg.com/564x/e8/5e/bf/e85ebf981f08428d11b1cbd54e44357b.jpg'
-						/>
-						<div className='pt-2'>
-							<p className='font-semibold relative z-10 bg-gradient-to-t from-indigo-500 via-purple-500 to-pink-500 bg-clip-text text-transparent'>
-								{data.name}
-							</p>
-							<p className='text-[10px] relative z-10 bg-gradient-to-t from-indigo-500 via-purple-500 to-pink-500 bg-clip-text text-transparent'>
-								{data.singers.join('')}
-							</p>
-						</div>
-					</div>
-				</div>
-				<div
-					aria-hidden
-					onClick={props.onRedirectHome}
-					className='absolute top-4 left-4 bg-primary_dark shadow-bootstrapLarge p-2 rounded-full'>
-					<BsChevronCompactLeft />
-				</div>
-			</div>
-			<div className='flex flex-col gap-2 px-4'>
-				<p className='text-sm'>2h 33min</p>
-				<article className='flex justify-between items-center'>
-					<div className='flex gap-8 items-center'>
-						<div className='w-12 h-12 shadow-bootstrapLarge rounded-md overflow-auto'>
-							<Video
-								mute={true}
-								autoPlay
-								src='https://res.cloudinary.com/dkvhfe4uu/video/upload/v1718469569/justFriend_oximsk.mp4'
-								track='https://res.cloudinary.com/dkvhfe4uu/video/upload/v1718469569/justFriend_oximsk.mp4'
+		<div className='w-full flex flex-col gap-4 overflow-y-auto h-album snap-mandatory snap-y'>
+			<div className='snap-start'>
+				<div className='relative w-full flex justify-center items-center p-4 before:absolute before:w-full before:h-full before:bg-[url(https://i.pinimg.com/564x/e8/5e/bf/e85ebf981f08428d11b1cbd54e44357b.jpg)] before:bg-cover before:blur-xl'>
+					<div className='relative rounded-xl flex flex-col gap-2 p-1'>
+						<div className='bg-primary_dark relative overflow-hidden z-10 p-4 rounded-xl text-center flex flex-col justify-center items-center font-bold before:absolute before:h-[150%] before:w-20 before:animate-spin_dur_4s before:bg-gradient-to-t before:from-indigo-500 before:via-purple-500 before:to-pink-500 after:absolute after:bg-primary_dark after:inset-1 after:rounded-lg'>
+							<img
+								className='h-52 w-52 rounded-xl relative z-10'
+								src='https://i.pinimg.com/564x/e8/5e/bf/e85ebf981f08428d11b1cbd54e44357b.jpg'
+								alt='https://i.pinimg.com/564x/e8/5e/bf/e85ebf981f08428d11b1cbd54e44357b.jpg'
 							/>
+							<div className='pt-2'>
+								<p className='font-semibold relative z-10 bg-gradient-to-t from-indigo-500 via-purple-500 to-pink-500 bg-clip-text text-transparent'>
+									{data.name}
+								</p>
+								<p className='text-[10px] relative z-10 bg-gradient-to-t from-indigo-500 via-purple-500 to-pink-500 bg-clip-text text-transparent'>
+									{data.singers.join('')}
+								</p>
+							</div>
 						</div>
-						<IconBootstrapLarge>
-							<GoPlus className='text-md hover:scale-110 transition-transform duration-300 cursor-pointer' />
-						</IconBootstrapLarge>
-						<IconBootstrapLarge>
-							<GoDownload className='text-md hover:scale-110 transition-transform duration-300 cursor-pointer' />
-						</IconBootstrapLarge>
-						<PopperBottom
-							render={(renderProps) => {
-								return (
-									<MenuIcon
-										onClose={renderProps.onClose}
-										items={itemsMenu}
-									/>
-								);
-							}}>
-							<IconBootstrapLarge>
-								<GoKebabHorizontal className='text-lg rotate-90' />
-							</IconBootstrapLarge>
-						</PopperBottom>
 					</div>
-					<div className='flex gap-3 items-center'>
-						<IconBootstrapLarge>
-							<LiaRandomSolid className='text-lg hover:scale-110 transition-transform duration-300 cursor-pointer' />
-						</IconBootstrapLarge>
-						<FaPlayCircle className='text-5xl hover:scale-110 transition-transform duration-300 cursor-pointer shadow-bootstrapLarge rounded-full' />
+					<div
+						aria-hidden
+						onClick={props.onRedirectHome}
+						className='absolute top-4 left-4 bg-primary_dark shadow-bootstrapLarge p-2 rounded-full'>
+						<BsChevronCompactLeft />
 					</div>
-				</article>
+				</div>
 			</div>
-			<div className='px-4'>
-				<SongOfAlbum data={data.songs} />
+			<div>
+				<div className='flex flex-col gap-2 px-4 snap-start'>
+					<p className='text-sm'>2h 33min</p>
+					<article className='flex justify-between items-center'>
+						<div className='flex gap-8 items-center'>
+							<div className='w-12 h-12 shadow-bootstrapLarge rounded-md overflow-auto'>
+								<Video
+									mute={true}
+									autoPlay
+									src='https://res.cloudinary.com/dkvhfe4uu/video/upload/v1718469569/justFriend_oximsk.mp4'
+									track='https://res.cloudinary.com/dkvhfe4uu/video/upload/v1718469569/justFriend_oximsk.mp4'
+								/>
+							</div>
+							<IconBootstrapLarge>
+								<GoPlus className='text-md hover:scale-110 transition-transform duration-300 cursor-pointer' />
+							</IconBootstrapLarge>
+							<IconBootstrapLarge>
+								<GoDownload className='text-md hover:scale-110 transition-transform duration-300 cursor-pointer' />
+							</IconBootstrapLarge>
+							<PopperBottom
+								render={(renderProps) => {
+									return (
+										<MenuIcon
+											onClose={renderProps.onClose}
+											items={itemsMenu}
+										/>
+									);
+								}}>
+								<IconBootstrapLarge>
+									<GoKebabHorizontal className='text-lg rotate-90' />
+								</IconBootstrapLarge>
+							</PopperBottom>
+						</div>
+						<div className='flex gap-3 items-center'>
+							<IconBootstrapLarge>
+								<LiaRandomSolid className='text-lg hover:scale-110 transition-transform duration-300 cursor-pointer' />
+							</IconBootstrapLarge>
+							<FaPlayCircle className='text-5xl hover:scale-110 transition-transform duration-300 cursor-pointer shadow-bootstrapLarge rounded-full' />
+						</div>
+					</article>
+				</div>
+				<div className='px-4'>
+					<SongOfAlbum data={data.songs} />
+				</div>
 			</div>
 		</div>
 	);
