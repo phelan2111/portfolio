@@ -8,10 +8,11 @@ interface IPropsRender {
 
 interface IPopperBottomProps {
 	children: ReactNode;
+	className?: string;
 	render: (props: IPropsRender) => ReactNode;
 }
 
-function PopperBottom(props: IPopperBottomProps) {
+function PopperBottom({ className = 'z-20', ...props }: IPopperBottomProps) {
 	const [isOpen, setIsOpen] = useState<boolean>(false);
 	const handleOpen = () => {
 		setIsOpen(true);
@@ -31,12 +32,12 @@ function PopperBottom(props: IPopperBottomProps) {
 				<div
 					aria-hidden
 					onClick={handleClose}
-					className='fixed bg-black/50 w-screen h-screen bottom-0 z-20 right-0'
+					className={`fixed bg-black/50 w-screen h-screen bottom-0 right-0 ${className}`}
 				/>
 			)}
 			<div
 				className={`fixed bg-primary_dark w-screen bottom-0 rounded-t-2xl z-50 right-0 transition-all duration-500
-					${isOpen ? 'translate-y-0' : 'translate-y-full'}`}>
+					${isOpen ? 'translate-y-0 opacity-100' : 'translate-y-full opacity-0'}`}>
 				{props.render({
 					isOpen,
 					onClose: handleClose,

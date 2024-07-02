@@ -77,6 +77,10 @@ export default {
       animation: {
         translateBottom: 'translateBottom 0.4s  ease-in-out',
         translateRight: 'translateRight 1s ease-in-out',
+        translateRight_duration_1dot3: 'translateRight 1.3s ease-in-out',
+        translateRight_duration_1dot6: 'translateRight 1.6s ease-in-out',
+        translateRight_duration_1dot9: 'translateRight 1.9s ease-in-out',
+        translateRight_duration_2dot2: 'translateRight 2.2s ease-in-out',
         translateLeft_duration_2s: 'translateLeft 2s ease-in-out',
         translateLeft_duration_2dot3s: 'translateLeft 2.3s ease-in-out',
         bgScale: 'bgScale 1.5s  ease-in-out',
@@ -85,7 +89,7 @@ export default {
         waveColumnEven: 'waveColumn 1.5s 0.4s infinite',
         ring_delay_300: 'ring 5s 0.3s infinite',
         ring_delay_0: 'ring 5s infinite',
-        spin_dur_4s: 'spin 4s linear infinite'
+        spin_dur_4s: 'spin 4s linear infinite',
       },
       backgroundSize: {
         '125%': '125%'

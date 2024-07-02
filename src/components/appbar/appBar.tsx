@@ -1,7 +1,8 @@
-import Avatar from '@/core/image/avatar';
 import Tabs, { IItemTab } from '@/core/tabs';
 import { PATH_REDIRECT } from '@/utils/enums';
+
 import { useLocation, useNavigate } from 'react-router-dom';
+import PopperSetting from '../popper/setting';
 
 const tabs: IItemTab<string>[] = [
 	{
@@ -34,8 +35,8 @@ function AppBar() {
 	};
 
 	return (
-		<header className='select-none flex gap-4 items-center sticky top-0 h-fit bg-primary_dark p-4 z-20 snap-start'>
-			<Avatar src='https://i.pinimg.com/564x/91/a7/5b/91a75bb16f881c2211700a1e513ea98d.jpg' />
+		<header className='select-none flex gap-4 items-center sticky top-0 h-fit bg-primary_dark p-4 z-50 snap-start'>
+			<PopperSetting />
 			<Tabs
 				onChange={handleRedirect}
 				tabDefault={handleDefaultTab()}

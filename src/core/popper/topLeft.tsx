@@ -1,23 +1,19 @@
 import { ReactNode, useState } from 'react';
-
-export interface IRenderPopperBottomRightProps {
+export interface IRenderPopperTopLeftProps {
 	onOpen: VoidFunction;
 	onClose: VoidFunction;
 	isOpen: boolean;
 }
 
-interface IPopperBottomRightProps {
+interface IPopperTopLeftProps {
 	children?: ReactNode;
 	isOpen?: boolean;
+	renderMainContent: (props: IRenderPopperTopLeftProps) => ReactNode;
+	renderPopper?: (props: IRenderPopperTopLeftProps) => ReactNode;
 	className?: string;
-	renderMainContent: (props: IRenderPopperBottomRightProps) => ReactNode;
-	renderPopper?: (props: IRenderPopperBottomRightProps) => ReactNode;
 }
 
-function PopperBottomRight({
-	className = 'z-20',
-	...props
-}: IPopperBottomRightProps) {
+function PopperTopLeft({ className = 'z-50', ...props }: IPopperTopLeftProps) {
 	const [isOpenPopup, setIsOpenPopup] = useState<boolean>(
 		props.isOpen ?? false,
 	);
@@ -28,7 +24,6 @@ function PopperBottomRight({
 	const handleOpen = () => {
 		setIsOpenPopup(true);
 	};
-
 	return (
 		<div>
 			{props.renderMainContent({
@@ -37,11 +32,11 @@ function PopperBottomRight({
 				onOpen: handleOpen,
 			})}
 			<div
-				className={`fixed bottom-0 h-screen bg-primary_dark-20 left-0 transition-all duration-500 ${
+				className={`fixed top-0 h-screen bg-primary_dark-20 left-0 transition-all duration-500 ${
 					isOpenPopup
 						? 'translate-y-0 w-screen rounded-none opacity-100'
-						: 'translate-y-full w-10 opacity-0 rounded-se-3xl'
-				}  ${className}`}>
+						: '-translate-y-full w-10 opacity-0 rounded-se-3xl'
+				} ${className}`}>
 				{props.renderPopper
 					? props.renderPopper({
 							isOpen: isOpenPopup,
@@ -54,4 +49,4 @@ function PopperBottomRight({
 	);
 }
 
-export default PopperBottomRight;
+export default PopperTopLeft;
