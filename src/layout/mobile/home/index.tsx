@@ -6,7 +6,7 @@ import ToTry from './components/list/toTry';
 import TodayBiggestHits from './components/list/todayBiggestHits';
 import YourFavoriteArtists from './components/list/yourFavoriteArtists';
 import YourTopMixes from './components/list/yourTopMixes';
-import AppBar from '@/components/appbar/appBar';
+import AppBar from '@/components/ui/appbar/appBar';
 
 interface IHomeMobileProps {
 	onClick: (dataItem: unknown) => void;

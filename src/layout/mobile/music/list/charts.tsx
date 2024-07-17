@@ -1,6 +1,6 @@
-import ChartItem from '@/components/item/album/charts';
 import Localize from '@/langs';
 import data from '../data/charts.json';
+import ChartItem from '@/components/ui/item/album/charts';
 
 interface IChartsProps {
 	onClick: (dataItem: unknown) => void;

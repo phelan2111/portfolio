@@ -1,5 +1,5 @@
-import MenuIcon, { IItemIcon } from '@/components/menu/icon';
-import PopperBottom from '@/core/popper/bottom';
+import PopperBottom from '@/components/root/popper/bottom';
+import MenuIcon, { IItemIcon } from '@/components/ui/menu/icon';
 import {
 	BsBroadcast,
 	BsCloudDownloadFill,

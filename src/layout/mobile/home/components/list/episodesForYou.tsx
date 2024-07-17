@@ -1,4 +1,4 @@
-import EpisodesForYouCard from '@/components/card/episodesForYou';
+import EpisodesForYouCard from '@/components/ui/card/episodesForYou';
 import Localize from '@/langs';
 import data from '../../data/episidesForyou.json';
 

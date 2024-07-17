@@ -1,4 +1,4 @@
-import ToTryCard from '@/components/card/toTry';
+import ToTryCard from '@/components/ui/card/toTry';
 import Localize from '@/langs';
 import data from '../../../data/totry.json';
 

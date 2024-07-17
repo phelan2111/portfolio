@@ -1,4 +1,4 @@
-import Wrapper from '@/core/wrapper';
+import Wrapper from '@/components/root/wrapper';
 import { Outlet } from 'react-router-dom';
 
 function AuthWrapper() {

@@ -1,4 +1,4 @@
-import PopperBottom from '@/core/popper/bottom';
+import PopperBottom from '@/components/root/popper/bottom';
 import Localize from '@/langs';
 import { CiVolumeMute } from 'react-icons/ci';
 import { FaPlayCircle, FaUserAstronaut } from 'react-icons/fa';
@@ -17,9 +17,9 @@ import {
 } from 'react-icons/bs';
 import { Fragment } from 'react/jsx-runtime';
 import { TypeToTry } from '@/utils/enums';
-import Video from '@/core/video/video';
+import Video from '@/components/root/video/video';
 import { useCallback, useEffect, useState } from 'react';
-import AnimationScrollElement from '@/core/animation/scrollByElement';
+import AnimationScrollElement from '@/components/root/animation/scrollByElement';
 
 interface IToTryCardProps {
 	name: string;

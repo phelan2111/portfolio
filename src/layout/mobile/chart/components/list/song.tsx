@@ -1,5 +1,4 @@
-import MenuIcon, { IItemIcon } from '@/components/menu/icon';
-import PopperBottom from '@/core/popper/bottom';
+import PopperBottom from '@/components/root/popper/bottom';
 import {
 	BsBroadcast,
 	BsCloudDownloadFill,
@@ -11,6 +10,7 @@ import {
 import { FaUserAstronaut } from 'react-icons/fa';
 import { GoKebabHorizontal } from 'react-icons/go';
 import RankSong from '../rank';
+import MenuIcon, { IItemIcon } from '@/components/ui/menu/icon';
 
 export interface IItemSong {
 	name: string;

@@ -1,7 +1,7 @@
-import LogoComponent from '@/components/common/logo';
-import Button from '@/core/button';
-import Form from '@/core/form';
-import InputOTP from '@/core/inputs/otp';
+import LogoComponent from '@/components/ui/common/logo';
+import Button from '@/components/root/button';
+import Form from '@/components/root/form';
+import InputOTP from '@/components/root/inputs/otp';
 import Localize from '@/langs';
 
 interface IOTPProps {

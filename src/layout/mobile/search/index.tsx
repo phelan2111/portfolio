@@ -1,8 +1,8 @@
-import InputSearch from '@/components/input/search';
-import HorizontalSearchItem from '@/components/item/search/horizontal';
 import Localize from '@/langs';
 import data from './data/search.json';
-import PopperSetting from '@/components/popper/setting';
+import PopperSetting from '@/components/ui/popper/setting';
+import InputSearch from '@/components/ui/input/search';
+import HorizontalSearchItem from '@/components/ui/item/search/horizontal';
 
 function SearchMobile() {
 	return (

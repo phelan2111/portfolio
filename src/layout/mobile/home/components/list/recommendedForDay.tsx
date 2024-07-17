@@ -1,4 +1,4 @@
-import AlbumCard from '@/components/card/album';
+import AlbumCard from '@/components/ui/card/album';
 import Localize from '@/langs';
 import data from '../../data/yourTopMixes.json';
 

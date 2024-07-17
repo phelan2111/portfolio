@@ -1,6 +1,6 @@
 import LinkNavigateBottom, {
 	IItemLinkBottom,
-} from '@/components/link/navigateBottom';
+} from '@/components/ui/link/navigateBottom';
 import { PATH } from '@/routes/config';
 import { useLayoutEffect, useState } from 'react';
 import { HiOutlineHome, HiOutlineSearch } from 'react-icons/hi';

@@ -1,8 +1,8 @@
-import PopperTopLeft from '@/core/popper/topLeft';
+import PopperTopLeft from '@/components/root/popper/topLeft';
 import { FaHistory, FaPlus, FaRegComment } from 'react-icons/fa';
 import { IoMdClose } from 'react-icons/io';
 import { MdOutlineSettings } from 'react-icons/md';
-import Avatar from '@/core/image/avatar';
+import Avatar from '@/components/root/image/avatar';
 
 function PopperSetting() {
 	return (

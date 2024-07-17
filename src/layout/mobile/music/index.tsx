@@ -1,4 +1,4 @@
-import AppBar from '@/components/appbar/appBar';
+import AppBar from '@/components/ui/appbar/appBar';
 import FamiliarAlbum from './list/familiarAlbum';
 import YourTopMixes from './list/yourTopMixes';
 import YourFavoriteArtists from './list/yourFavoriteArtists';

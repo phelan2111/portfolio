@@ -1,8 +1,8 @@
 import { createBrowserRouter } from 'react-router-dom';
 import { PATH } from './config';
 import { lazy } from 'react';
-import BasicWrapper from '@/components/wrapper/basic';
-import AuthWrapper from '@/components/wrapper/auth';
+import BasicWrapper from '@/components/ui/wrapper/basic';
+import AuthWrapper from '@/components/ui/wrapper/auth';
 const SignIn = lazy(() => import('@/pages/kyc/signIn'));
 const SignUp = lazy(() => import('@/pages/kyc/signUp'));
 const Home = lazy(() => import('@/pages/home'));

@@ -1,6 +1,6 @@
-import PodcastsSuggestionCard from '@/components/card/podcastsSuggestion';
+import PodcastsSuggestionCard from '@/components/ui/card/podcastsSuggestion';
 import MenuIcon, { IItemIcon } from '@/components/menu/icon';
-import BackDropPopper from '@/core/popper/backDrop';
+import BackDropPopper from '@/components/root/popper/backDrop';
 import data from '../../data/suggestion.json';
 import { useState } from 'react';
 import {

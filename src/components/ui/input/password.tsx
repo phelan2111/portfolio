@@ -1,4 +1,4 @@
-import TextField, { ITextFieldProps } from '@/core/inputs/textField';
+import TextField, { ITextFieldProps } from '@/components/root/inputs/textField';
 import { useState } from 'react';
 import { BsEye, BsEyeSlash } from 'react-icons/bs';
 

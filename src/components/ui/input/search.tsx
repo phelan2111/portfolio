@@ -1,10 +1,10 @@
 import { ReactNode, useState } from 'react';
 
-import PopperBottomRight from '@/core/popper/bottomRight';
+import PopperBottomRight from '@/components/root/popper/bottomRight';
 import { IoIosSearch } from 'react-icons/io';
 import Localize from '@/langs';
 import { IoArrowBackOutline } from 'react-icons/io5';
-import TextField from '@/core/inputs/textField';
+import TextField from '@/components/root/inputs/textField';
 
 export interface IRenderInputSearchProps {
 	valueSearch: string;

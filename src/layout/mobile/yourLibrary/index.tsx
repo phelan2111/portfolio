@@ -1,12 +1,12 @@
-import YourLibraryAlbumItem from '@/components/item/yourLibrary/album';
-import TextField from '@/core/inputs/textField';
-import PopperBottomRight from '@/core/popper/bottomRight';
+import TextField from '@/components/root/inputs/textField';
+import PopperBottomRight from '@/components/root/popper/bottomRight';
 import Localize from '@/langs';
 import { GoPlus } from 'react-icons/go';
 import { IoIosSearch } from 'react-icons/io';
 import { IoArrowBackOutline } from 'react-icons/io5';
 import data from './data/data.json';
-import FilterChip, { IItemFilterChip } from '@/components/filter/chip';
+import FilterChip, { IItemFilterChip } from '@/components/ui/filter/chip';
+import YourLibraryAlbumItem from '@/components/ui/item/yourLibrary/album';
 const filter: IItemFilterChip[] = [
 	{
 		label: 'Playlist',

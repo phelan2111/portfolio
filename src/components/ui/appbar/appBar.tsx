@@ -1,4 +1,4 @@
-import Tabs, { IItemTab } from '@/core/tabs';
+import Tabs, { IItemTab } from '@/components/root/tabs';
 import { PATH_REDIRECT } from '@/utils/enums';
 
 import { useLocation, useNavigate } from 'react-router-dom';

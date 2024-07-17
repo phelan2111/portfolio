@@ -1,6 +1,6 @@
-import BestOfArtistItem from '@/components/item/singer/bestOfArtist';
 import Localize from '@/langs';
 import data from '../data/bestOfArtists.json';
+import BestOfArtistItem from '@/components/ui/item/singer/bestOfArtist';
 
 function BestOfArtists() {
 	return (

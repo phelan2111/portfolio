@@ -26,6 +26,7 @@ module.exports = {
 					['styles', './src/styles/'],
 					['utils', './src/util/'],
 					['pages', './src/pages/'],
+					['ui', './src/ui/'],
 				],
 			},
 			node: {

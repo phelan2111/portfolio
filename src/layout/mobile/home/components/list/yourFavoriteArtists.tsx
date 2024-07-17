@@ -1,6 +1,6 @@
-import VerticalSinger from '@/components/item/singer/vertical';
 import Localize from '@/langs';
 import data from '../../data/yourFavoriteArtist.json';
+import VerticalSingerItem from '@/components/ui/item/singer/vertical';
 
 function YourFavoriteArtists() {
 	return (
@@ -10,7 +10,7 @@ function YourFavoriteArtists() {
 			</h4>
 			<div className='flex flex-nowrap overflow-x-auto gap-4 scrollHiddenX snap-mandatory snap-x'>
 				{data.map((i) => (
-					<VerticalSinger key={i.avatarSinger} {...i} />
+					<VerticalSingerItem key={i.avatarSinger} {...i} />
 				))}
 			</div>
 		</section>

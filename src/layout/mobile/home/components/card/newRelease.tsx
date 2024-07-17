@@ -1,4 +1,4 @@
-import SongCard from '@/components/card/song';
+import SongCard from '@/components/ui/card/song';
 import Localize from '@/langs';
 import data from '../../data/newRelease.json';
 function NewReleaseCard() {

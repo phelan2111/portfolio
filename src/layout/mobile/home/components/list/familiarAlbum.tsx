@@ -1,4 +1,4 @@
-import HorizontalAlbumItem from '@/components/item/album/horizontal';
+import HorizontalAlbumItem from '@/components/ui/item/album/horizontal';
 import data from '../../data/familiarAlbum.json';
 
 interface IFamiliarAlbumProps {

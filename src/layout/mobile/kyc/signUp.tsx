@@ -1,7 +1,7 @@
-import LogoComponent from '@/components/common/logo';
-import Button from '@/core/button';
-import Form from '@/core/form';
-import TextField from '@/core/inputs/textField';
+import LogoComponent from '@/components/ui/common/logo';
+import Button from '@/components/root/button';
+import Form from '@/components/root/form';
+import TextField from '@/components/root/inputs/textField';
 import Localize from '@/langs';
 import { FcGoogle } from 'react-icons/fc';
 
