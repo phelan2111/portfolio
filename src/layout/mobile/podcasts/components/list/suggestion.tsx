@@ -1,5 +1,4 @@
 import PodcastsSuggestionCard from '@/components/ui/card/podcastsSuggestion';
-import MenuIcon, { IItemIcon } from '@/components/menu/icon';
 import BackDropPopper from '@/components/root/popper/backDrop';
 import data from '../../data/suggestion.json';
 import { useState } from 'react';
@@ -12,6 +11,7 @@ import {
 	BsShareFill,
 } from 'react-icons/bs';
 import { FaUserAstronaut } from 'react-icons/fa';
+import MenuIcon, { IItemIcon } from '@/components/ui/menu/icon';
 
 const itemsMenu: IItemIcon[] = [
 	{

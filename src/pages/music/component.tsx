@@ -1,8 +1,8 @@
 import { useNavigate } from 'react-router-dom';
 import View from './view';
-import { IChartItemProps } from '@/components/item/album/charts';
 import { PATH_REDIRECT } from '@/utils/enums';
-import { IHorizontalAlbumItemProps } from '@/components/item/album/horizontal';
+import { IChartItemProps } from '@/components/ui/item/album/charts';
+import { IHorizontalAlbumItemProps } from '@/components/ui/item/album/horizontal';
 
 function Component() {
 	const navigate = useNavigate();

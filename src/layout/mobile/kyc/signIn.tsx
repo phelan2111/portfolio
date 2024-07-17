@@ -1,11 +1,11 @@
 import LogoComponent from '@/components/ui/common/logo';
-import InputPassword from '@/components/input/password';
 import Button from '@/components/root/button';
 import Form from '@/components/root/form';
 import Checkbox from '@/components/root/inputs/checkbox';
 import TextField from '@/components/root/inputs/textField';
 import Localize from '@/langs';
 import { FcGoogle } from 'react-icons/fc';
+import InputPassword from '@/components/ui/input/password';
 
 interface ISignInMobileProps {
 	onRedirectSignUp: VoidFunction;

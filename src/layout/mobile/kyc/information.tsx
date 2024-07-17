@@ -1,9 +1,9 @@
 import LogoComponent from '@/components/ui/common/logo';
-import InputPassword from '@/components/input/password';
 import Button from '@/components/root/button';
 import Form from '@/components/root/form';
 import TextField from '@/components/root/inputs/textField';
 import Localize from '@/langs';
+import InputPassword from '@/components/ui/input/password';
 
 interface IInformationProps {
 	onCreateProfile: VoidFunction;
