@@ -40,7 +40,8 @@ export default {
         album: 'calc(100dvh - 80px)',
         podcasts: 'calc(100dvh - 230px)',
         yourLibrary: 'calc(100dvh - 200px)',
-        screen: '100dvh'
+        screen: '100dvh',
+        addAccount: 'calc(100dvh - 44px)',
       },
       keyframes: {
         translateRight: {
@@ -76,6 +77,8 @@ export default {
       },
       animation: {
         translateBottom: 'translateBottom 0.4s  ease-in-out',
+        translateBottom_duration_0dot8: 'translateBottom 0.8s ease-in-out',
+        translateBottom_duration_1dot2: 'translateBottom 1.2s ease-in-out',
         translateRight: 'translateRight 1s ease-in-out',
         translateRight_duration_1dot3: 'translateRight 1.3s ease-in-out',
         translateRight_duration_1dot6: 'translateRight 1.6s ease-in-out',

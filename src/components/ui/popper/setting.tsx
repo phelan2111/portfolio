@@ -3,8 +3,38 @@ import { FaHistory, FaPlus, FaRegComment } from 'react-icons/fa';
 import { IoMdClose } from 'react-icons/io';
 import { MdOutlineSettings } from 'react-icons/md';
 import Avatar from '@/components/root/image/avatar';
-
+import Localize from '@/langs';
+import { PATH_REDIRECT } from '@/utils/enums';
+import { useNavigate } from 'react-router-dom';
+const settingPopup = [
+	{
+		text: 'ADD_ACCOUNT',
+		icon: <FaPlus />,
+		className: 'animate-translateRight_duration_1dot3 ml-16',
+		path: PATH_REDIRECT.ADD_ACCOUNT,
+	},
+	{
+		text: 'WHAT_NEW',
+		icon: <FaRegComment />,
+		className: 'animate-translateRight_duration_1dot6 ml-28',
+		path: PATH_REDIRECT.ADD_ACCOUNT,
+	},
+	{
+		text: 'LISTEN_HISTORY',
+		icon: <FaHistory />,
+		className: 'animate-translateRight_duration_1dot9 ml-16',
+		path: PATH_REDIRECT.ADD_ACCOUNT,
+	},
+	{
+		text: 'SETTING',
+		icon: <MdOutlineSettings className='text-xl' />,
+		className: 'animate-translateRight_duration_2dot2',
+		path: PATH_REDIRECT.ADD_ACCOUNT,
+	},
+];
 function PopperSetting() {
+	const navigate = useNavigate();
+
 	return (
 		<PopperTopLeft
 			renderMainContent={(propsRender) => {
@@ -31,33 +61,29 @@ function PopperSetting() {
 									<p className='text-sm font-bold'>
 										Lee Min New
 									</p>
-									<p className='text-[10px]'>View profile</p>
+									<p className='text-[10px]'>
+										{Localize('VIEW_PROFILE')}
+									</p>
 								</div>
 							</div>
-							<div className='flex items-center gap-4 ml-16 w-fit shadow-insetAllSide  pl-2 pr-4 py-1 rounded-2xl animate-translateRight_duration_1dot3'>
-								<div className='w-8 h-8 flex items-center justify-center rounded-full'>
-									<FaPlus />
-								</div>
-								<p className='text-sm'>Add account</p>
-							</div>
-							<div className='flex items-center gap-4 ml-28 shadow-insetAllSide pl-2 pr-4 py-1 rounded-2xl animate-translateRight_duration_1dot6'>
-								<div className='w-8 h-8 flex items-center justify-center rounded-full'>
-									<FaRegComment />
-								</div>
-								<p className='text-sm'>{`What's new`}</p>
-							</div>
-							<div className='flex items-center gap-4 ml-16  pl-2 pr-4 w-fit py-1 rounded-2xl shadow-insetAllSide animate-translateRight_duration_1dot9'>
-								<div className='w-8 h-8  flex items-center justify-center rounded-full'>
-									<FaHistory />
-								</div>
-								<p className='text-sm'>Listen history</p>
-							</div>
-							<div className='flex items-center gap-4 shadow-insetAllSide w-fit pl-2 pr-4 py-1 rounded-2xl animate-translateRight_duration_2dot2'>
-								<div className='w-8 h-8 flex items-center justify-center rounded-full'>
-									<MdOutlineSettings className='text-xl' />
-								</div>
-								<p className='text-sm'>Setting</p>
-							</div>
+							{settingPopup.map((setting) => {
+								return (
+									<div
+										aria-hidden
+										onClick={() => {
+											navigate(setting.path);
+										}}
+										key={setting.text}
+										className={`flex items-center gap-4 w-fit shadow-insetAllSide  pl-2 pr-4 py-1 rounded-2xl ${setting.className}`}>
+										<div className='w-8 h-8 flex items-center justify-center rounded-full'>
+											<FaPlus />
+										</div>
+										<p className='text-sm'>
+											{Localize(setting.text)}
+										</p>
+									</div>
+								);
+							})}
 							<div
 								aria-hidden
 								onClick={propsRender.onClose}

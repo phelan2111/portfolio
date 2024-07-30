@@ -12,6 +12,7 @@ const Search = lazy(() => import('@/pages/search'));
 const Music = lazy(() => import('@/pages/music'));
 const Chart = lazy(() => import('@/pages/chart'));
 const YourLibrary = lazy(() => import('@/pages/yourLibrary'));
+const AddAccount = lazy(() => import('@/pages/addAccount'));
 
 const router = createBrowserRouter([
 	{
@@ -61,6 +62,10 @@ const router = createBrowserRouter([
 				element: <Chart />,
 			},
 		],
+	},
+	{
+		path: PATH.ADD_ACCOUNT,
+		element: <AddAccount />,
 	},
 ]);
 

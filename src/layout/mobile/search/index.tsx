@@ -7,11 +7,11 @@ import HorizontalSearchItem from '@/components/ui/item/search/horizontal';
 function SearchMobile() {
 	return (
 		<div className='p-4 flex flex-col gap-4'>
-			<header className='flex gap-3 items-center'>
+			<header className='flex gap-3 items-center animate-translateBottom_duration_0dot8'>
 				<PopperSetting />
 				<h6 className='text-lg font-semibold'>{Localize('SEARCH')}</h6>
 			</header>
-			<article>
+			<article className='animate-translateBottom_duration_1dot2'>
 				<InputSearch
 					render={() => {
 						return (

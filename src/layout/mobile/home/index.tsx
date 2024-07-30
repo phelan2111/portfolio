@@ -18,7 +18,7 @@ function HomeMobile(props: IHomeMobileProps) {
 			<AppBar />
 			<div
 				id='homeMobile'
-				className='flex px-4 flex-col gap-6 overflow-y-auto h-home snap-mandatory snap-y'>
+				className='flex px-4 flex-col gap-6 overflow-y-auto h-home snap-mandatory snap-y animate-translateBottom_duration_1dot2'>
 				<FamiliarAlbum onClick={props.onClick} />
 				<NewReleaseCard />
 				<YourTopMixes />

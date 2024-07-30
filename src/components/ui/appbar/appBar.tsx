@@ -35,7 +35,7 @@ function AppBar() {
 	};
 
 	return (
-		<header className='select-none flex gap-4 items-center sticky top-0 h-fit bg-primary_dark p-4 z-50 snap-start'>
+		<header className='select-none flex gap-4 items-center sticky top-0 h-fit bg-primary_dark p-4 z-50 snap-start animate-translateBottom_duration_0dot8'>
 			<PopperSetting />
 			<Tabs
 				onChange={handleRedirect}

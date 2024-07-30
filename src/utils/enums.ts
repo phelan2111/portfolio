@@ -18,6 +18,7 @@ export const PATH_REDIRECT = {
 	CHART: {
 		_: '/chart',
 	},
+	ADD_ACCOUNT: '/addAccount',
 };
 export enum TypeToTry {
 	single,

@@ -1,7 +1,7 @@
 import Localize from '@/langs';
 import { ReactNode } from 'react';
 
-interface IButtonProps {
+export interface IButtonProps {
 	children?: ReactNode;
 	text?: string;
 	className?: string;

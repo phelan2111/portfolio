@@ -67,7 +67,7 @@ function AlbumMobile(props: IAlbumMobileProps) {
 
 	return (
 		<div className='w-full flex flex-col gap-4 overflow-y-auto h-album snap-mandatory snap-y'>
-			<div className='snap-start'>
+			<div className='snap-start animate-translateBottom_duration_0dot8'>
 				<div className='relative w-full flex justify-center items-center p-4 before:absolute before:w-full before:h-full before:bg-[url(https://i.pinimg.com/564x/e8/5e/bf/e85ebf981f08428d11b1cbd54e44357b.jpg)] before:bg-cover before:blur-xl'>
 					<div className='relative rounded-xl flex flex-col gap-2 p-1'>
 						<div className='bg-primary_dark relative overflow-hidden z-10 p-4 rounded-xl text-center flex flex-col justify-center items-center font-bold before:absolute before:h-[150%] before:w-20 before:animate-spin_dur_4s before:bg-gradient-to-t before:from-indigo-500 before:via-purple-500 before:to-pink-500 after:absolute after:bg-primary_dark after:inset-1 after:rounded-lg'>
@@ -94,7 +94,7 @@ function AlbumMobile(props: IAlbumMobileProps) {
 					</div>
 				</div>
 			</div>
-			<div>
+			<div className='animate-translateBottom_duration_1dot2'>
 				<div className='flex flex-col gap-2 px-4 snap-start'>
 					<p className='text-sm'>2h 33min</p>
 					<article className='flex justify-between items-center'>

@@ -7,6 +7,7 @@ import { IoArrowBackOutline } from 'react-icons/io5';
 import data from './data/data.json';
 import FilterChip, { IItemFilterChip } from '@/components/ui/filter/chip';
 import YourLibraryAlbumItem from '@/components/ui/item/yourLibrary/album';
+import PopperSetting from '@/components/ui/popper/setting';
 const filter: IItemFilterChip[] = [
 	{
 		label: 'Playlist',
@@ -42,13 +43,9 @@ const filter: IItemFilterChip[] = [
 function YourLibraryMobile() {
 	return (
 		<div className='flex flex-col'>
-			<header className='flex items-center justify-between p-4 sticky top-0 z-20'>
+			<header className='flex items-center justify-between p-4 sticky top-0 z-20 animate-translateBottom_duration_0dot8'>
 				<div className='flex gap-3 items-center'>
-					<img
-						className='w-8 h-8 rounded-full object-cover'
-						src='https://i.pinimg.com/564x/aa/ee/b7/aaeeb7276ffe0509e396512a62badbd9.jpg'
-						alt='https://i.pinimg.com/564x/aa/ee/b7/aaeeb7276ffe0509e396512a62badbd9.jpg'
-					/>
+					<PopperSetting />
 					<h6 className='text-lg font-semibold'>
 						{Localize('YOUR_LIBRARY')}
 					</h6>
@@ -106,10 +103,10 @@ function YourLibraryMobile() {
 					<GoPlus className='hover:text-3xl transition-all duration-500' />
 				</div>
 			</header>
-			<article className='px-4 pb-4'>
+			<article className='px-4 pb-4 animate-translateBottom_duration_1dot2'>
 				<FilterChip data={filter} />
 			</article>
-			<article className='flex flex-col gap-4 h-yourLibrary relative z-10 overflow-y-auto snap-mandatory snap-y p-4'>
+			<article className='flex flex-col gap-4 h-yourLibrary relative z-10 overflow-y-auto snap-mandatory snap-y p-4 animate-translateBottom_duration_1dot2'>
 				{data.map((i) => {
 					return <YourLibraryAlbumItem key={i.image} {...i} />;
 				})}

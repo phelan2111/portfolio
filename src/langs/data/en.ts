@@ -58,4 +58,18 @@ export const dataLocalizeEN: Record<string, string> = {
 	PLAYLIST: 'Playlist',
 	MADE_FOR: 'Made for',
 	ARTISTS: 'Artists',
+	ADD_ACCOUNT: 'Add account',
+	LISTEN_HISTORY: 'Listen history',
+	SETTING: 'Setting',
+	WHAT_NEW: "What's new",
+	VIEW_PROFILE: 'View profile',
+	MILLIONS_OF_SONG: 'Millions of song.',
+	FREE_ON_COHESIVE_MUSIC: 'Free on Cohesive Music.',
+	CONTINUE_WITH_PHONE_NUMBER: 'Continue with phone number',
+	CONTINUE_WITH_GG: 'Continue with Google',
+	CONTINUE_WITH_FACEBOOK: 'Continue with facebook',
+	LOG_IN: 'Log in',
+	SIGN_UP_FREE: 'Sign up free',
+	WHILE_YOU_ARE_SIGNED:
+		'While you are signed in, anyone else using this device will be able to access your account.',
 };
