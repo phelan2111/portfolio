@@ -72,4 +72,7 @@ export const dataLocalizeEN: Record<string, string> = {
 	SIGN_UP_FREE: 'Sign up free',
 	WHILE_YOU_ARE_SIGNED:
 		'While you are signed in, anyone else using this device will be able to access your account.',
+	THE_LATEST_RELEASE_FORM_ARTISTS:
+		'The latest release from artists, podcasts, and shows tou follow.',
+	NEW: 'New',
 };

@@ -3,6 +3,7 @@ import { PATH } from './config';
 import { lazy } from 'react';
 import BasicWrapper from '@/components/ui/wrapper/basic';
 import AuthWrapper from '@/components/ui/wrapper/auth';
+import ThemeColor from '@/components/root/themes/color';
 const SignIn = lazy(() => import('@/pages/kyc/signIn'));
 const SignUp = lazy(() => import('@/pages/kyc/signUp'));
 const Home = lazy(() => import('@/pages/home'));
@@ -13,59 +14,70 @@ const Music = lazy(() => import('@/pages/music'));
 const Chart = lazy(() => import('@/pages/chart'));
 const YourLibrary = lazy(() => import('@/pages/yourLibrary'));
 const AddAccount = lazy(() => import('@/pages/addAccount'));
+const WhatNews = lazy(() => import('@/pages/whatNews'));
 
 const router = createBrowserRouter([
 	{
-		path: PATH.KYC._,
-		element: <AuthWrapper />,
-		children: [
-			{
-				path: PATH.KYC.SIGN_IN,
-				element: <SignIn />,
-			},
-			{
-				path: PATH.KYC.SIGN_UP,
-				element: <SignUp />,
-			},
-		],
-	},
-	{
 		path: PATH.HOME,
-		element: <BasicWrapper />,
+		element: <ThemeColor />,
 		children: [
+			{
+				path: PATH.KYC._,
+				element: <AuthWrapper />,
+				children: [
+					{
+						path: PATH.KYC.SIGN_IN,
+						element: <SignIn />,
+					},
+					{
+						path: PATH.KYC.SIGN_UP,
+						element: <SignUp />,
+					},
+				],
+			},
 			{
 				path: PATH.HOME,
-				element: <Home />,
+				element: <BasicWrapper />,
+				children: [
+					{
+						path: PATH.HOME,
+						element: <Home />,
+					},
+					{
+						path: PATH.YOUR_LIBRARY,
+						element: <YourLibrary />,
+					},
+					{
+						path: PATH.ALBUM._,
+						element: <Album />,
+					},
+					{
+						path: PATH.PODCASTS._,
+						element: <Podcasts />,
+					},
+					{
+						path: PATH.SEARCH,
+						element: <Search />,
+					},
+					{
+						path: PATH.MUSIC._,
+						element: <Music />,
+					},
+					{
+						path: PATH.CHART._,
+						element: <Chart />,
+					},
+				],
 			},
 			{
-				path: PATH.YOUR_LIBRARY,
-				element: <YourLibrary />,
+				path: PATH.ADD_ACCOUNT,
+				element: <AddAccount />,
 			},
 			{
-				path: PATH.ALBUM._,
-				element: <Album />,
-			},
-			{
-				path: PATH.PODCASTS._,
-				element: <Podcasts />,
-			},
-			{
-				path: PATH.SEARCH,
-				element: <Search />,
-			},
-			{
-				path: PATH.MUSIC._,
-				element: <Music />,
-			},
-			{
-				path: PATH.CHART._,
-				element: <Chart />,
+				path: PATH.WHAT_NEWS,
+				element: <WhatNews />,
 			},
 		],
-	},
-	{
-		path: PATH.ADD_ACCOUNT,
-		element: <AddAccount />,
 	},
 ]);
 

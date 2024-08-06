@@ -20,4 +20,5 @@ export const PATH = {
 		_: '/podcasts',
 	},
 	ADD_ACCOUNT: '/addAccount',
+	WHAT_NEWS: '/whatNews',
 };

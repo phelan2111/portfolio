@@ -7,7 +7,7 @@ import { HiOutlineHome, HiOutlineSearch } from 'react-icons/hi';
 import { IoLibraryOutline } from 'react-icons/io5';
 import { useLocation, useNavigate } from 'react-router-dom';
 
-const links: IItemLinkBottom[] = [
+export const links: IItemLinkBottom[] = [
 	{
 		path: PATH.HOME,
 		text: 'HOME',
@@ -27,7 +27,12 @@ const links: IItemLinkBottom[] = [
 		className: 'left-[152px]',
 	},
 ];
-function BottomNavigate() {
+
+interface IBottomNavigateProps {
+	defaultPath?: IItemLinkBottom;
+}
+
+function BottomNavigate(props: IBottomNavigateProps) {
 	const navigate = useNavigate();
 	const location = useLocation();
 	const [linkState, setLinkState] = useState<IItemLinkBottom>(links[0]);
@@ -39,11 +44,15 @@ function BottomNavigate() {
 	};
 
 	useLayoutEffect(() => {
-		const linksActive = links.find((i) => i.path === location.pathname);
-		if (linksActive) {
-			setLinkState(linksActive);
+		if (props.defaultPath) {
+			setLinkState(props.defaultPath);
+		} else {
+			const linksActive = links.find((i) => i.path === location.pathname);
+			if (linksActive) {
+				setLinkState(linksActive);
+			}
 		}
-	}, [location.pathname]);
+	}, [location.pathname, props.defaultPath]);
 
 	return (
 		<div className='fixed bottom-0 w-full select-none bg-primary_light rounded-t-3xl z-40 shadow-insetTop flex lg:hidden'>

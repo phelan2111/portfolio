@@ -17,7 +17,7 @@ const settingPopup = [
 		text: 'WHAT_NEW',
 		icon: <FaRegComment />,
 		className: 'animate-translateRight_duration_1dot6 ml-28',
-		path: PATH_REDIRECT.ADD_ACCOUNT,
+		path: PATH_REDIRECT.WHAT_NEWS,
 	},
 	{
 		text: 'LISTEN_HISTORY',

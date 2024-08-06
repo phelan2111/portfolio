@@ -19,6 +19,7 @@ export const PATH_REDIRECT = {
 		_: '/chart',
 	},
 	ADD_ACCOUNT: '/addAccount',
+	WHAT_NEWS: '/whatNews',
 };
 export enum TypeToTry {
 	single,
