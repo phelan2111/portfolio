@@ -1,4 +1,4 @@
-import NewSingerItem from '@/components/ui/item/whatNews/newSinger';
+import NewSingerItem from '@/components/ui/item/newSinger';
 import data from '../../data/new.json';
 function New() {
 	return (

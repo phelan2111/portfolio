@@ -15,6 +15,8 @@ const Chart = lazy(() => import('@/pages/chart'));
 const YourLibrary = lazy(() => import('@/pages/yourLibrary'));
 const AddAccount = lazy(() => import('@/pages/addAccount'));
 const WhatNews = lazy(() => import('@/pages/whatNews'));
+const ListeningHistory = lazy(() => import('@/pages/listeningHistory'));
+const Playlist = lazy(() => import('@/pages/playlist'));
 
 const router = createBrowserRouter([
 	{
@@ -48,7 +50,7 @@ const router = createBrowserRouter([
 						element: <YourLibrary />,
 					},
 					{
-						path: PATH.ALBUM._,
+						path: PATH.ALBUM.DETAILS,
 						element: <Album />,
 					},
 					{
@@ -64,7 +66,7 @@ const router = createBrowserRouter([
 						element: <Music />,
 					},
 					{
-						path: PATH.CHART._,
+						path: PATH.CHART.DETAILS,
 						element: <Chart />,
 					},
 				],
@@ -76,6 +78,14 @@ const router = createBrowserRouter([
 			{
 				path: PATH.WHAT_NEWS,
 				element: <WhatNews />,
+			},
+			{
+				path: PATH.LISTENING_HISTORY._,
+				element: <ListeningHistory />,
+			},
+			{
+				path: PATH.PLAYLIST.DETAILS,
+				element: <Playlist />,
 			},
 		],
 	},

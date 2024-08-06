@@ -4,32 +4,32 @@ import { IoMdClose } from 'react-icons/io';
 import { MdOutlineSettings } from 'react-icons/md';
 import Avatar from '@/components/root/image/avatar';
 import Localize from '@/langs';
-import { PATH_REDIRECT } from '@/utils/enums';
 import { useNavigate } from 'react-router-dom';
+import { PATH } from '@/routes/config';
 const settingPopup = [
 	{
 		text: 'ADD_ACCOUNT',
 		icon: <FaPlus />,
 		className: 'animate-translateRight_duration_1dot3 ml-16',
-		path: PATH_REDIRECT.ADD_ACCOUNT,
+		path: PATH.ADD_ACCOUNT,
 	},
 	{
 		text: 'WHAT_NEW',
 		icon: <FaRegComment />,
 		className: 'animate-translateRight_duration_1dot6 ml-28',
-		path: PATH_REDIRECT.WHAT_NEWS,
+		path: PATH.WHAT_NEWS,
 	},
 	{
 		text: 'LISTEN_HISTORY',
 		icon: <FaHistory />,
 		className: 'animate-translateRight_duration_1dot9 ml-16',
-		path: PATH_REDIRECT.ADD_ACCOUNT,
+		path: PATH.LISTENING_HISTORY._,
 	},
 	{
 		text: 'SETTING',
 		icon: <MdOutlineSettings className='text-xl' />,
 		className: 'animate-translateRight_duration_2dot2',
-		path: PATH_REDIRECT.ADD_ACCOUNT,
+		path: PATH.ADD_ACCOUNT,
 	},
 ];
 function PopperSetting() {

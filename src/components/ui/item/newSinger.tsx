@@ -1,3 +1,4 @@
+import dayjs from 'dayjs';
 import { CiCirclePlus, CiMenuKebab, CiSaveDown1 } from 'react-icons/ci';
 import { IoMdPlayCircle } from 'react-icons/io';
 
@@ -17,7 +18,9 @@ function NewSingerItem(props: INewSingerItemProps) {
 					alt={props.image}
 				/>
 				<div className='flex flex-col gap-1'>
-					<p className='text-xs'>Jul 16</p>
+					<p className='text-xs'>
+						{dayjs(props.createAt).format('MMM DD')}
+					</p>
 					<p>{props.nameSong}</p>
 					<p className='text-xs'>{props.singer}</p>
 				</div>

@@ -1,11 +1,10 @@
 import HomeMobile from '@/layout/mobile/home';
 
-interface IViewProps {
-	onRedirectAlbum: (dataItem: unknown) => void;
-}
+interface IViewProps {}
 
 function View(props: IViewProps) {
-	return <HomeMobile onClick={props.onRedirectAlbum} />;
+	console.log('HomeView', props);
+	return <HomeMobile />;
 }
 
 export default View;

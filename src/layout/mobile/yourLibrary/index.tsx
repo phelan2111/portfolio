@@ -6,8 +6,8 @@ import { IoIosSearch } from 'react-icons/io';
 import { IoArrowBackOutline } from 'react-icons/io5';
 import data from './data/data.json';
 import FilterChip, { IItemFilterChip } from '@/components/ui/filter/chip';
-import YourLibraryAlbumItem from '@/components/ui/item/yourLibrary/album';
 import PopperSetting from '@/components/ui/popper/setting';
+import YourLibraryAlbumItem from '@/components/ui/item/album';
 const filter: IItemFilterChip[] = [
 	{
 		label: 'Playlist',

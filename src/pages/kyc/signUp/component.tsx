@@ -1,8 +1,8 @@
 import { useNavigate } from 'react-router-dom';
 import View from './view';
-import { PATH_REDIRECT } from '@/utils/enums';
 import { useState } from 'react';
 import { STEP_SIGN_UP } from './types';
+import { PATH } from '@/routes/config';
 
 function Component() {
 	const navigate = useNavigate();
@@ -12,13 +12,13 @@ function Component() {
 		setStep(STEP_SIGN_UP.VERIFY);
 	};
 	const handleRedirectSignIn = () => {
-		navigate(PATH_REDIRECT.KYC.SIGN_IN);
+		navigate(PATH.KYC.SIGN_IN);
 	};
 	const handleVerify = () => {
 		setStep(STEP_SIGN_UP.INFORMATION);
 	};
 	const handleCreateProfile = () => {
-		navigate(PATH_REDIRECT.HOME);
+		navigate(PATH.HOME);
 	};
 
 	return (

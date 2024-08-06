@@ -1,17 +1,10 @@
 import MusicMobile from '@/layout/mobile/music';
 
-interface IViewProps {
-	onRedirectChart: (dataItem: unknown) => void;
-	onRedirectAlbum: (dataItem: unknown) => void;
-}
+interface IViewProps {}
 
 function View(props: IViewProps) {
-	return (
-		<MusicMobile
-			onGetInformationAlbum={props.onRedirectAlbum}
-			onGetInformationChart={props.onRedirectChart}
-		/>
-	);
+	console.log('View', props);
+	return <MusicMobile />;
 }
 
 export default View;

@@ -1,21 +1,21 @@
 import Tabs, { IItemTab } from '@/components/root/tabs';
-import { PATH_REDIRECT } from '@/utils/enums';
 
 import { useLocation, useNavigate } from 'react-router-dom';
 import PopperSetting from '../popper/setting';
+import { PATH } from '@/routes/config';
 
 const tabs: IItemTab<string>[] = [
 	{
 		text: 'ALL',
-		value: PATH_REDIRECT.HOME,
+		value: PATH.HOME,
 	},
 	{
 		text: 'MUSIC',
-		value: PATH_REDIRECT.MUSIC,
+		value: PATH.MUSIC._,
 	},
 	{
 		text: 'PODCAST',
-		value: PATH_REDIRECT.PODCASTS,
+		value: PATH.PODCASTS._,
 	},
 ];
 

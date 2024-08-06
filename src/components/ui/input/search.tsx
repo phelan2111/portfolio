@@ -29,7 +29,7 @@ function InputSearch(props: IInputSearchProps) {
 				return (
 					<div
 						onClick={renderProps.onOpen}
-						className='flex select-none bg-white shadow-materialDesign hover:shadow-bootstrapLarge transition-all duration-500 rounded-md text-primary_dark items-center gap-2 p-2'
+						className='flex select-none bg-white shadow-materialDesign hover:shadow-bootstrapLarge transition-all duration-500 rounded-md text-primary_dark items-center gap-2 p-2 animate-translateBottom_duration_1dot2'
 						aria-hidden>
 						<IoIosSearch className='text-2xl' />
 						<p>{Localize('WHAT_DO_YOU_WANT')}</p>

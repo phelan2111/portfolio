@@ -68,13 +68,19 @@ function AlbumMobile(props: IAlbumMobileProps) {
 	return (
 		<div className='w-full flex flex-col gap-4 overflow-y-auto h-album snap-mandatory snap-y'>
 			<div className='snap-start animate-translateBottom_duration_0dot8'>
-				<div className='relative w-full flex justify-center items-center p-4 before:absolute before:w-full before:h-full before:bg-[url(https://i.pinimg.com/564x/e8/5e/bf/e85ebf981f08428d11b1cbd54e44357b.jpg)] before:bg-cover before:blur-xl'>
+				<div className='relative w-full flex justify-center items-center p-4'>
 					<div className='relative rounded-xl flex flex-col gap-2 p-1'>
 						<div className='bg-primary_dark relative overflow-hidden z-10 p-4 rounded-xl text-center flex flex-col justify-center items-center font-bold before:absolute before:h-[150%] before:w-20 before:animate-spin_dur_4s before:bg-gradient-to-t before:from-indigo-500 before:via-purple-500 before:to-pink-500 after:absolute after:bg-primary_dark after:inset-1 after:rounded-lg'>
 							<img
 								className='h-52 w-52 rounded-xl relative z-10'
 								src='https://i.pinimg.com/564x/e8/5e/bf/e85ebf981f08428d11b1cbd54e44357b.jpg'
 								alt='https://i.pinimg.com/564x/e8/5e/bf/e85ebf981f08428d11b1cbd54e44357b.jpg'
+							/>
+							<div
+								style={{
+									backgroundImage: `url(https://i.pinimg.com/564x/e8/5e/bf/e85ebf981f08428d11b1cbd54e44357b.jpg)`,
+								}}
+								className='absolute w-full h-full bg-cover blur-xl'
 							/>
 							<div className='pt-2'>
 								<p className='font-semibold relative z-10 bg-gradient-to-t from-indigo-500 via-purple-500 to-pink-500 bg-clip-text text-transparent'>
@@ -86,6 +92,12 @@ function AlbumMobile(props: IAlbumMobileProps) {
 							</div>
 						</div>
 					</div>
+					<div
+						style={{
+							backgroundImage: `url(https://i.pinimg.com/564x/e8/5e/bf/e85ebf981f08428d11b1cbd54e44357b.jpg)`,
+						}}
+						className='absolute w-full h-full bg-cover blur-xl'
+					/>
 					<div
 						aria-hidden
 						onClick={props.onRedirectHome}

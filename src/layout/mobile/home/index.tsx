@@ -8,18 +8,17 @@ import YourFavoriteArtists from './components/list/yourFavoriteArtists';
 import YourTopMixes from './components/list/yourTopMixes';
 import AppBar from '@/components/ui/appbar/appBar';
 
-interface IHomeMobileProps {
-	onClick: (dataItem: unknown) => void;
-}
+interface IHomeMobileProps {}
 
 function HomeMobile(props: IHomeMobileProps) {
+	console.log('HomeMobile', props);
 	return (
 		<div className='pb-[105px] select-none flex-col gap-3 flex'>
 			<AppBar />
 			<div
 				id='homeMobile'
 				className='flex px-4 flex-col gap-6 overflow-y-auto h-home snap-mandatory snap-y animate-translateBottom_duration_1dot2'>
-				<FamiliarAlbum onClick={props.onClick} />
+				<FamiliarAlbum />
 				<NewReleaseCard />
 				<YourTopMixes />
 				<YourFavoriteArtists />

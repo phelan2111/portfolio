@@ -32,6 +32,9 @@ function AnimationScrollElement(props: IAnimationScrollElementProps) {
 				}
 			});
 		}
+		return () => {
+			window.removeEventListener('scroll', () => {});
+		};
 	}, [props]);
 
 	return <Fragment>{props.children}</Fragment>;

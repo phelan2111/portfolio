@@ -1,12 +1,14 @@
 import Localize from '@/langs';
 import data from '../data/charts.json';
-import ChartItem from '@/components/ui/item/album/charts';
+import ChartItem from '@/components/ui/item/charts';
+import { useRedirect } from '@/hooks/useRedirect';
+import { PATH } from '@/routes/config';
 
-interface IChartsProps {
-	onClick: (dataItem: unknown) => void;
-}
+interface IChartsProps {}
 
 function Charts(props: IChartsProps) {
+	console.log('Charts', props);
+	const { redirectPage } = useRedirect();
 	return (
 		<section className='flex flex-col gap-3 snap-start'>
 			<h4 className='text-xl font-bold'>{Localize('CHARTS')}</h4>
@@ -15,7 +17,7 @@ function Charts(props: IChartsProps) {
 					return (
 						<ChartItem
 							onClick={() => {
-								props.onClick(i);
+								redirectPage(`${PATH.CHART._}/${i.id}`);
 							}}
 							key={i.description}
 							{...i}

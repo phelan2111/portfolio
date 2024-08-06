@@ -59,7 +59,7 @@ export const dataLocalizeEN: Record<string, string> = {
 	MADE_FOR: 'Made for',
 	ARTISTS: 'Artists',
 	ADD_ACCOUNT: 'Add account',
-	LISTEN_HISTORY: 'Listen history',
+	LISTEN_HISTORY: 'Listening history',
 	SETTING: 'Setting',
 	WHAT_NEW: "What's new",
 	VIEW_PROFILE: 'View profile',
@@ -75,4 +75,11 @@ export const dataLocalizeEN: Record<string, string> = {
 	THE_LATEST_RELEASE_FORM_ARTISTS:
 		'The latest release from artists, podcasts, and shows tou follow.',
 	NEW: 'New',
+	RECENTLY_PLAYED: 'Recently played',
+	TO_DAY: 'Today',
+	SEE_ALL: 'See all',
+	PLAYED: 'played',
+	YESTERDAY: 'Yesterday',
+	TODAY: 'Today',
+	TRACKS_YOU_PLAYED: 'Tracks you played',
 };
