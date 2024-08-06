@@ -27,7 +27,8 @@ export default {
         insetTop: '0 20px 10px -20px rgba(0,0,0,0.45) inset',
         insetBotRight: '0 -20px 10px -20px rgba(0,0,0,0.45) inset, -20px 0 10px -20px rgba(0,0,0,0.45) inset',
         materialDesign: '0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24)',
-        podcastsCard: '0 0 10px rgba(0,0,0,0.25)'
+        podcastsCard: '0 0 10px rgba(0,0,0,0.25)',
+        profile: 'inset 0 0 0 2px rgba(0, 0, 0, 0.15),  0 0 0 2px rgba(0, 0, 0, 0.15), inset 0 0 0.85rem #232323, 0 0 0.85rem  #232323'
       },
       minHeight: {
         screen: '100dvh'

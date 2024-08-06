@@ -4,8 +4,8 @@ import { IoMdClose } from 'react-icons/io';
 import { MdOutlineSettings } from 'react-icons/md';
 import Avatar from '@/components/root/image/avatar';
 import Localize from '@/langs';
-import { useNavigate } from 'react-router-dom';
 import { PATH } from '@/routes/config';
+import { useRedirect } from '@/hooks/useRedirect';
 const settingPopup = [
 	{
 		text: 'ADD_ACCOUNT',
@@ -33,7 +33,7 @@ const settingPopup = [
 	},
 ];
 function PopperSetting() {
-	const navigate = useNavigate();
+	const { redirectPage } = useRedirect();
 
 	return (
 		<PopperTopLeft
@@ -41,7 +41,7 @@ function PopperSetting() {
 				return (
 					<Avatar
 						onClick={propsRender.onOpen}
-						src='https://i.pinimg.com/564x/91/a7/5b/91a75bb16f881c2211700a1e513ea98d.jpg'
+						src='https://i.pinimg.com/564x/ad/f2/b2/adf2b26f6a419fe0e507f3526d57c5b4.jpg'
 					/>
 				);
 			}}
@@ -51,15 +51,20 @@ function PopperSetting() {
 						key={`${propsRender.isOpen}`}
 						className='h-full w-full flex items-center'>
 						<div className='p-4 flex flex-col gap-14 relative'>
-							<div className='flex gap-4 items-center animate-translateRight'>
+							<div
+								aria-hidden
+								onClick={() => {
+									redirectPage(PATH.PROFILE);
+								}}
+								className='flex gap-4 items-center animate-translateRight'>
 								<img
 									className='w-12 h-12 rounded-full object-cover'
-									src='https://i.pinimg.com/736x/8c/3e/e8/8c3ee85d414e357d9b924ee788d3394e.jpg'
-									alt='https://i.pinimg.com/736x/8c/3e/e8/8c3ee85d414e357d9b924ee788d3394e.jpg'
+									src='https://i.pinimg.com/564x/ad/f2/b2/adf2b26f6a419fe0e507f3526d57c5b4.jpg'
+									alt='https://i.pinimg.com/564x/ad/f2/b2/adf2b26f6a419fe0e507f3526d57c5b4.jpg'
 								/>
 								<div className='flex flex-col'>
 									<p className='text-sm font-bold'>
-										Lee Min New
+										Chaos Fegu
 									</p>
 									<p className='text-[10px]'>
 										{Localize('VIEW_PROFILE')}
@@ -71,12 +76,12 @@ function PopperSetting() {
 									<div
 										aria-hidden
 										onClick={() => {
-											navigate(setting.path);
+											redirectPage(setting.path);
 										}}
 										key={setting.text}
 										className={`flex items-center gap-4 w-fit shadow-insetAllSide  pl-2 pr-4 py-1 rounded-2xl ${setting.className}`}>
 										<div className='w-8 h-8 flex items-center justify-center rounded-full'>
-											<FaPlus />
+											{setting.icon}
 										</div>
 										<p className='text-sm'>
 											{Localize(setting.text)}
