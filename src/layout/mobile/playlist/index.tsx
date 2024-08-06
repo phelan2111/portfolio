@@ -47,7 +47,7 @@ function PlaylistMobile() {
 		},
 	];
 	return (
-		<main className='h-screen w-screen bg-primary_dark-20 text-white pb-40 overflow-auto snap-mandatory snap-y'>
+		<main className='h-screen w-screen md:hidden block bg-primary_dark-20 text-white pb-40 overflow-auto snap-mandatory snap-y'>
 			<header className='flex text-white relative w-full justify-center py-4 animate-translateBottom_duration_0dot8 snap-start'>
 				<h4 className='text-lg font-bold'>
 					{handleRenderDate(data.createAt)}

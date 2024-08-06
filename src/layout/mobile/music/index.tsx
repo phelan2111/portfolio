@@ -11,7 +11,7 @@ interface IMusicMobileProps {}
 function MusicMobile(props: IMusicMobileProps) {
 	console.log('MusicMobile', props);
 	return (
-		<div className='pb-[105px] select-none flex-col gap-3 flex'>
+		<div className='pb-[105px] select-none flex-col gap-3 md:hidden flex'>
 			<AppBar />
 			<div
 				id='homeMobile'

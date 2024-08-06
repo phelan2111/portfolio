@@ -33,7 +33,7 @@ function ProfileMobile() {
 		},
 	];
 	return (
-		<main className='h-screen w-screen bg-primary_dark-20 text-white pb-40'>
+		<main className='h-screen w-screen bg-primary_dark-20 text-white pb-40 md:hidden block'>
 			<header className='flex text-white relative w-full justify-center py-4 animate-translateBottom_duration_0dot8'>
 				<h4 className='text-lg font-bold'>{Localize('PROFILE')}</h4>
 				<IoArrowBackSharp

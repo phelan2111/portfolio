@@ -56,7 +56,7 @@ function WhatNewsMobile() {
 	}, []);
 
 	return (
-		<main className='h-screen w-screen bg-primary_dark-20 text-white pb-40'>
+		<main className='h-screen w-screen md:hidden block bg-primary_dark-20 text-white pb-40'>
 			<div
 				id='navigateTop'
 				className='p-4 text-2xl flex gap-4 sticky top-0 transition-colors duration-700 z-10 animate-translateBottom_duration_0dot8 snap-start'>
