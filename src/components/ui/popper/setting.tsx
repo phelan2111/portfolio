@@ -29,7 +29,7 @@ const settingPopup = [
 		text: 'SETTING',
 		icon: <MdOutlineSettings className='text-xl' />,
 		className: 'animate-translateRight_duration_2dot2',
-		path: PATH.ADD_ACCOUNT,
+		path: PATH.SETTING,
 	},
 ];
 function PopperSetting() {

@@ -82,4 +82,11 @@ export const dataLocalizeEN: Record<string, string> = {
 	YESTERDAY: 'Yesterday',
 	TODAY: 'Today',
 	TRACKS_YOU_PLAYED: 'Tracks you played',
+	ACCOUNT: 'Account',
+	CONTENT_AND_DISPLAY: 'Content and display',
+	AUDIO_QUALITY: 'Audio quality',
+	VIDEO_QUALITY: 'Video quality',
+	NOTIFICATIONS: 'Notifications',
+	ABOUT: 'About',
+	LOG_OUT: 'Log out',
 };

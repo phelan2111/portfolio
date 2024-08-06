@@ -30,4 +30,5 @@ export const PATH = {
 		_: '/playlist',
 		DETAILS: '/playlist/:id',
 	},
+	SETTING: '/setting',
 };

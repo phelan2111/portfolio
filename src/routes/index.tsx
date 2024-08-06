@@ -17,6 +17,7 @@ const AddAccount = lazy(() => import('@/pages/addAccount'));
 const WhatNews = lazy(() => import('@/pages/whatNews'));
 const ListeningHistory = lazy(() => import('@/pages/listeningHistory'));
 const Playlist = lazy(() => import('@/pages/playlist'));
+const Setting = lazy(() => import('@/pages/setting'));
 
 const router = createBrowserRouter([
 	{
@@ -86,6 +87,10 @@ const router = createBrowserRouter([
 			{
 				path: PATH.PLAYLIST.DETAILS,
 				element: <Playlist />,
+			},
+			{
+				path: PATH.SETTING,
+				element: <Setting />,
 			},
 		],
 	},
