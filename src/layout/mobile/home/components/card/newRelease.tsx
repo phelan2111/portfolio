@@ -1,6 +1,6 @@
 import SongCard from '@/components/ui/card/song';
 import Localize from '@/langs';
-import data from '../../data/newRelease.json';
+import data from '@/pages/home/data/newRelease.json';
 function NewReleaseCard() {
 	return (
 		<aside className='flex flex-col gap-3 snap-start'>

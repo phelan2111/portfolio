@@ -6,6 +6,7 @@ export interface IItemLinkBottom {
 	path: string;
 	icon: ReactNode;
 	[name: string]: unknown;
+	children?: IItemLinkBottom[];
 }
 interface ILinkNavigateBottomProps {
 	item: IItemLinkBottom;

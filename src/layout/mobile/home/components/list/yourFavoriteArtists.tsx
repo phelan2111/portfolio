@@ -1,5 +1,5 @@
 import Localize from '@/langs';
-import data from '../../data/yourFavoriteArtist.json';
+import data from '@/pages/home/data/yourFavoriteArtist.json';
 import VerticalSingerItem from '@/components/ui/item/vertical';
 
 function YourFavoriteArtists() {

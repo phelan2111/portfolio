@@ -1,6 +1,6 @@
 import AlbumCard from '@/components/ui/card/album';
 import Localize from '@/langs';
-import data from '../../data/yourTopMixes.json';
+import data from '@/pages/home/data/yourTopMixes.json';
 
 function RecommendedForDay() {
 	return (

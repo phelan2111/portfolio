@@ -19,7 +19,7 @@ const tabs: IItemTab<string>[] = [
 	},
 ];
 
-function AppBar() {
+function AppBarBottom() {
 	const navigate = useNavigate();
 	const location = useLocation();
 
@@ -46,4 +46,4 @@ function AppBar() {
 	);
 }
 
-export default AppBar;
+export default AppBarBottom;

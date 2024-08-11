@@ -6,14 +6,14 @@ import ToTry from './components/list/toTry';
 import TodayBiggestHits from './components/list/todayBiggestHits';
 import YourFavoriteArtists from './components/list/yourFavoriteArtists';
 import YourTopMixes from './components/list/yourTopMixes';
-import AppBar from '@/components/ui/appbar/appBar';
+import AppBar from '@/components/ui/appbar/bottom';
 
 interface IHomeMobileProps {}
 
 function HomeMobile(props: IHomeMobileProps) {
 	console.log('HomeMobile', props);
 	return (
-		<div className='pb-[105px] select-none flex-col gap-3 flex md:hidden'>
+		<div className='pb-[105px] select-none flex-col gap-3 flex lg:hidden'>
 			<AppBar />
 			<div
 				id='homeMobile'

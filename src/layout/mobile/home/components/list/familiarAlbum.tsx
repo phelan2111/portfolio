@@ -1,4 +1,4 @@
-import data from '../../data/familiarAlbum.json';
+import data from '@/pages/home/data/familiarAlbum.json';
 import { useRedirect } from '@/hooks/useRedirect';
 import HorizontalItem from '@/components/ui/item/horizontal';
 import { PATH } from '@/routes/config';

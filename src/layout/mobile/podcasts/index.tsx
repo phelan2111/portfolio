@@ -1,4 +1,4 @@
-import AppBar from '@/components/ui/appbar/appBar';
+import AppBar from '@/components/ui/appbar/bottom';
 import FavouritesList from './components/list/favourites';
 import Suggestion from './components/list/suggestion';
 

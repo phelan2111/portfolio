@@ -32,7 +32,8 @@ export default {
         materialDesign: '0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24)',
         podcastsCard: '0 0 10px rgba(0,0,0,0.25)',
         profile: 'inset 0 0 0 2px rgba(0, 0, 0, 0.15),  0 0 0 2px rgba(0, 0, 0, 0.15), inset 0 0 0.85rem #232323, 0 0 0.85rem  #232323',
-        glass: '0 4px 12px rgba(0, 0, 0, 0.1)'
+        glass: '0 4px 12px rgba(0, 0, 0, 0.1)',
+        navigateRight: '13px 13px 10px #1c1c1c, -13px -13px 10px #262626'
       },
       minHeight: {
         screen: '100dvh'
@@ -98,7 +99,6 @@ export default {
         ring_delay_300: 'ring 5s 0.3s infinite',
         ring_delay_0: 'ring 5s infinite',
         spin_dur_4s: 'spin 4s linear infinite',
-        
       },
       backgroundSize: {
         '125%': '125%'

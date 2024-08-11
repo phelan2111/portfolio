@@ -1,6 +1,6 @@
 import EpisodesForYouCard from '@/components/ui/card/episodesForYou';
 import Localize from '@/langs';
-import data from '../../data/episidesForyou.json';
+import data from '@/pages/home/data/episidesForyou.json';
 
 function EpisodesForYou() {
 	return (
