@@ -24,7 +24,6 @@ function InputOTP({
 			renderInput={(props) => (
 				<input
 					{...props}
-					type='number'
 					className='!w-12 !h-12 rounded-sm outline-none text-primary_dark text-lg focus:shadow-white shadow-bootstrapLarge'
 				/>
 			)}

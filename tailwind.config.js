@@ -19,6 +19,9 @@ export default {
         gradientCard: "linear-gradient(-45deg, #e81cff 0%, #40c9ff 100% )",
         vietNam: "linear-gradient(to right, #cc2b5e, #753a88)"
       },
+      borderRadius: {
+        orange: "60% 30% 30% 20%"
+      },
       boxShadow: {
         error: "0px 0px 1px 1px",
         white: "0px 0px 1px 1px",
@@ -28,7 +31,8 @@ export default {
         insetBotRight: '0 -20px 10px -20px rgba(0,0,0,0.45) inset, -20px 0 10px -20px rgba(0,0,0,0.45) inset',
         materialDesign: '0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24)',
         podcastsCard: '0 0 10px rgba(0,0,0,0.25)',
-        profile: 'inset 0 0 0 2px rgba(0, 0, 0, 0.15),  0 0 0 2px rgba(0, 0, 0, 0.15), inset 0 0 0.85rem #232323, 0 0 0.85rem  #232323'
+        profile: 'inset 0 0 0 2px rgba(0, 0, 0, 0.15),  0 0 0 2px rgba(0, 0, 0, 0.15), inset 0 0 0.85rem #232323, 0 0 0.85rem  #232323',
+        glass: '0 4px 12px rgba(0, 0, 0, 0.1)'
       },
       minHeight: {
         screen: '100dvh'
@@ -94,6 +98,7 @@ export default {
         ring_delay_300: 'ring 5s 0.3s infinite',
         ring_delay_0: 'ring 5s infinite',
         spin_dur_4s: 'spin 4s linear infinite',
+        
       },
       backgroundSize: {
         '125%': '125%'

@@ -15,8 +15,8 @@ function SignInMobile(props: ISignInMobileProps) {
 	console.log('SignInMobile', props);
 	const { redirectPage } = useRedirect();
 	return (
-		<div className='bg-white/10 px-10 py-4 rounded-md flex flex-col gap-10 w-full h-screen select-none animate-translateRight'>
-			<div className='flex justify-center flex-col items-center'>
+		<div className='bg-white/10 px-10 py-4 rounded-md flex-col gap-10 w-full h-screen select-none flex lg:hidden'>
+			<div className='flex justify-center flex-col items-center animate-translateRight'>
 				<LogoComponent />
 				<div className='mt-2 px-2 py-2 rounded-sm text-center w-full'>
 					<h4 className='font-bold text-lg'>
@@ -24,11 +24,11 @@ function SignInMobile(props: ISignInMobileProps) {
 					</h4>
 				</div>
 			</div>
-			<div>
+			<div className='animate-translateRight'>
 				<h4 className='text-3xl font-bold'>{Localize('SIGN_IN')}</h4>
 				<p className='text-xs pt-2'>{Localize('LET_GET_STARTED')} </p>
 			</div>
-			<div>
+			<div className='animate-translateRight'>
 				<div className='border-white border flex items-center cursor-pointer hover:text-primary_dark hover:bg-white/80 transition-colors duration-500 gap-2 justify-center py-3 rounded-sm m-auto'>
 					<FcGoogle />
 					<p className='font-medium'>{Localize('LOGIN_GOOGLE')}</p>

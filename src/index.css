@@ -4,6 +4,10 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+	--duration: 20s;
+}
+
 body {
 	font-family: 'Raleway', sans-serif;
 	overflow: hidden;
@@ -26,5 +30,53 @@ body {
 		border-radius: 10px;
 		-webkit-box-shadow: inset 0 0 6px transparent;
 		background-color: transparent;
+	}
+}
+
+.wrapper-parallax {
+	display: flex;
+		flex-direction: column;
+		justify-content: center;
+		position: absolute;
+		opacity: 0.8;
+	transform: translate3d(10%, 0%, 0) perspective(400px) rotateY(10deg);
+}
+
+.images-line {
+	animation: runner var(--duration) linear infinite;
+	display: flex;
+	gap: 32px;
+	transform: translateX(23%);
+	&:nth-child(even) {
+		animation-duration: calc(var(--duration) * 1.5);
+	}
+	.line {
+		background-position: 50% 50%;
+		background-size: cover;
+		flex: none;
+		height: 29vh;
+		width: 20vh;
+		position: relative;
+		transition: ease-in-out all 0.3s;
+		border-radius: 1rem;
+		&:after {
+			content: "";
+			background: inherit;
+			display: block;
+			width: 100%;
+			height: 100%;
+			border-radius: 50%;
+			top: 3vh;
+			position: absolute;
+			background-size: cover;
+			z-index: -1;
+			transition: ease-in-out all 0.3s;
+			filter: blur(25px) opacity(0.8);
+		}
+	}
+}
+@keyframes runner {
+	to {
+		transform: translateX(-10.4%);
 	}
 }
