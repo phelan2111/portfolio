@@ -4,13 +4,15 @@ import Form from '@/components/root/form';
 import TextField from '@/components/root/inputs/textField';
 import Localize from '@/langs';
 import { FcGoogle } from 'react-icons/fc';
+import { useRedirect } from '@/hooks/useRedirect';
+import { PATH } from '@/routes/config';
 
 interface ISignUpMobileProps {
-	onRedirectSignIn: VoidFunction;
-	onConfirmUserName: VoidFunction;
+	onSubmit: VoidFunction;
 }
 
 function SignUpMobile(props: ISignUpMobileProps) {
+	const { redirectPage } = useRedirect();
 	return (
 		<div className='bg-white/10 px-10 py-4 rounded-md flex flex-col gap-10 w-full h-screen select-none animate-translateRight'>
 			<div className='flex justify-center flex-col items-center'>
@@ -38,7 +40,7 @@ function SignUpMobile(props: ISignUpMobileProps) {
 								<TextField label='USER_NAME' />
 								<div className='pt-[26px] w-full'>
 									<Button
-										onClick={props.onConfirmUserName}
+										onClick={props.onSubmit}
 										text='SIGN_UP'
 									/>
 								</div>
@@ -48,7 +50,7 @@ function SignUpMobile(props: ISignUpMobileProps) {
 				/>
 				<p
 					aria-hidden='true'
-					onClick={props.onRedirectSignIn}
+					onClick={() => redirectPage(PATH.KYC.SIGN_IN)}
 					className='text-sm py-3 text-center underline cursor-pointer hover:text-white/60 transition-colors duration-300'>
 					<span>{Localize('DO_NOT_HAVE_ACCOUNT')}</span>{' '}
 					<span className='text-blue-200 hover:text-inherit'>

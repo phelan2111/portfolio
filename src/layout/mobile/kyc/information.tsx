@@ -5,11 +5,11 @@ import TextField from '@/components/root/inputs/textField';
 import Localize from '@/langs';
 import InputPassword from '@/components/ui/input/password';
 
-interface IInformationProps {
-	onCreateProfile: VoidFunction;
+interface IInformationSignUpMobileProps {
+	onSubmit: VoidFunction;
 }
 
-function Information(props: IInformationProps) {
+function InformationSignUpMobile(props: IInformationSignUpMobileProps) {
 	return (
 		<div className='bg-white/10 px-10 py-4 rounded-md flex flex-col gap-10 w-full h-screen select-none animate-translateRight'>
 			<div className='flex justify-center flex-col items-center'>
@@ -37,7 +37,7 @@ function Information(props: IInformationProps) {
 							</div>
 							<div className='pt-[26px] w-full'>
 								<Button
-									onClick={props.onCreateProfile}
+									onClick={props.onSubmit}
 									text='GET_START'
 								/>
 							</div>
@@ -49,4 +49,4 @@ function Information(props: IInformationProps) {
 	);
 }
 
-export default Information;
+export default InformationSignUpMobile;

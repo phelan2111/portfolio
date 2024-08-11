@@ -1,30 +1,28 @@
-import SignUpMobile from '@/layout/mobile/kyc/signUp';
 import { STEP_SIGN_UP } from './types';
-import OTP from '@/layout/mobile/kyc/otp';
-import Information from '@/layout/mobile/kyc/information';
+import SignUpUser from './step/signUp';
+import InformationSignUp from './step/information';
+import OTPSignUp from './step/OTP';
 
-interface IComponentStepProps extends IViewProps {
+export interface IComponentStepProps extends IViewProps {
 	step: STEP_SIGN_UP;
 }
 function ComponentStep(props: IComponentStepProps) {
 	switch (props.step) {
 		case STEP_SIGN_UP.VERIFY: {
-			return <OTP {...props} />;
+			return <OTPSignUp onSubmit={props.onSubmitOTP} />;
 		}
 		case STEP_SIGN_UP.INFORMATION: {
-			return <Information {...props} />;
+			return <InformationSignUp />;
 		}
 		default: {
-			return <SignUpMobile {...props} />;
+			return <SignUpUser onSignUpSuccess={props.onSubmitFormUser} />;
 		}
 	}
 }
 
 interface IViewProps {
-	onRedirectSignIn: VoidFunction;
-	onConfirmUserName: VoidFunction;
-	onVerify: VoidFunction;
-	onCreateProfile: VoidFunction;
+	onSubmitFormUser: VoidFunction;
+	onSubmitOTP: VoidFunction;
 	step: STEP_SIGN_UP;
 }
 function View(props: IViewProps) {

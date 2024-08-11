@@ -6,12 +6,14 @@ import TextField from '@/components/root/inputs/textField';
 import Localize from '@/langs';
 import { FcGoogle } from 'react-icons/fc';
 import InputPassword from '@/components/ui/input/password';
+import { useRedirect } from '@/hooks/useRedirect';
+import { PATH } from '@/routes/config';
 
-interface ISignInMobileProps {
-	onRedirectSignUp: VoidFunction;
-}
+interface ISignInMobileProps {}
 
 function SignInMobile(props: ISignInMobileProps) {
+	console.log('SignInMobile', props);
+	const { redirectPage } = useRedirect();
 	return (
 		<div className='bg-white/10 px-10 py-4 rounded-md flex flex-col gap-10 w-full h-screen select-none animate-translateRight'>
 			<div className='flex justify-center flex-col items-center'>
@@ -57,7 +59,7 @@ function SignInMobile(props: ISignInMobileProps) {
 					}}
 				/>
 				<p
-					onClick={props.onRedirectSignUp}
+					onClick={() => redirectPage(PATH.KYC.SIGN_UP)}
 					aria-hidden='true'
 					className='text-sm py-3 text-center underline cursor-pointer hover:text-white/60 transition-colors duration-300'>
 					<span>{Localize('DO_NOT_HAVE_ACCOUNT')}</span>{' '}

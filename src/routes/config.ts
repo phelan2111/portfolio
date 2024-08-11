@@ -1,8 +1,8 @@
 export const PATH = {
 	KYC: {
 		_: 'kyc',
-		SIGN_IN: 'signIn',
-		SIGN_UP: 'signUp',
+		SIGN_IN: '/kyc/signIn',
+		SIGN_UP: '/kyc/signUp',
 	},
 	HOME: '/',
 	SEARCH: '/search',

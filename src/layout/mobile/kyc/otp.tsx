@@ -5,7 +5,7 @@ import InputOTP from '@/components/root/inputs/otp';
 import Localize from '@/langs';
 
 interface IOTPProps {
-	onVerify: VoidFunction;
+	onSubmit: VoidFunction;
 }
 
 function OTP(props: IOTPProps) {
@@ -33,7 +33,7 @@ function OTP(props: IOTPProps) {
 								<InputOTP numInputs={5} />
 								<div className='pt-[26px] w-full'>
 									<Button
-										onClick={props.onVerify}
+										onClick={props.onSubmit}
 										text='VERIFY'
 									/>
 								</div>
