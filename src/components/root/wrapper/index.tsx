@@ -5,6 +5,7 @@ export interface IWrapperProps {
 	children: ReactNode;
 	className?: string;
 	extends?: ReactNode;
+	isNavigate?: boolean;
 }
 
 function Wrapper({ className = '', ...props }: IWrapperProps) {
@@ -12,10 +13,10 @@ function Wrapper({ className = '', ...props }: IWrapperProps) {
 		<main
 			className={`min-h-screen bg-primary_light text-primary_dark dark:bg-primary_dark dark:text-primary_light ${className}`}>
 			<div className='max-w-[1440px] m-auto w-full lg:flex gap-3'>
-				<NavigateLeft />
+				{props.isNavigate && <NavigateLeft />}
 				{props.children}
 			</div>
-			<div>{props.extends}</div>
+			<div className='hidden lg:block'>{props.extends}</div>
 		</main>
 	);
 }

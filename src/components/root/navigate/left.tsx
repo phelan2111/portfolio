@@ -1,20 +1,59 @@
+import FilterChip, { IItemFilterChip } from '@/components/ui/filter/chip';
+import YourLibraryAlbumItem from '@/components/ui/item/album';
 import { IItemLinkBottom } from '@/components/ui/link/navigateBottom';
 import Localize from '@/langs';
 import { PATH } from '@/routes/config';
 import { useId, useLayoutEffect, useState } from 'react';
 import { HiOutlineHome, HiOutlineSearch } from 'react-icons/hi';
+import { IoLibraryOutline } from 'react-icons/io5';
 import { useLocation, useNavigate } from 'react-router-dom';
+import data from '@/layout/mobile/yourLibrary/data/data.json';
+import SearchYourLibrary from '@/components/ui/input/search/yourLibrary';
+import { LuLayoutPanelLeft } from 'react-icons/lu';
+import AnimationScale from '../animation/scale';
 
 export const links: IItemLinkBottom[] = [
 	{
 		path: PATH.HOME,
 		text: 'HOME',
-		icon: <HiOutlineHome />,
+		icon: <HiOutlineHome className='text-2xl' />,
 	},
 	{
 		path: PATH.SEARCH,
 		text: 'SEARCH',
-		icon: <HiOutlineSearch />,
+		icon: <HiOutlineSearch className='text-2xl' />,
+	},
+];
+const filter: IItemFilterChip[] = [
+	{
+		label: 'Playlist',
+		value: 'Playlist',
+		children: [
+			{
+				label: 'Playlist',
+				value: 'Playlist',
+			},
+			{
+				label: 'By you',
+				value: 'By you',
+			},
+			{
+				label: 'By Cohesive',
+				value: 'By Cohesive',
+			},
+		],
+	},
+	{
+		label: 'Podcasts',
+		value: 'Podcasts',
+	},
+	{
+		label: 'Artist',
+		value: 'Artist',
+	},
+	{
+		label: 'Download',
+		value: 'Download',
 	},
 ];
 
@@ -45,7 +84,7 @@ function NavigateLeft(props: INavigateLeftProps) {
 	}, [location.pathname, props.defaultPath]);
 
 	return (
-		<div className='lg:flex hidden px-2 py-6'>
+		<div className='lg:block hidden px-2 py-6'>
 			<ul className='flex flex-col gap-4'>
 				{links.map((link) => {
 					const itemActive = linkState.path === link.path;
@@ -57,9 +96,9 @@ function NavigateLeft(props: INavigateLeftProps) {
 								onClick={() => {
 									handleClick(link);
 								}}
-								className='w-60 rounded-3xl relative group overflow-hidden hover:bg-white/10 cursor-pointer transition-all duration-700'>
+								className='w-full rounded-3xl relative group overflow-hidden hover:bg-white/10 cursor-pointer transition-all duration-700 animate-translateBottom_duration_1dot2'>
 								<div className='flex items-center gap-2 px-4 py-4'>
-									<HiOutlineHome className='text-2xl' />
+									{link.icon}
 									<p className='relative z-20 font-bold pt-1'>
 										{Localize(link.text)}
 									</p>
@@ -79,10 +118,10 @@ function NavigateLeft(props: INavigateLeftProps) {
 							}}
 							key={key}
 							className={
-								'w-60 shadow-navigateRight rounded-3xl relative group overflow-hidden cursor-pointer transition-all duration-700 bg-white/70 text-primary_dark'
+								'w-full shadow-navigateRight rounded-3xl relative group overflow-hidden cursor-pointer transition-all duration-700 bg-white/70 text-primary_dark animate-translateBottom_duration_1dot2'
 							}>
 							<div className='flex items-center gap-2 px-4 py-4'>
-								<HiOutlineHome className='text-2xl' />
+								{link.icon}
 								<p className='relative z-20 font-bold pt-1'>
 									{Localize(link.text)}
 								</p>
@@ -94,6 +133,39 @@ function NavigateLeft(props: INavigateLeftProps) {
 						</li>
 					);
 				})}
+				<li className='animate-translateBottom_duration_1dot2'>
+					<div className='bg-primary_dark-10 rounded-3xl'>
+						<div className='flex items-center gap-2 px-4 py-4'>
+							<IoLibraryOutline />
+							<p className='relative z-20 font-bold pt-1'>
+								{Localize('YOUR_LIBRARY')}
+							</p>
+						</div>
+						<article className='px-4 pb-4 animate-translateBottom_duration_1dot2'>
+							<FilterChip data={filter} />
+						</article>
+						<article className='px-4 pb-4 flex justify-between items-center'>
+							<SearchYourLibrary onChange={() => void 0} />
+							<AnimationScale>
+								<div className='h-10 w-10 bg-white/10 rounded-full flex items-center justify-center cursor-pointer'>
+									<LuLayoutPanelLeft />
+								</div>
+							</AnimationScale>
+						</article>
+						<article className='pb-4 pt-2 pr-4'>
+							<div className='flex flex-col gap-4 h-yourLibraryDk scrollHiddenY relative z-10 overflow-y-auto snap-mandatory snap-y p-4 animate-translateBottom_duration_1dot2'>
+								{data.map((i) => {
+									return (
+										<YourLibraryAlbumItem
+											key={i.image}
+											{...i}
+										/>
+									);
+								})}
+							</div>
+						</article>
+					</div>
+				</li>
 			</ul>
 		</div>
 	);

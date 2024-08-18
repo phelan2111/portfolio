@@ -42,7 +42,7 @@ const filter: IItemFilterChip[] = [
 ];
 function YourLibraryMobile() {
 	return (
-		<div className='flex flex-col md:hidden'>
+		<div className='flex flex-col lg:hidden'>
 			<header className='flex items-center justify-between p-4 sticky top-0 z-20 animate-translateBottom_duration_0dot8'>
 				<div className='flex gap-3 items-center'>
 					<PopperSetting />

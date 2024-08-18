@@ -1,14 +1,14 @@
 import Localize from '@/langs';
 import data from './data/search.json';
 import PopperSetting from '@/components/ui/popper/setting';
-import InputSearch from '@/components/ui/input/search';
 import HorizontalItem from '@/components/ui/item/horizontal';
 import { IoCloseOutline } from 'react-icons/io5';
 import { LuDot } from 'react-icons/lu';
+import InputSearch from '@/components/ui/input/search';
 
 function SearchMobile() {
 	return (
-		<div className='p-4 md:hidden flex flex-col gap-4'>
+		<div className='p-4 lg:hidden flex flex-col gap-4'>
 			<header className='flex gap-3 items-center animate-translateBottom_duration_0dot8'>
 				<PopperSetting />
 				<h6 className='text-lg font-semibold'>{Localize('SEARCH')}</h6>

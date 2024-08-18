@@ -10,7 +10,7 @@ function AddAccountMobile() {
 	const { redirectPrev } = useRedirect();
 
 	return (
-		<main className='h-screen w-screen bg-primary_dark-20 md:hidden block'>
+		<main className='h-screen w-screen bg-primary_dark-20 lg:hidden block'>
 			<header className='flex text-white relative w-full justify-center py-4 animate-translateBottom_duration_0dot8'>
 				<h4 className='text-lg font-bold'>{Localize('ADD_ACCOUNT')}</h4>
 				<MdOutlineClose

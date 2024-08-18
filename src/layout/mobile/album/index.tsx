@@ -66,7 +66,7 @@ function AlbumMobile(props: IAlbumMobileProps) {
 	];
 
 	return (
-		<div className='w-full md:hidden flex flex-col gap-4 overflow-y-auto h-album snap-mandatory snap-y'>
+		<div className='w-full lg:hidden flex flex-col gap-4 overflow-y-auto h-album snap-mandatory snap-y'>
 			<div className='snap-start animate-translateBottom_duration_0dot8'>
 				<div className='relative w-full flex justify-center items-center p-4'>
 					<div className='relative rounded-xl flex flex-col gap-2 p-1'>

@@ -35,7 +35,7 @@ function SettingMobile() {
 		},
 	];
 	return (
-		<main className='h-screen w-screen md:hidden block bg-primary_dark-20 text-white pb-40'>
+		<main className='h-screen w-screen lg:hidden block bg-primary_dark-20 text-white pb-40'>
 			<header className='flex text-white relative w-full justify-center py-4 animate-translateBottom_duration_0dot8'>
 				<h4 className='text-lg font-bold'>{Localize('SETTING')}</h4>
 				<IoArrowBackSharp
