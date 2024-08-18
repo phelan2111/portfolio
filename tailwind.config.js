@@ -47,7 +47,7 @@ export default {
         album: 'calc(100dvh - 80px)',
         podcasts: 'calc(100dvh - 230px)',
         yourLibrary: 'calc(100dvh - 200px)',
-        yourLibraryDk: 'calc(100dvh - 410px)',
+        yourLibraryDk: 'calc(100dvh - 460px)',
         screen: '100dvh',
         addAccount: 'calc(100dvh - 44px)',
       },
@@ -110,6 +110,7 @@ export default {
         md: '768px',
         lg: '1024px',
         xl: '1440px',
+        xxl: '1920px'
     },
     },
     },

@@ -12,7 +12,7 @@ function Wrapper({ className = '', ...props }: IWrapperProps) {
 	return (
 		<main
 			className={`min-h-screen bg-primary_light text-primary_dark dark:bg-primary_dark dark:text-primary_light ${className}`}>
-			<div className='max-w-[1440px] m-auto w-full lg:flex gap-3'>
+			<div className='max-w-[1920px] m-auto w-full lg:flex gap-3'>
 				{props.isNavigate && <NavigateLeft />}
 				{props.children}
 			</div>
