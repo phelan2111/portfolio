@@ -16,7 +16,7 @@ function YourLibraryAlbumItem(props: IYourLibraryAlbumItemProps) {
 	const isArtist = props.isArtist === IsArtistOfYourLibrary.artists;
 
 	return (
-		<div className='flex items-center gap-4 transition-colors duration-500 cursor-pointer snap-start relative hover:bg-white/10 rounded-full'>
+		<div className='flex items-center gap-4 transition-all group duration-500 translate3d-yourLibrary cursor-pointer snap-start relative hover:bg-white/10 rounded-full'>
 			<div
 				style={{
 					borderColor: isArtist ? 'transparent' : props.themeColor,

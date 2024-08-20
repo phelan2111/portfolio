@@ -5,7 +5,7 @@ function ParallaxWrap() {
 	const key = useId();
 
 	return (
-		<div className='w-screen h-screen absolute top-0 right-0 wrapper-parallax flex flex-col gap-8'>
+		<div className='wrapper-parallax flex flex-col gap-8'>
 			{data.map((type) => {
 				return (
 					<div key={key} className='images-line'>

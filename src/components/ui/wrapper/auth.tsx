@@ -6,7 +6,7 @@ function AuthWrapper() {
 	return (
 		<Wrapper
 			extends={<ParallaxWrap />}
-			className='flex justify-center items-center relative'>
+			className='flex justify-center items-center relative h-screen overflow-hidden'>
 			<Outlet />
 		</Wrapper>
 	);

@@ -3,7 +3,7 @@ import { GoPlusCircle } from 'react-icons/go';
 
 function PlaySong() {
 	return (
-		<article className='fixed bottom-[70px] w-full z-30 right-0 bg-primary_dark-10 rounded-t-2xl md:bottom-0 transition-all duration-500'>
+		<article className='fixed bottom-[70px] w-full z-30 right-0 bg-primary_dark-10 rounded-t-2xl lg:bottom-0 transition-all duration-500'>
 			<div className='px-4 py-2 flex justify-between items-center pb-6'>
 				<div className='flex gap-2'>
 					<img

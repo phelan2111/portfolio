@@ -34,7 +34,9 @@ export default {
         podcastsCard: '0 0 10px rgba(0,0,0,0.25)',
         profile: 'inset 0 0 0 2px rgba(0, 0, 0, 0.15),  0 0 0 2px rgba(0, 0, 0, 0.15), inset 0 0 0.85rem #232323, 0 0 0.85rem  #232323',
         glass: '0 4px 12px rgba(0, 0, 0, 0.1)',
-        navigateRight: '13px 13px 10px #1c1c1c, -13px -13px 10px #262626'
+        navigateRight: '13px 13px 10px #1c1c1c, -13px -13px 10px #262626',
+        navigateLeft: '-13px 13px 10px #1c1c1c, -13px 13px 10px #262626',
+        card: '0 5px 20px 5px #00000044'
       },
       minHeight: {
         screen: '100dvh'
