@@ -46,10 +46,11 @@ export default {
       },
       height: {
         home: 'calc(100dvh - 160px)',
+        desktopWrapper: 'calc(100dvh - 345px)',
         album: 'calc(100dvh - 80px)',
         podcasts: 'calc(100dvh - 230px)',
         yourLibrary: 'calc(100dvh - 200px)',
-        yourLibraryDk: 'calc(100dvh - 460px)',
+        yourLibraryDk: 'calc(100dvh - 315px)',
         screen: '100dvh',
         addAccount: 'calc(100dvh - 44px)',
       },

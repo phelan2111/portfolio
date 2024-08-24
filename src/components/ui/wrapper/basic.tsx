@@ -5,7 +5,7 @@ import PlaySong from '../play/song';
 
 function BasicWrapper() {
 	return (
-		<Wrapper isNavigate>
+		<Wrapper isHeader isNavigate>
 			<Outlet />
 			<BottomNavigate />
 			<PlaySong />

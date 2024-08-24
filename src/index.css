@@ -115,8 +115,18 @@ body {
 	}
 }
 
-.translate3d-yourLibrary {
+.translate3d-y {
 	&:hover {
 		transform: translate3d(0%, 0%, 0) perspective(1000px) rotateX(20deg);
+	}
+}
+
+.translate3d-x {
+	@media screen and (min-width: 1024px) {
+		transform: translate3d(0%, 0%, 0) perspective(1000px) rotateY(20deg) rotateX(20deg);
+		&:hover {
+			transform: translate3d(0%, 0%, 0) perspective(1000px) rotate(0deg);
+		}
+		
 	}
 }

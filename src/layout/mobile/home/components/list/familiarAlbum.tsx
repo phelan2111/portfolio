@@ -13,7 +13,7 @@ function FamiliarAlbum(props: IFamiliarAlbumProps) {
 			{data.map((album) => {
 				return (
 					<HorizontalItem
-						className='bg-primary_dark-10 hover:opacity-80 transition-all duration-300 shadow-materialDesign rounded-md'
+						className='bg-primary_dark-10 hover:opacity-80 transition-all duration-300 shadow-materialDesign rounded-md overflow-hidden'
 						onClick={() => {
 							redirectPage(`${PATH.ALBUM._}/${album.id}`);
 						}}

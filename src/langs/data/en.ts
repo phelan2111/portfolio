@@ -93,4 +93,6 @@ export const dataLocalizeEN: Record<string, string> = {
 	FOLLOWERS: 'Followers',
 	FOLLOWING: 'Following',
 	EDIT_PROFILE: 'Edit Profile',
+	SHOW_ALL: 'Show all',
+	RECENT_ALBUMS: 'Recent albums',
 };

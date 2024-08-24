@@ -9,14 +9,14 @@ function AlbumCard(props: IAlbumCardProps) {
 	const singersName = props.singersName.join(', ');
 
 	return (
-		<div className='h-fit min-w-36 flex flex-col gap-3 snap-end'>
+		<div className='h-fit min-w-36 flex flex-col lg:p-2 lg:hover:shadow-sm gap-3 lg:group transition-all duration-500 lg:hover:bg-gradient-to-r lg:hover:from-white/10 lg:rounded-lg lg:overflow-hidden cursor-pointer snap-end lg:snap-none translate3d-x'>
 			<div
 				style={{
 					borderColor: props.themeColor,
 				}}
 				className='relative border-b-4'>
 				<img
-					className='h-36 w-36 object-cover'
+					className='h-36 w-36 object-cover lg:w-full lg:h-44'
 					src={props.albumImage}
 					alt={props.albumImage}
 				/>
@@ -28,7 +28,7 @@ function AlbumCard(props: IAlbumCardProps) {
 					<p className='font-bold'>{props.albumName}</p>
 				</div>
 			</div>
-			<p className='text-xs'>{singersName} and more</p>
+			<p className='text-xs transition-all'>{singersName} and more</p>
 		</div>
 	);
 }
