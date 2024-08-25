@@ -16,8 +16,8 @@ function Header() {
 	};
 
 	return (
-		<header className='flex flex-col gap-6'>
-			<div className='w-full gap-6 animate-translateBottom_duration_0dot8 hidden lg:flex'>
+		<header className='flex-col gap-6 hidden lg:flex'>
+			<div className='w-full gap-6 animate-translateBottom_duration_0dot8 flex'>
 				<div className='bg-primary_dark-10 p-4 rounded-3xl w-full'>
 					<div className='flex w-full justify-between items-end h-full'>
 						<div className='w-fit h-14 overflow-hidden flex justify-center items-center gap-6 -translate-x-6'>

@@ -76,7 +76,7 @@ function HoverCard(props: IHoverCardProps) {
 			className={`transition-all duration-500 relative hover:duration-150 ${props.className}`}>
 			<div
 				ref={refLight}
-				className='absolute transition-all w-full h-full top-0 left-0'
+				className='absolute transition-all duration-500 w-full h-full top-0 left-0'
 			/>
 			{props.children}
 		</div>
