@@ -69,7 +69,7 @@ function WhatNewsMobile() {
 			</div>
 			<div
 				id='elementScroll'
-				className='h-yourLibrary overflow-y-auto snap-mandatory snap-y animate-translateBottom_duration_1dot2'>
+				className='h-podcasts overflow-y-auto snap-mandatory snap-y animate-translateBottom_duration_0dot8'>
 				<div className='px-4 pt-4 snap-start'>
 					<h4 id='whatNews' className='text-3xl font-bold'>
 						{Localize('WHAT_NEW')}

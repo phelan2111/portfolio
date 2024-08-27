@@ -40,5 +40,8 @@ module.exports = {
 	rules: {
 		'react/react-in-jsx-scope': 'off',
 		'import/no-unresolved': 'off',
+		'jsx-a11y/no-autofocus': [ 2, {
+            'ignoreNonDOM': true
+        }],
 	},
 };

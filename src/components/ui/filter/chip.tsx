@@ -53,7 +53,7 @@ function FilterChip(props: IFilterChipProps) {
 									handleSelectParent(item);
 									setIndexCurrentTarget(index);
 								}}
-								className='px-4 py-1 bg-primary_light/30 rounded-2xl'>
+								className='px-4 py-1 bg-primary_light/30 cursor-pointer rounded-2xl'>
 								<span className='text-xs'>{item.label}</span>
 							</div>
 						</div>

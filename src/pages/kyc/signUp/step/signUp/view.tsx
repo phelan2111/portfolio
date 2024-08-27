@@ -1,6 +1,6 @@
+import ScreenResponsive from '@/components/ui/responsive/screen';
 import SignUpDesktop from '@/layout/desktop/kyc/signUp';
 import SignUpMobile from '@/layout/mobile/kyc/signUp';
-import { Fragment } from 'react';
 
 interface IViewProps {
 	onSubmit: VoidFunction;
@@ -8,10 +8,10 @@ interface IViewProps {
 
 function View(props: IViewProps) {
 	return (
-		<Fragment>
-			<SignUpMobile {...props} />
-			<SignUpDesktop {...props} />
-		</Fragment>
+		<ScreenResponsive
+			mobile={() => <SignUpMobile {...props} />}
+			desktop={() => <SignUpDesktop {...props} />}
+		/>
 	);
 }
 

@@ -1,7 +1,13 @@
+import ScreenResponsive from '@/components/ui/responsive/screen';
 import ListeningHistoryMobile from '@/layout/mobile/listeningHistory';
 
 function View() {
-	return <ListeningHistoryMobile />;
+	return (
+		<ScreenResponsive
+			mobile={() => <ListeningHistoryMobile />}
+			desktop={() => <div>ListeningHistoryDesktop</div>}
+		/>
+	);
 }
 
 export default View;

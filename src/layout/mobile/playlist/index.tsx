@@ -86,7 +86,7 @@ function PlaylistMobile() {
 					/>
 				</div>
 			</article>
-			<section className='p-4 pt-8 flex flex-col gap-4 animate-translateBottom_duration_1dot2'>
+			<section className='p-4 pt-8 flex flex-col gap-4 animate-translateBottom_duration_0dot8'>
 				<h3 className='font-semibold text-xs'>
 					{Localize('TRACKS_YOU_PLAYED')}
 				</h3>

@@ -15,7 +15,7 @@ function MusicMobile(props: IMusicMobileProps) {
 			<AppBar />
 			<div
 				id='homeMobile'
-				className='flex px-4 flex-col gap-6 overflow-y-auto h-home snap-mandatory snap-y animate-translateBottom_duration_1dot2'>
+				className='flex px-4 flex-col gap-6 overflow-y-auto h-home snap-mandatory snap-y animate-translateBottom_duration_0dot8'>
 				<FamiliarAlbum />
 				<YourTopMixes />
 				<YourFavoriteArtists />

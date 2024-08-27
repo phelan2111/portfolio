@@ -13,11 +13,11 @@ interface IHomeMobileProps {}
 function HomeMobile(props: IHomeMobileProps) {
 	console.log('HomeMobile', props);
 	return (
-		<div className='pb-[105px] select-none flex-col gap-3 flex lg:hidden'>
+		<div className='pb-[105px] select-none flex-col gap-3 flex'>
 			<AppBar />
 			<div
 				id='homeMobile'
-				className='flex px-4 flex-col gap-6 overflow-y-auto h-home snap-mandatory snap-y animate-translateBottom_duration_1dot2'>
+				className='flex px-4 flex-col gap-6 overflow-y-auto h-home snap-mandatory snap-y animate-translateBottom_duration_0dot8'>
 				<FamiliarAlbum />
 				<NewReleaseCard />
 				<YourTopMixes />

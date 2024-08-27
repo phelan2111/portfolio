@@ -4,7 +4,7 @@ import PopperSetting from '@/components/ui/popper/setting';
 import HorizontalItem from '@/components/ui/item/horizontal';
 import { IoCloseOutline } from 'react-icons/io5';
 import { LuDot } from 'react-icons/lu';
-import InputSearch from '@/components/ui/input/search';
+import InputSearch from '@/components/ui/input/search/mobile';
 
 function SearchMobile() {
 	return (

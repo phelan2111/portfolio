@@ -27,7 +27,7 @@ function AppBarTop() {
 		return tabs[0];
 	};
 	return (
-		<header className='select-none flex gap-4 items-center sticky top-0 h-fit z-50 snap-start animate-translateBottom_duration_1dot2'>
+		<header className='select-none flex gap-4 items-center sticky top-0 h-fit z-50 snap-start animate-translateBottom_duration_0dot8'>
 			<Tabs
 				onChange={(dataItem: IItemTab<unknown>) => {
 					redirectPage(dataItem.value as string);

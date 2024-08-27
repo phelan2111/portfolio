@@ -16,12 +16,14 @@ import { GoDownload, GoKebabHorizontal, GoPlus } from 'react-icons/go';
 import IconBootstrapLarge from '@/components/ui/icon/iconBootstrapLarge';
 import data from './data/songs.json';
 import MenuIcon, { IItemIcon } from '@/components/ui/menu/icon';
+import { useRedirect } from '@/hooks/useRedirect';
+import { PATH } from '@/routes/config';
 
-interface IAlbumMobileProps {
-	onRedirectHome: VoidFunction;
-}
+interface IAlbumMobileProps {}
 
 function AlbumMobile(props: IAlbumMobileProps) {
+	const { redirectPage } = useRedirect();
+	console.log('AlbumMobile', props);
 	const itemsMenu: IItemIcon[] = [
 		{
 			icon: <BsFillPlusCircleFill />,
@@ -66,7 +68,7 @@ function AlbumMobile(props: IAlbumMobileProps) {
 	];
 
 	return (
-		<div className='w-full lg:hidden flex flex-col gap-4 overflow-y-auto h-album snap-mandatory snap-y'>
+		<div className='w-full flex flex-col gap-4 overflow-y-auto h-album snap-mandatory snap-y'>
 			<div className='snap-start animate-translateBottom_duration_0dot8'>
 				<div className='relative w-full flex justify-center items-center p-4'>
 					<div className='relative rounded-xl flex flex-col gap-2 p-1'>
@@ -100,13 +102,15 @@ function AlbumMobile(props: IAlbumMobileProps) {
 					/>
 					<div
 						aria-hidden
-						onClick={props.onRedirectHome}
+						onClick={() => {
+							redirectPage(PATH.HOME);
+						}}
 						className='absolute top-4 left-4 bg-primary_dark shadow-bootstrapLarge p-2 rounded-full'>
 						<BsChevronCompactLeft />
 					</div>
 				</div>
 			</div>
-			<div className='animate-translateBottom_duration_1dot2'>
+			<div className='animate-translateBottom_duration_0dot8'>
 				<div className='flex flex-col gap-2 px-4 snap-start'>
 					<p className='text-sm'>2h 33min</p>
 					<article className='flex justify-between items-center'>

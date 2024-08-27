@@ -18,12 +18,14 @@ import data from './data/songs.json';
 import { LuDot } from 'react-icons/lu';
 import Localize from '@/langs';
 import MenuIcon, { IItemIcon } from '@/components/ui/menu/icon';
+import { useRedirect } from '@/hooks/useRedirect';
+import { PATH } from '@/routes/config';
 
-interface IChartMobileProps {
-	onRedirectMusic: VoidFunction;
-}
+interface IChartMobileProps {}
 
 function ChartMobile(props: IChartMobileProps) {
+	console.log('props', props);
+	const { redirectPage } = useRedirect();
 	const itemsMenu: IItemIcon[] = [
 		{
 			icon: <BsFillPlusCircleFill />,
@@ -68,7 +70,7 @@ function ChartMobile(props: IChartMobileProps) {
 	];
 
 	return (
-		<div className='w-full flex lg:hidden flex-col gap-4 overflow-y-auto h-album snap-mandatory snap-y'>
+		<div className='w-full flex flex-col gap-4 overflow-y-auto h-album snap-mandatory snap-y'>
 			<div className='snap-start animate-translateBottom_duration_0dot8'>
 				<div className='relative w-full flex justify-center items-center bg-gradient-to-b from-indigo-900 p-4'>
 					<div className='relative rounded-xl flex flex-col gap-2 p-1 pb-10'>
@@ -83,13 +85,15 @@ function ChartMobile(props: IChartMobileProps) {
 					</div>
 					<div
 						aria-hidden
-						onClick={props.onRedirectMusic}
+						onClick={() => {
+							redirectPage(PATH.MUSIC._);
+						}}
 						className='absolute top-4 left-4 shadow-bootstrapLarge p-2 rounded-full bg-primary_dark'>
 						<BsChevronCompactLeft />
 					</div>
 				</div>
 			</div>
-			<div className='flex flex-col gap-2 px-4 snap-start animate-translateBottom_duration_1dot2'>
+			<div className='flex flex-col gap-2 px-4 snap-start animate-translateBottom_duration_0dot8'>
 				<div className='flex items-center'>
 					<p className='text-sm'>Jun 29, 2024</p>
 					<LuDot />
@@ -133,7 +137,7 @@ function ChartMobile(props: IChartMobileProps) {
 					</div>
 				</article>
 			</div>
-			<div className='px-4 animate-translateBottom_duration_1dot2'>
+			<div className='px-4 animate-translateBottom_duration_0dot8'>
 				<SongOfAlbum data={data.songs} />
 			</div>
 		</div>

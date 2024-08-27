@@ -6,17 +6,17 @@ import Localize from '@/langs';
 import { IoArrowBackOutline } from 'react-icons/io5';
 import TextField from '@/components/root/inputs/textField';
 
-export interface IRenderInputSearchProps {
+export interface IRenderInputSearchMobileProps {
 	valueSearch: string;
 	isOpen: boolean;
 	onClose: VoidFunction;
 	onOpen: VoidFunction;
 }
-interface IInputSearchProps {
-	render: (renderProps: IRenderInputSearchProps) => ReactNode;
+interface IInputSearchMobileProps {
+	render: (renderProps: IRenderInputSearchMobileProps) => ReactNode;
 }
 
-function InputSearch(props: IInputSearchProps) {
+function InputSearchMobile(props: IInputSearchMobileProps) {
 	const [value, setValue] = useState<string>('');
 
 	const handleSetValue = (valueInput: string) => {
@@ -29,7 +29,7 @@ function InputSearch(props: IInputSearchProps) {
 				return (
 					<div
 						onClick={renderProps.onOpen}
-						className='flex select-none bg-white shadow-materialDesign hover:shadow-bootstrapLarge transition-all duration-500 rounded-md text-primary_dark items-center gap-2 p-2 animate-translateBottom_duration_1dot2'
+						className='flex select-none bg-white shadow-materialDesign hover:shadow-bootstrapLarge transition-all duration-500 rounded-md text-primary_dark items-center gap-2 p-2 animate-translateBottom_duration_0dot8'
 						aria-hidden>
 						<IoIosSearch className='text-2xl' />
 						<p>{Localize('WHAT_DO_YOU_WANT')}</p>
@@ -68,4 +68,4 @@ function InputSearch(props: IInputSearchProps) {
 	);
 }
 
-export default InputSearch;
+export default InputSearchMobile;

@@ -1,20 +1,25 @@
 import Localize from '@/langs';
-import LogoComponent from './logo';
+import LogoComponent from '../logo';
 import { IoNotificationsOutline } from 'react-icons/io5';
-import { useLocation, useNavigate } from 'react-router-dom';
-import { PATH } from '@/routes/config';
-import AppBarTop from '../appbar/top';
+import AppBarTop from '../../appbar/top';
 import { FaAngleLeft, FaAngleRight } from 'react-icons/fa';
+import { PATH } from '@/routes/config';
+import InputSearchDesktop from '../../input/search/desktop';
 
-function Header() {
-	const navigate = useNavigate();
-	const location = useLocation();
-	const isHome = location.pathname === PATH.HOME;
-
-	const handleClick = (path: string) => {
-		navigate(path);
-	};
-
+interface IViewProps {
+	onClickTab: (path: string) => void;
+	isSearch: boolean;
+}
+interface IIViewToolProps {
+	isSearch: boolean;
+}
+function ViewTool(props: IIViewToolProps) {
+	if (props.isSearch) {
+		return <InputSearchDesktop />;
+	}
+	return <AppBarTop />;
+}
+function View(props: IViewProps) {
 	return (
 		<header className='flex-col gap-6 hidden lg:flex'>
 			<div className='w-full gap-6 animate-translateBottom_duration_0dot8 flex'>
@@ -41,7 +46,7 @@ function Header() {
 													'polygon(50% 0%, 25% 100%, 75% 100%)',
 											}}
 											className={`absolute z-10 bg-gradient-to-b transition-all -right-1.5 top-0 duration-500 w-[70px] h-[40px] ${
-												isHome
+												!props.isSearch
 													? 'from-white/30'
 													: 'from-white/0'
 											}`}
@@ -55,7 +60,7 @@ function Header() {
 													'polygon(50% 0%, 25% 100%, 75% 100%)',
 											}}
 											className={`absolute z-10 transition-all -left-4 top-0 duration-500 w-[70px] h-[40px] ${
-												isHome
+												!props.isSearch
 													? 'bg-transparent'
 													: 'bg-gradient-to-b from-white/30'
 											}`}
@@ -68,11 +73,11 @@ function Header() {
 									className='h-full '
 									aria-hidden
 									onClick={() => {
-										handleClick(PATH.HOME);
+										props.onClickTab(PATH.HOME);
 									}}>
 									<div
 										className={`flex gap-2 font-bold text-3x h-full items-end cursor-pointer bg-clip-text text-transparent bg-gradient-to-r ${
-											!isHome
+											props.isSearch
 												? 'from-white/100 to-white/90'
 												: 'from-pink-500 to-violet-500'
 										}`}>
@@ -82,11 +87,11 @@ function Header() {
 								<li
 									aria-hidden
 									onClick={() => {
-										handleClick(PATH.SEARCH);
+										props.onClickTab(PATH.SEARCH);
 									}}>
 									<div
 										className={`flex gap-2 font-bold text-3x h-full items-end cursor-pointer bg-clip-text text-transparent bg-gradient-to-r ${
-											isHome
+											!props.isSearch
 												? 'from-white/100 to-white/90'
 												: 'from-pink-500 to-violet-500'
 										}`}>
@@ -110,14 +115,14 @@ function Header() {
 					</div>
 				</div>
 			</div>
-			<div className='bg-primary_dark-10 w-full py-6 px-4 rounded-3xl flex flex-col gap-8'>
-				<div className='flex justify-between'>
-					<AppBarTop />
-					<div className='flex gap-2 animate-translateBottom_duration_1dot2'>
-						<div className='w-8 h-8 bg-primary_dark-20 rounded-full flex justify-center items-center transition-transform hover:scale-110 cursor-pointer'>
+			<div className='bg-primary_dark-10 w-full p-6 rounded-3xl flex flex-col gap-8 animate-translateBottom_duration_0dot8'>
+				<div className='flex justify-between items-center'>
+					<ViewTool isSearch={props.isSearch} />
+					<div className='flex gap-2 animate-translateBottom_duration_0dot8'>
+						<div className='w-8 h-8 bg-primary_dark-20 rounded-full flex justify-center items-center hover:scale-110 cursor-pointer'>
 							<FaAngleLeft />
 						</div>
-						<div className='w-8 h-8 bg-primary_dark-20 rounded-full flex justify-center transition-transform hover:scale-110 items-center cursor-pointer opacity-50'>
+						<div className='w-8 h-8 bg-primary_dark-20 rounded-full flex justify-center hover:scale-110 items-center cursor-pointer opacity-50'>
 							<FaAngleRight />
 						</div>
 					</div>
@@ -127,4 +132,4 @@ function Header() {
 	);
 }
 
-export default Header;
+export default View;

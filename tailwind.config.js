@@ -45,11 +45,11 @@ export default {
         screen: '100dvw'
       },
       height: {
-        home: 'calc(100dvh - 160px)',
+        home: 'calc(100dvh - 230px)',
         desktopWrapper: 'calc(100dvh - 345px)',
         album: 'calc(100dvh - 80px)',
-        podcasts: 'calc(100dvh - 230px)',
-        yourLibrary: 'calc(100dvh - 200px)',
+        podcasts: 'calc(100dvh - 210px)',
+        yourLibrary: 'calc(100dvh - 250px)',
         yourLibraryDk: 'calc(100dvh - 315px)',
         screen: '100dvh',
         addAccount: 'calc(100dvh - 44px)',
@@ -85,6 +85,10 @@ export default {
           '50%': { transform: 'translateY(3px) translateX(3px)', opacity: 0.5},
           '100%': { transform: 'translateY(0px)', opacity: 1},
         },
+        push: {
+          '0% , 50%': { transform: 'translate(-50% , 0%)  scale(1)'},
+          '100%': { transform: 'translate(-50%, -100%) scale(0)'},
+        },
       },
       animation: {
         translateBottom: 'translateBottom 0.4s  ease-in-out',
@@ -104,6 +108,8 @@ export default {
         ring_delay_300: 'ring 5s 0.3s infinite',
         ring_delay_0: 'ring 5s infinite',
         spin_dur_4s: 'spin 4s linear infinite',
+        push: 'push 2s infinite linear',
+        push_delay_0dot8: 'push 2s 0.5s infinite linear',
       },
       backgroundSize: {
         '125%': '125%'

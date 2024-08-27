@@ -103,10 +103,10 @@ function YourLibraryMobile() {
 					<GoPlus className='hover:text-3xl transition-all duration-500' />
 				</div>
 			</header>
-			<article className='px-4 pb-4 animate-translateBottom_duration_1dot2'>
+			<article className='px-4 pb-4 animate-translateBottom_duration_0dot8'>
 				<FilterChip data={filter} />
 			</article>
-			<article className='flex flex-col gap-4 h-yourLibrary relative z-10 overflow-y-auto snap-mandatory snap-y p-4 animate-translateBottom_duration_1dot2'>
+			<article className='flex flex-col gap-4 h-yourLibrary relative z-10 overflow-y-auto snap-mandatory snap-y p-4 animate-translateBottom_duration_0dot8'>
 				{data.map((i) => {
 					return <YourLibraryAlbumItem key={i.image} {...i} />;
 				})}

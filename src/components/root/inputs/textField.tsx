@@ -1,7 +1,14 @@
 import Localize from '@/langs';
 import { HTMLInputTypeAttribute, ReactNode, useState } from 'react';
 
-export interface ITextFieldProps {
+export interface ITextFieldProps
+	extends Omit<
+		React.DetailedHTMLProps<
+			React.InputHTMLAttributes<HTMLInputElement>,
+			HTMLInputElement
+		>,
+		'onChange' | 'autoFocus'
+	> {
 	label?: string;
 	classNameInput?: string;
 	placeholder?: string;
@@ -14,6 +21,7 @@ export interface ITextFieldProps {
 		direction: 'start' | 'end';
 		node: ReactNode;
 	};
+	autoFocus?: boolean;
 }
 
 function TextField({
@@ -38,15 +46,16 @@ function TextField({
 				className={`relative flex h-fit bg-white items-center gap-1 hover:shadow-white transition-all duration-500 focus-within:shadow-white px-2 rounded-sm ${className}`}>
 				{isIconStart && props.icon && props.icon.node}
 				<input
-					onChange={(e) => {
-						handleChange(e.currentTarget.value);
-						props.onChange && props.onChange(e.currentTarget.value);
-					}}
 					value={value}
 					type={type}
 					name={name}
 					placeholder={props.placeholder}
 					className={`w-full outline-none bg-transparent h-11 text-primary_dark text-base ${classNameInput}`}
+					{...props}
+					onChange={(e) => {
+						handleChange(e.currentTarget.value);
+						props.onChange && props.onChange(e.currentTarget.value);
+					}}
 				/>
 				{isIconEnd && props.icon && props.icon.node}
 			</div>
