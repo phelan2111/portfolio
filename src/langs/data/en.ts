@@ -95,4 +95,10 @@ export const dataLocalizeEN: Record<string, string> = {
 	EDIT_PROFILE: 'Edit Profile',
 	SHOW_ALL: 'Show all',
 	RECENT_ALBUMS: 'Recent albums',
+	ABOUT_THE_ARTIST: 'About the artist',
+	FOLLOW: 'Follow',
+	UN_FOLLOW: 'Unfollow',
+	MONTHLY_LISTENER: 'monthly listeners',
+	NEXT_IN_QUEUE: 'Next in queue',
+	OPEN_QUEUE: 'Open queue',
 };

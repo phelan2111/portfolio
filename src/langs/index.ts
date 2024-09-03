@@ -1,5 +1,5 @@
 import { useAppSelector } from '@/hooks/redux';
-import { dataLangue } from '@/redux/langue';
+import { dataLangue } from '@/redux/slice/langue';
 import { Langue } from '@/utils/enums';
 import { dataLocalizeEN } from '@/langs/data/en';
 import { dataLocalizeVI } from '@/langs/data/vi';

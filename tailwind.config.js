@@ -53,6 +53,7 @@ export default {
         yourLibraryDk: 'calc(100dvh - 315px)',
         screen: '100dvh',
         addAccount: 'calc(100dvh - 44px)',
+        tool: 'calc(100dvh - 160px)',
       },
       keyframes: {
         translateRight: {
@@ -114,7 +115,7 @@ export default {
       backgroundSize: {
         '125%': '125%'
       },
-      screen: {
+      screens: {
         sm: '425px',
         md: '768px',
         lg: '1024px',

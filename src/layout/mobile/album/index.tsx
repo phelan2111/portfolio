@@ -89,7 +89,7 @@ function AlbumMobile(props: IAlbumMobileProps) {
 									{data.name}
 								</p>
 								<p className='text-[10px] relative z-10 bg-gradient-to-t from-indigo-500 via-purple-500 to-pink-500 bg-clip-text text-transparent'>
-									{data.singers.join('')}
+									{data.singers.join(', ')}
 								</p>
 							</div>
 						</div>
@@ -113,8 +113,8 @@ function AlbumMobile(props: IAlbumMobileProps) {
 			<div className='animate-translateBottom_duration_0dot8'>
 				<div className='flex flex-col gap-2 px-4 snap-start'>
 					<p className='text-sm'>2h 33min</p>
-					<article className='flex justify-between items-center'>
-						<div className='flex gap-8 items-center'>
+					<article className='flex justify-between gap-5 flex-wrap items-center'>
+						<div className='flex gap-5 items-center'>
 							<div className='w-12 h-12 shadow-bootstrapLarge rounded-md overflow-auto'>
 								<Video
 									mute={true}
@@ -147,7 +147,7 @@ function AlbumMobile(props: IAlbumMobileProps) {
 							<IconBootstrapLarge>
 								<LiaRandomSolid className='text-lg hover:scale-110 transition-transform duration-300 cursor-pointer' />
 							</IconBootstrapLarge>
-							<FaPlayCircle className='text-5xl hover:scale-110 transition-transform duration-300 cursor-pointer shadow-bootstrapLarge rounded-full' />
+							<FaPlayCircle className='text-4xl hover:scale-110 transition-transform duration-300 cursor-pointer shadow-bootstrapLarge rounded-full' />
 						</div>
 					</article>
 				</div>

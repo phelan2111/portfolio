@@ -1,24 +1,13 @@
 import Localize from '@/langs';
 import LogoComponent from '../logo';
 import { IoNotificationsOutline } from 'react-icons/io5';
-import AppBarTop from '../../appbar/top';
-import { FaAngleLeft, FaAngleRight } from 'react-icons/fa';
 import { PATH } from '@/routes/config';
-import InputSearchDesktop from '../../input/search/desktop';
 
 interface IViewProps {
 	onClickTab: (path: string) => void;
 	isSearch: boolean;
 }
-interface IIViewToolProps {
-	isSearch: boolean;
-}
-function ViewTool(props: IIViewToolProps) {
-	if (props.isSearch) {
-		return <InputSearchDesktop />;
-	}
-	return <AppBarTop />;
-}
+
 function View(props: IViewProps) {
 	return (
 		<header className='flex-col gap-6 hidden lg:flex'>
@@ -31,7 +20,7 @@ function View(props: IViewProps) {
 									<LogoComponent />
 								</div>
 							</div>
-							<div className='text-xl items-end h-full hidden xl:flex font-bold'>
+							<div className='text-xl items-end h-full hidden xxl:flex font-bold'>
 								{Localize('COHESIVE_MUSIC')}
 							</div>
 						</div>
@@ -112,19 +101,6 @@ function View(props: IViewProps) {
 							src='https://i.pinimg.com/736x/42/d1/6f/42d16fffa8c6c6124a7bd66ddc818c39.jpg'
 							alt='https://i.pinimg.com/736x/42/d1/6f/42d16fffa8c6c6124a7bd66ddc818c39.jpg'
 						/>
-					</div>
-				</div>
-			</div>
-			<div className='bg-primary_dark-10 w-full p-6 rounded-3xl flex flex-col gap-8 animate-translateBottom_duration_0dot8'>
-				<div className='flex justify-between items-center'>
-					<ViewTool isSearch={props.isSearch} />
-					<div className='flex gap-2 animate-translateBottom_duration_0dot8'>
-						<div className='w-8 h-8 bg-primary_dark-20 rounded-full flex justify-center items-center hover:scale-110 cursor-pointer'>
-							<FaAngleLeft />
-						</div>
-						<div className='w-8 h-8 bg-primary_dark-20 rounded-full flex justify-center hover:scale-110 items-center cursor-pointer opacity-50'>
-							<FaAngleRight />
-						</div>
 					</div>
 				</div>
 			</div>

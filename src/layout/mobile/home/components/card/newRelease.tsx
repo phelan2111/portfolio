@@ -7,15 +7,15 @@ function NewReleaseCard() {
 			<div className='flex gap-3'>
 				<img
 					className='w-12 h-12 object-cover rounded-full shadow-bootstrapLarge'
-					src={data.avatar}
-					alt={data.avatar}
+					src={data[0].avatar}
+					alt={data[0].avatar}
 				/>
 				<div className='flex flex-col justify-between'>
 					<p className='text-xs'>{Localize('NEW_RELEASE_FROM')}</p>
-					<h3 className='text-md font-bold'>{data.singerName}</h3>
+					<h3 className='text-md font-bold'>{data[0].singerName}</h3>
 				</div>
 			</div>
-			<SongCard {...data.song} />
+			<SongCard {...data[0].song} />
 		</aside>
 	);
 }

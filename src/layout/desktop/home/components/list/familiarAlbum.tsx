@@ -9,10 +9,11 @@ interface IFamiliarAlbumProps {}
 function FamiliarAlbum(props: IFamiliarAlbumProps) {
 	console.log('FamiliarAlbum', props);
 	const { redirectPage } = useRedirect();
+
 	return (
 		<section className='flex flex-col gap-6 animate-translateBottom_duration_0dot8'>
 			<h4 className='text-xl font-bold'>{Localize('RECENT_ALBUMS')}</h4>
-			<div className='grid xl:grid-cols-4 lg:grid-cols-2 gap-3 snap-start'>
+			<div className='grid xl:grid-cols-4 lg:grid-cols-2 gap-3 snap-start px-4'>
 				{data.map((album) => {
 					return (
 						<HorizontalItem

@@ -1,7 +1,21 @@
+import { useAppDispatch } from '@/hooks/redux';
+import { sliceToolControl } from '@/redux/slice';
+import { EnumToolType } from '@/redux/slice/toolControl';
+import { BsPlayBtn } from 'react-icons/bs';
 import { FaPlay } from 'react-icons/fa';
 import { GoPlusCircle } from 'react-icons/go';
 
 function PlaySong() {
+	const dispatch = useAppDispatch();
+	const isView = sliceToolControl.useGetState().open;
+	const handleNowPlayingView = () => {
+		dispatch(
+			sliceToolControl.func.onSetState({
+				open: !isView,
+				typeTool: EnumToolType.nowPlayingView,
+			}),
+		);
+	};
 	return (
 		<article className='fixed bottom-[70px] w-full z-30 right-0 bg-primary_dark-10 rounded-t-2xl lg:bottom-0 transition-all duration-500'>
 			<div className='px-4 py-2 flex justify-between items-center pb-6'>
@@ -17,6 +31,11 @@ function PlaySong() {
 					</div>
 				</div>
 				<div className='flex items-center gap-4'>
+					<BsPlayBtn
+						aria-hidden
+						onClick={handleNowPlayingView}
+						className='text-2xl hover:scale-110 transition-transform duration-300 cursor-pointer hidden xl:block'
+					/>
 					<GoPlusCircle className='text-2xl hover:scale-110 transition-transform duration-300 cursor-pointer' />
 					<FaPlay className='text-xl hover:scale-110 transition-transform duration-300 cursor-pointer' />
 				</div>

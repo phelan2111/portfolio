@@ -1,6 +1,7 @@
 import Localize from '@/langs';
 import data from '@/pages/home/data/yourFavoriteArtist.json';
 import VerticalSingerItem from '@/components/ui/item/vertical';
+import { handleStyleViewTool } from '../..';
 
 function YourFavoriteArtists() {
 	return (
@@ -8,8 +9,11 @@ function YourFavoriteArtists() {
 			<h4 className='text-xl font-bold'>
 				{Localize('YOUR_FAVORITE_ARTISTS')}
 			</h4>
-			<div className='grid xl:grid-cols-6 2xl:grid-cols-7 lg:grid-cols-3 gap-4'>
-				{data.slice(0, 7).map((i) => (
+			<div
+				className={`grid xl:grid-cols-3 lg:grid-cols-3 gap-4 px-4 ${
+					handleStyleViewTool().className
+				}`}>
+				{data.slice(0, handleStyleViewTool().sliceData).map((i) => (
 					<VerticalSingerItem key={i.avatarSinger} {...i} />
 				))}
 			</div>

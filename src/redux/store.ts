@@ -1,13 +1,15 @@
 import { configureStore } from '@reduxjs/toolkit';
-import modalReducer from './feedback';
-import langueReducer from './langue';
-import songReducer from './song';
+import modalReducer from './slice/modal';
+import langueReducer from './slice/langue';
+import songReducer from './slice/song';
+import toolControl from './slice/toolControl';
 
 export const store = configureStore({
 	reducer: {
-		feedback: modalReducer,
+		modal: modalReducer,
 		langue: langueReducer,
 		song: songReducer,
+		toolSlice: toolControl,
 	},
 });
 

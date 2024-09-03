@@ -37,7 +37,7 @@ function HorizontalItem({
 			aria-hidden
 			onClick={props.onClick}
 			className={`flex justify-between items-center group ${className}`}>
-			<div className='absolute text-xs lowercase delay-500 shadow-podcastsCard group-hover:delay-0 flex-nowrap text-nowrap justify-center items-center overflow-hidden hidden lg:flex top-0 right-0 w-0 h-0 bg-primary_dark group-hover:w-1/3 group-hover:h-2/3 transition-all rounded-es-full duration-700 -z-10'>
+			<div className='absolute text-xs lowercase delay-500 shadow-podcastsCard group-hover:delay-0 flex-nowrap text-nowrap justify-center items-center overflow-hidden hidden lg:flex top-0 right-0 w-0 h-0 bg-primary_dark group-hover:w-1/3 group-hover:h-2/3 transition-all rounded-es-full duration-500'>
 				<p className='p-2 pr-4'>
 					{props.item?.total as number} {Localize('SONG')}
 				</p>

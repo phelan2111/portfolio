@@ -2,6 +2,7 @@ import HoverCard from '@/components/root/animation/hoverCard';
 import AlbumCard from '@/components/ui/card/album';
 import Localize from '@/langs';
 import data from '@/pages/home/data/yourTopMixes.json';
+import { handleStyleViewTool } from '../..';
 
 function MakeForUser() {
 	return (
@@ -14,18 +15,23 @@ function MakeForUser() {
 					{Localize('SHOW_ALL')}
 				</div>
 			</div>
-			<div className='grid xl:grid-cols-6 2xl:grid-cols-7 lg:grid-cols-3 gap-4'>
-				{data.slice(0, 7).map((album) => (
-					<HoverCard
-						className='rounded-lg overflow-hidden translate3d-x cursor-pointer shadow-xl'
-						key={
-							album.albumName +
-							album.albumImage +
-							MakeForUser.name
-						}>
-						<AlbumCard {...album} />
-					</HoverCard>
-				))}
+			<div
+				className={`grid grid-cols-3 gap-4 px-4 ${
+					handleStyleViewTool().className
+				}`}>
+				{[...data]
+					.slice(0, handleStyleViewTool().sliceData)
+					.map((album) => (
+						<HoverCard
+							className='rounded-lg overflow-hidden cursor-pointer shadow-xl'
+							key={
+								album.albumName +
+								album.albumImage +
+								MakeForUser.name
+							}>
+							<AlbumCard {...album} />
+						</HoverCard>
+					))}
 			</div>
 		</section>
 	);

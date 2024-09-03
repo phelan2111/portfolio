@@ -1,6 +1,6 @@
 import { PayloadAction, createSlice } from '@reduxjs/toolkit';
-import { RootState } from './store';
 import { Langue } from '@/utils/enums';
+import { RootState } from '../store';
 
 export interface ModalState {
 	data: Langue;
@@ -11,16 +11,16 @@ const initialState: ModalState = {
 };
 
 export const langueSlice = createSlice({
-	name: 'langue',
+	name: 'langueSlice',
 	initialState,
 	reducers: {
-		onChangeLangue: (state, action: PayloadAction<ModalState>) => {
+		onSetState: (state, action: PayloadAction<ModalState>) => {
 			state.data = action.payload.data;
 		},
 	},
 });
 
-export const { onChangeLangue } = langueSlice.actions;
+export const funcLangue = langueSlice.actions;
 
 export const dataLangue = (state: RootState) => state.langue.data;
 

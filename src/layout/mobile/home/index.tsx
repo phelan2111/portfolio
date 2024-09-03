@@ -13,7 +13,7 @@ interface IHomeMobileProps {}
 function HomeMobile(props: IHomeMobileProps) {
 	console.log('HomeMobile', props);
 	return (
-		<div className='pb-[105px] select-none flex-col gap-3 flex'>
+		<div className='pb-[105px] select-none flex-col flex'>
 			<AppBar />
 			<div
 				id='homeMobile'

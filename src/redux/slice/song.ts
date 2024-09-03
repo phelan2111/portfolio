@@ -1,6 +1,6 @@
 import { createSlice } from '@reduxjs/toolkit';
 import type { PayloadAction } from '@reduxjs/toolkit';
-import { RootState } from './store';
+import { RootState } from '../store';
 
 export interface ISongState {
 	name: string;
@@ -13,7 +13,7 @@ const initialState: ISongState = {
 };
 
 export const songSlice = createSlice({
-	name: 'song',
+	name: 'songSlice',
 	initialState,
 	reducers: {
 		onPlay: (state) => {
@@ -28,8 +28,8 @@ export const songSlice = createSlice({
 	},
 });
 
-export const { onPlay, onSetData } = songSlice.actions;
+export const funcSong = songSlice.actions;
 
-export const dataModal = (state: RootState) => state.song;
+export const dataSong = (state: RootState) => state.song;
 
 export default songSlice.reducer;

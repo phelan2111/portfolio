@@ -9,12 +9,16 @@ export interface IButtonProps {
 	onClick?: VoidFunction;
 }
 
-function Button({ className = '', type = 'button', ...props }: IButtonProps) {
+function Button({
+	className = 'w-full',
+	type = 'button',
+	...props
+}: IButtonProps) {
 	return (
 		<button
 			onClick={props.onClick}
 			type={type}
-			className={`bg-primary_light w-full hover:bg-primary_light/80 dark:bg-primary_dark dark:hover:bg-primary_dark/80 transition-all duration-300 h-11 active:shadow-white rounded-sm text-base ${className}`}>
+			className={`bg-primary_light hover:bg-primary_light/80 dark:bg-primary_dark dark:hover:bg-primary_dark/80 transition-all duration-300 h-11 active:shadow-white rounded-sm text-base ${className}`}>
 			{props.text ? Localize(props.text) : props.children}
 		</button>
 	);

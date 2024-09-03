@@ -82,7 +82,7 @@ function SongOfAlbum(props: ISongOfAlbumProps) {
 						<div className='flex items-center justify-between w-full'>
 							<div>
 								<h6>{item.name}</h6>
-								<p className='text-xs truncate w-64'>
+								<p className='text-xs truncate w-52'>
 									{item.singers.join('_')}
 								</p>
 							</div>

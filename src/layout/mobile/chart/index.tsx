@@ -99,8 +99,8 @@ function ChartMobile(props: IChartMobileProps) {
 					<LuDot />
 					<p className='text-sm'>7 New Entries</p>
 				</div>
-				<article className='flex justify-between items-center'>
-					<div className='flex gap-8 items-center'>
+				<article className='flex justify-between flex-wrap gap-5 items-center'>
+					<div className='flex gap-5 items-center'>
 						<div className='w-12 h-12 shadow-bootstrapLarge rounded-md overflow-auto'>
 							<Video
 								mute={true}
