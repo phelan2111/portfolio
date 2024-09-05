@@ -12,7 +12,7 @@ import { FcGoogle } from 'react-icons/fc';
 function SignInDesktop() {
 	const { redirectPage } = useRedirect();
 	return (
-		<div className='hidden lg:flex m-auto p-6 relative z-10 w-full'>
+		<div className='hidden lg:flex m-auto p-6 relative z-10 w-full h-full'>
 			<div className='flex bg-white/30 p-6 rounded-2xl backdrop-blur m-auto gap-6 max-w-96 w-full shadow-bootstrapLarge animate-translateRight'>
 				<article className='flex flex-col gap-10 w-full'>
 					<div className='m-auto'>

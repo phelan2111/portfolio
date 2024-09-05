@@ -4,7 +4,7 @@ import Localize from '@/langs';
 import data from '@/pages/home/data/newRelease.json';
 function NewReleaseCard() {
 	return (
-		<section className='flex flex-col gap-3 snap-start'>
+		<section className='flex flex-col gap-4 snap-start'>
 			<h4 className='text-xl font-bold'>
 				{Localize('NEW_RELEASE_FROM')} Sơn Tùng M-TP
 			</h4>

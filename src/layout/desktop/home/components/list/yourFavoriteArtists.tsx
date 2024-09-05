@@ -5,7 +5,7 @@ import { handleStyleViewTool } from '../..';
 
 function YourFavoriteArtists() {
 	return (
-		<section className='flex flex-col gap-3 snap-start'>
+		<section className='flex flex-col gap-4 snap-start'>
 			<h4 className='text-xl font-bold'>
 				{Localize('YOUR_FAVORITE_ARTISTS')}
 			</h4>

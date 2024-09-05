@@ -1,5 +1,5 @@
 import Localize from '@/langs';
-import data from './data/search.json';
+import data from '@/pages/search/data/search.json';
 import PopperSetting from '@/components/ui/popper/setting';
 import HorizontalItem from '@/components/ui/item/horizontal';
 import { IoCloseOutline } from 'react-icons/io5';

@@ -6,7 +6,7 @@ import { handleStyleViewTool } from '../..';
 
 function YourTopMixes() {
 	return (
-		<section className='flex flex-col gap-3 snap-start'>
+		<section className='flex flex-col gap-4 snap-start'>
 			<div className='flex justify-between w-full items-center'>
 				<h4 className='text-xl font-bold'>
 					{Localize('YOUR_TOP_MIX')}

@@ -3,6 +3,7 @@ import { ReactNode, useCallback, useEffect, useRef } from 'react';
 interface IHoverCardProps {
 	children: ReactNode;
 	className?: string;
+	onClick?: VoidFunction;
 }
 function HoverCard(props: IHoverCardProps) {
 	const ref = useRef<HTMLDivElement>(null);
@@ -69,6 +70,8 @@ function HoverCard(props: IHoverCardProps) {
 
 	return (
 		<div
+			aria-hidden
+			onClick={props.onClick}
 			ref={ref}
 			style={{
 				transform: 'rotate3d(0)',

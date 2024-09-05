@@ -6,7 +6,7 @@ import { handleStyleViewTool } from '../..';
 
 function MakeForUser() {
 	return (
-		<section className='flex flex-col gap-3'>
+		<section className='flex flex-col gap-4'>
 			<div className='flex justify-between w-full items-center'>
 				<h4 className='text-xl font-bold'>
 					{Localize('MADE_FOR')} Chaos

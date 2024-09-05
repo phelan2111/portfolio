@@ -15,7 +15,7 @@ function SignUpMobile(props: ISignUpMobileProps) {
 	const { redirectPage } = useRedirect();
 	return (
 		<div className='bg-white/10 px-10 py-4 rounded-md flex-col gap-10 w-full h-screen select-none flex lg:hidden'>
-			<div className='flex justify-center flex-col items-center  animate-translateRight'>
+			<div className='flex justify-center flex-col items-center animate-translateRight'>
 				<LogoComponent />
 				<div className='mt-2 px-2 py-2 rounded-sm text-center w-full'>
 					<h4 className='font-bold text-lg'>
