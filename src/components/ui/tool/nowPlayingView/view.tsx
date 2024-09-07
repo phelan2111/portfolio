@@ -12,7 +12,7 @@ function View(props: IViewProps) {
 	return (
 		<div className='min-w-[348px] flex flex-col gap-6 h-tool overflow-y-auto scrollHiddenY pr-2'>
 			<div className='flex flex-col'>
-				<div className='flex sticky pb-3 bg-primary_dark-10 top-0 items-center justify-between animate-translateBottom_duration_0dot8'>
+				<div className='flex sticky pb-3 pt-1 bg-primary_dark-10 top-0 items-center justify-between animate-translateBottom_duration_0dot8 z-10'>
 					<h5 className='font-bold'>Lil Nas X</h5>
 					<div className='flex items-center gap-2'>
 						<div className='min-w-8 h-8 bg-primary_dark-20 rounded-full flex justify-center items-center transition-transform hover:scale-110 cursor-pointer'>

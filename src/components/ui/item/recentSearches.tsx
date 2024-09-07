@@ -22,7 +22,7 @@ function ItemRecentSearches(props: IItemRecentSearchesProps) {
 					<FaRegPlayCircle className='text-3xl' />
 				</div>
 				<img
-					className={`w-full transition-all duration-500 object-cover rounded-full shadow-bootstrapLarge ${
+					className={`transition-all m-auto duration-500 object-cover rounded-full shadow-bootstrapLarge ${
 						handleStyleViewTool().classNameItem
 					}`}
 					src={props.image}

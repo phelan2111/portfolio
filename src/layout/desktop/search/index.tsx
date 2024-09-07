@@ -7,8 +7,10 @@ import { sliceToolControl } from '@/redux/slice';
 export function handleStyleViewTool() {
 	const isViewTool = sliceToolControl.useGetState().open;
 	const sliceData = isViewTool ? 3 : 5;
-	const className = isViewTool ? '2xl:grid-cols-3' : '2xl:grid-cols-5';
-	const classNameItem = isViewTool ? 'h-72' : 'h-56';
+	const className = isViewTool
+		? '2xl:grid-cols-3 xl:grid-cols-1'
+		: '2xl:grid-cols-5 xl:grid-cols-2';
+	const classNameItem = isViewTool ? 'h-72 w-72' : 'h-56 w-56';
 	return {
 		className,
 		sliceData,
