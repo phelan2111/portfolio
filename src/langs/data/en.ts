@@ -101,4 +101,5 @@ export const dataLocalizeEN: Record<string, string> = {
 	MONTHLY_LISTENER: 'monthly listeners',
 	NEXT_IN_QUEUE: 'Next in queue',
 	OPEN_QUEUE: 'Open queue',
+	BROWSE_ALL: 'Browse all',
 };
