@@ -6,7 +6,7 @@ import OTPSignUp from './step/OTP';
 export interface IComponentStepProps extends IViewProps {
 	step: STEP_SIGN_UP;
 }
-function ModelStep(props: IComponentStepProps) {
+function ComponentStep(props: IComponentStepProps) {
 	switch (props.step) {
 		case STEP_SIGN_UP.VERIFY: {
 			return <OTPSignUp onSubmit={props.onSubmitOTP} />;
