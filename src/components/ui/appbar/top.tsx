@@ -3,6 +3,7 @@ import { useRedirect } from '@/hooks/useRedirect';
 import { PATH } from '@/routes/config';
 import InputSearchDesktop from '../input/search/desktop';
 import { FaAngleLeft, FaAngleRight } from 'react-icons/fa';
+import { memo } from 'react';
 
 const tabs: IItemTab<string>[] = [
 	{
@@ -34,7 +35,7 @@ function ViewTool() {
 		return <InputSearchDesktop />;
 	}
 	return (
-		<header className='select-none flex gap-4 items-center sticky top-0 h-fit z-50 snap-start animate-translateBottom_duration_0dot8'>
+		<header className='select-none flex gap-4 items-center sticky top-0 h-fit z-50 snap-start'>
 			<Tabs
 				onChange={(dataItem: IItemTab<unknown>) => {
 					redirectPage(dataItem.value as string);
@@ -46,12 +47,16 @@ function ViewTool() {
 	);
 }
 
-function AppBarTop() {
+interface IAppBarTopProps {
+	className?: string;
+}
+function AppBarTop({ className = '' }: IAppBarTopProps) {
 	return (
-		<div className='bg-primary_dark-10 w-full p-6 rounded-3xl flex flex-col gap-8 animate-translateBottom_duration_0dot8'>
+		<div
+			className={`bg-primary_dark-10 w-full p-6 rounded-3xl flex flex-col gap-8  ${className}`}>
 			<div className='flex justify-between items-center'>
 				<ViewTool />
-				<div className='flex gap-2 animate-translateBottom_duration_0dot8'>
+				<div className='flex gap-2'>
 					<div className='w-8 h-8 bg-primary_dark-20 rounded-full flex justify-center items-center hover:scale-110 cursor-pointer'>
 						<FaAngleLeft />
 					</div>
@@ -64,4 +69,4 @@ function AppBarTop() {
 	);
 }
 
-export default AppBarTop;
+export default memo(AppBarTop);

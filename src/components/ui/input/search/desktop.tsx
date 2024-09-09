@@ -12,7 +12,7 @@ function InputSearchDesktop() {
 	};
 
 	return (
-		<article className='flex items-center relative bg-primary_dark p-2 animate-translateBottom_duration_0dot8 rounded-xl w-full max-w-96'>
+		<article className='flex items-center relative bg-primary_dark p-2 rounded-xl w-full max-w-96'>
 			<div className='w-8 h-8 absolute left-5 top-0 bg-primary_dark rounded-full animate-push' />
 			<div className='w-4 h-4 absolute left-3 top-0 delay-150 bg-primary_dark rounded-full animate-push_delay_0dot8' />
 			<div

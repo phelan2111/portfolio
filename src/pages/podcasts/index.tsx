@@ -1,7 +1,7 @@
-import Component from './component';
+import Model from './model';
 
 function PodCasts() {
-	return <Component />;
+	return <Model />;
 }
 
 export default PodCasts;

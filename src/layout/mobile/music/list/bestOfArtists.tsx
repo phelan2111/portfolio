@@ -1,5 +1,5 @@
 import Localize from '@/langs';
-import data from '../data/bestOfArtists.json';
+import data from '@/pages/music/data/bestOfArtists.json';
 import BestOfArtistItem from '@/components/ui/item/bestOfArtist';
 
 function BestOfArtists() {

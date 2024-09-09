@@ -1,5 +1,5 @@
 import HorizontalItem from '@/components/ui/item/horizontal';
-import data from '../data/familiarAlbum.json';
+import data from '@/pages/music/data/familiarAlbum.json';
 import { useRedirect } from '@/hooks/useRedirect';
 import { PATH } from '@/routes/config';
 

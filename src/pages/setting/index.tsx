@@ -1,7 +1,7 @@
-import Component from './component';
+import Model from './model';
 
 function Setting() {
-	return <Component />;
+	return <Model />;
 }
 
 export default Setting;

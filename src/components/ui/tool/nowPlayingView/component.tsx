@@ -3,7 +3,7 @@ import View from './view';
 import { EnumToolType } from '@/redux/slice/toolControl';
 import { useAppDispatch } from '@/hooks/redux';
 
-function Component() {
+function Model() {
 	const dispatch = useAppDispatch();
 
 	const handleClose = () => {
@@ -17,4 +17,4 @@ function Component() {
 	return <View onClose={handleClose} />;
 }
 
-export default Component;
+export default Model;

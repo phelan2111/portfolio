@@ -14,7 +14,7 @@ export interface IItemPodcastSuggest {
 }
 
 interface IPodcastsSuggestionCardProps {
-	onOptions: VoidFunction;
+	onOptions?: VoidFunction;
 	item: IItemPodcastSuggest;
 }
 function PodcastsSuggestionCard(props: IPodcastsSuggestionCardProps) {
@@ -22,10 +22,12 @@ function PodcastsSuggestionCard(props: IPodcastsSuggestionCardProps) {
 		<article className='relative'>
 			<div className='bg-white/10 backdrop-blur-md p-4 rounded-md shadow-podcastsCard snap-start'>
 				<div className='flex justify-between items-center gap-4 text-primary_light'>
-					<h4 className='text-lg font-bold leading-6'>
+					<h4 className='text-lg font-bold leading-6 xl:truncate'>
 						{props.item.name}
 					</h4>
-					<GoPlusCircle className='text-2xl font-bold hover:scale-110 transition-transform duration-300 cursor-pointer' />
+					<div className='xl:hidden'>
+						<GoPlusCircle className='text-2xl font-bold hover:scale-110 transition-transform duration-300 cursor-pointer' />
+					</div>
 				</div>
 				<p className='flex gap-1 text-xs items-end'>
 					Episode <LuDot />
@@ -41,25 +43,25 @@ function PodcastsSuggestionCard(props: IPodcastsSuggestionCardProps) {
 						<WaveLoader />
 					</div>
 				</div>
-				<div className='py-4'>
-					<p className='text-xs font-semibold line-clamp-3'>
+				<div className='py-4 xl:h-14'>
+					<p className='text-xs font-semibold line-clamp-3 xl:line-clamp-2'>
 						{props.item.createAt}{' '}
 						<span className='text-white/50'>
 							- {props.item.lastComment}
 						</span>
 					</p>
 				</div>
-				<div className='flex justify-between items-center'>
-					<div className='bg-primary_dark/70 cursor-pointer relative z-10 rounded-3xl font-semibold flex px-3 py-2 hover:bg-primary_dark/90 transition-colors duration-300 items-center gap-2'>
+				<div className='flex justify-between items-center xl:justify-end'>
+					<div className='bg-primary_dark/70 xl:hidden cursor-pointer relative z-10 rounded-3xl font-semibold flex px-3 py-2 hover:bg-primary_dark/90 transition-colors duration-300 items-center gap-2'>
 						<CiVolumeMute className='text-lg' />
 						<p className='text-xs'>{Localize('PREVIEW_ALBUM')}</p>
 					</div>
-					<div className='flex items-center gap-4'>
+					<div className='flex items-center gap-4 group'>
 						<SlOptionsVertical
 							onClick={props.onOptions}
-							className='text-lg'
+							className='text-lg xl:hidden'
 						/>
-						<FaPlayCircle className='text-3xl relative z-10' />
+						<FaPlayCircle className='text-3xl relative z-10 xl:hidden' />
 					</div>
 				</div>
 			</div>

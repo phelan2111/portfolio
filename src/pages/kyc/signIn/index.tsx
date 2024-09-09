@@ -1,7 +1,7 @@
-import Component from './component';
+import Model from './model';
 
 function SignIn() {
-	return <Component />;
+	return <Model />;
 }
 
 export default SignIn;

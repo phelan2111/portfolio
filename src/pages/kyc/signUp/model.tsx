@@ -2,7 +2,7 @@ import View from './view';
 import { useState } from 'react';
 import { STEP_SIGN_UP } from './types';
 
-function Component() {
+function Model() {
 	const [step, setStep] = useState<STEP_SIGN_UP>(STEP_SIGN_UP.USER_NAME);
 
 	const handleSubmitFormUser = () => {
@@ -22,4 +22,4 @@ function Component() {
 	);
 }
 
-export default Component;
+export default Model;

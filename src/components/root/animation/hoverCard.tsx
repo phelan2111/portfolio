@@ -76,7 +76,7 @@ function HoverCard(props: IHoverCardProps) {
 			style={{
 				transform: 'rotate3d(0)',
 			}}
-			className={`transition-all duration-500 relative hover:duration-150 ${props.className}`}>
+			className={`transition-all duration-200 hover:duration-200 relative ${props.className}`}>
 			<div
 				ref={refLight}
 				className='absolute z-10 transition-all duration-500 w-full h-full top-0 left-0'

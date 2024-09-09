@@ -47,7 +47,7 @@ function NavigateLeft(props: INavigateLeftProps) {
 
 	return (
 		<div className='lg:block hidden'>
-			<div className='animate-translateBottom_duration_0dot8'>
+			<div>
 				<div className='bg-primary_dark-10 rounded-3xl'>
 					<div className='flex items-center gap-2 px-4 py-4'>
 						<IoLibraryOutline />
@@ -55,10 +55,10 @@ function NavigateLeft(props: INavigateLeftProps) {
 							{Localize('YOUR_LIBRARY')}
 						</p>
 					</div>
-					<article className='px-4 pb-4 animate-translateBottom_duration_0dot8'>
+					<article className='px-4 pb-4'>
 						<FilterChip data={filter} />
 					</article>
-					<article className='px-4 pb-4 flex justify-between items-center animate-translateBottom_duration_0dot8'>
+					<article className='px-4 pb-4 flex justify-between items-center'>
 						<SearchYourLibrary onChange={() => void 0} />
 						<AnimationScale>
 							<div className='h-10 w-10 bg-white/10 rounded-full flex items-center justify-center cursor-pointer'>
@@ -67,7 +67,7 @@ function NavigateLeft(props: INavigateLeftProps) {
 						</AnimationScale>
 					</article>
 					<article className='pb-4 pt-2 pr-4'>
-						<div className='flex flex-col gap-4 h-yourLibraryDk scrollHiddenY relative z-10 overflow-y-auto snap-mandatory snap-y p-4 animate-translateBottom_duration_0dot8'>
+						<div className='flex flex-col gap-4 h-yourLibraryDk scrollHiddenY relative z-10 overflow-y-auto snap-mandatory snap-y p-4'>
 							{data.map((i) => {
 								return (
 									<YourLibraryAlbumItem

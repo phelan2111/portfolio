@@ -1,5 +1,5 @@
 import Localize from '@/langs';
-import data from '../data/charts.json';
+import data from '@/pages/music/data/charts.json';
 import ChartItem from '@/components/ui/item/charts';
 import { useRedirect } from '@/hooks/useRedirect';
 import { PATH } from '@/routes/config';

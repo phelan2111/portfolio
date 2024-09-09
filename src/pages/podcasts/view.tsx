@@ -1,11 +1,12 @@
 import ScreenResponsive from '@/components/ui/responsive/screen';
+import PodcastDesktop from '@/layout/desktop/podcasts';
 import PodcastsMobile from '@/layout/mobile/podcasts';
 
 function View() {
 	return (
 		<ScreenResponsive
 			mobile={() => <PodcastsMobile />}
-			desktop={() => <div>Podcasts Desktop</div>}
+			desktop={() => <PodcastDesktop />}
 		/>
 	);
 }

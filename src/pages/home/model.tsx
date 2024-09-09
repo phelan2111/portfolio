@@ -1,7 +1,7 @@
 import View from './view';
 
-function Component() {
+function Model() {
 	return <View />;
 }
 
-export default Component;
+export default Model;

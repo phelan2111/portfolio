@@ -3,7 +3,7 @@ import View from './view';
 import { PATH } from '@/routes/config';
 
 interface IComponentProps {}
-function Component(props: IComponentProps) {
+function Model(props: IComponentProps) {
 	console.log('Component', props);
 	const { redirectPage } = useRedirect();
 	const handleSubmit = () => {
@@ -12,4 +12,4 @@ function Component(props: IComponentProps) {
 	return <View onSubmit={handleSubmit} />;
 }
 
-export default Component;
+export default Model;

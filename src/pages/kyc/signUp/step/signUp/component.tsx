@@ -2,7 +2,7 @@ import { ISignUpUserProps } from '.';
 import View from './view';
 
 interface IComponentProps extends ISignUpUserProps {}
-function Component(props: IComponentProps) {
+function Model(props: IComponentProps) {
 	const handleSubmit = () => {
 		props.onSignUpSuccess();
 	};
@@ -10,4 +10,4 @@ function Component(props: IComponentProps) {
 	return <View onSubmit={handleSubmit} />;
 }
 
-export default Component;
+export default Model;

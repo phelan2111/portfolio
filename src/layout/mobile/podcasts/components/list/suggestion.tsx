@@ -1,6 +1,6 @@
 import PodcastsSuggestionCard from '@/components/ui/card/podcastsSuggestion';
 import BackDropPopper from '@/components/root/popper/backDrop';
-import data from '../../data/suggestion.json';
+import data from '@/pages/podcasts/data/suggestion.json';
 import { useState } from 'react';
 import {
 	BsBroadcast,

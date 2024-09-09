@@ -1,6 +1,6 @@
 import ToTryCard from '@/components/ui/card/toTry';
 import Localize from '@/langs';
-import data from '../../data/totry.json';
+import data from '@/pages/music/data/totry.json';
 
 function View() {
 	return (

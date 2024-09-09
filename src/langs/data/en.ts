@@ -102,4 +102,5 @@ export const dataLocalizeEN: Record<string, string> = {
 	NEXT_IN_QUEUE: 'Next in queue',
 	OPEN_QUEUE: 'Open queue',
 	BROWSE_ALL: 'Browse all',
+	YOUR_FAVORITE_PODCASTS: 'Your favorite podcasts',
 };

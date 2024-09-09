@@ -1,4 +1,4 @@
-import data from '../../data/favourites.json';
+import data from '@/pages/podcasts/data/favourites.json';
 
 function FavouritesList() {
 	return (
