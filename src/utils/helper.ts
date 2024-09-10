@@ -22,3 +22,13 @@ export function isToday(millisecond: number) {
 
 	return isToday;
 }
+
+export class Helper {
+	static formatNumber(number: number) {
+		const numberConvert = new Intl.NumberFormat('en-IN', {
+			maximumSignificantDigits: 10,
+		}).format(number);
+
+		return numberConvert;
+	}
+}

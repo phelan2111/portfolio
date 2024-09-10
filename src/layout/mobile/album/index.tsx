@@ -14,7 +14,7 @@ import { LiaRandomSolid } from 'react-icons/lia';
 import SongOfAlbum from './components/list/song';
 import { GoDownload, GoKebabHorizontal, GoPlus } from 'react-icons/go';
 import IconBootstrapLarge from '@/components/ui/icon/iconBootstrapLarge';
-import data from './data/songs.json';
+import data from '@/pages/album/data/songs.json';
 import MenuIcon, { IItemIcon } from '@/components/ui/menu/icon';
 import { useRedirect } from '@/hooks/useRedirect';
 import { PATH } from '@/routes/config';

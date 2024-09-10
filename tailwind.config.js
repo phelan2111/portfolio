@@ -47,7 +47,8 @@ export default {
       height: {
         home: 'calc(100dvh - 230px)',
         desktopWrapper: 'calc(100dvh - 345px)',
-        album: 'calc(100dvh - 80px)',
+        album: 'calc(100dvh - 170px)',
+        albumDk: 'calc(100dvh - 240px)',
         podcasts: 'calc(100dvh - 210px)',
         yourLibrary: 'calc(100dvh - 250px)',
         yourLibraryDk: 'calc(100dvh - 315px)',

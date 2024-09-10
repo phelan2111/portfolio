@@ -5,7 +5,7 @@ interface IResponsiveDesktopProps {
 }
 function ResponsiveDesktop(props: IResponsiveDesktopProps) {
 	return (
-		<div className='hidden lg:block w-full h-full'>{props.children}</div>
+		<main className='hidden lg:block w-full h-full'>{props.children}</main>
 	);
 }
 

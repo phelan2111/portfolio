@@ -103,4 +103,6 @@ export const dataLocalizeEN: Record<string, string> = {
 	OPEN_QUEUE: 'Open queue',
 	BROWSE_ALL: 'Browse all',
 	YOUR_FAVORITE_PODCASTS: 'Your favorite podcasts',
+	VERIFIED_ARTIST: 'Verified Artist',
+	POPULAR: 'Popular',
 };
