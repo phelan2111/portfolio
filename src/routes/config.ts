@@ -20,6 +20,7 @@ export const PATH = {
 	},
 	PODCASTS: {
 		_: '/podcasts',
+		DETAILS: '/podcasts/:id',
 	},
 	ADD_ACCOUNT: '/addAccount',
 	WHAT_NEWS: '/whatNews',

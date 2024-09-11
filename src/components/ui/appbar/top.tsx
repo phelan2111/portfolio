@@ -35,7 +35,7 @@ function ViewTool() {
 		return <InputSearchDesktop />;
 	}
 	return (
-		<header className='select-none flex gap-4 items-center sticky top-0 h-fit z-50 snap-start'>
+		<header className='select-none flex gap-4 items-center sticky top-0 h-11 z-50 snap-start'>
 			<Tabs
 				onChange={(dataItem: IItemTab<unknown>) => {
 					redirectPage(dataItem.value as string);

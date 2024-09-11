@@ -1,8 +1,8 @@
 import ResponsiveDesktop from '@/components/ui/responsive/desktop';
 import AppBarTop from '@/components/ui/appbar/top';
 import { sliceToolControl } from '@/redux/slice';
-import EpisodesForYou from './components/list/episodesForYou';
-import Suggestion from './components/list/suggestion';
+import EpisodesForYou from '../components/list/episodesForYou';
+import Suggestion from '../components/list/suggestion';
 export function handleStyleViewTool() {
 	const isViewTool = sliceToolControl.useGetState().open;
 	const sliceData = isViewTool ? 5 : 7;

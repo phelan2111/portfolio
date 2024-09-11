@@ -12,7 +12,7 @@ function InputSearchDesktop() {
 	};
 
 	return (
-		<article className='flex items-center relative bg-primary_dark p-2 rounded-xl w-full max-w-96'>
+		<article className='flex items-center relative bg-primary_dark px-2 rounded-xl w-full max-w-96'>
 			<div className='w-8 h-8 absolute left-5 top-0 bg-primary_dark rounded-full animate-push' />
 			<div className='w-4 h-4 absolute left-3 top-0 delay-150 bg-primary_dark rounded-full animate-push_delay_0dot8' />
 			<div
@@ -28,7 +28,7 @@ function InputSearchDesktop() {
 					}}
 					placeholder={Localize('WHAT_DO_YOU_WANT')}
 					classNameInput='text-primary_light'
-					className='!bg-transparent hover:!shadow-none !h-8 focus-within:!shadow-none'
+					className='!bg-transparent hover:!shadow-none focus-within:!shadow-none'
 				/>
 			</div>
 		</article>

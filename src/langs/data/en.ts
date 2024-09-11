@@ -105,4 +105,5 @@ export const dataLocalizeEN: Record<string, string> = {
 	YOUR_FAVORITE_PODCASTS: 'Your favorite podcasts',
 	VERIFIED_ARTIST: 'Verified Artist',
 	POPULAR: 'Popular',
+	FAN_ALSO_LIKE: 'Fan also like',
 };

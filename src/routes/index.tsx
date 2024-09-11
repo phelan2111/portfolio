@@ -8,7 +8,8 @@ const SignIn = lazy(() => import('@/pages/kyc/signIn'));
 const SignUp = lazy(() => import('@/pages/kyc/signUp'));
 const Home = lazy(() => import('@/pages/home'));
 const Album = lazy(() => import('@/pages/album'));
-const Podcasts = lazy(() => import('@/pages/podcasts'));
+const Podcasts = lazy(() => import('@/pages/podcasts/list'));
+const PodcastsDetails = lazy(() => import('@/pages/podcasts/details'));
 const Search = lazy(() => import('@/pages/search'));
 const Music = lazy(() => import('@/pages/music'));
 const Chart = lazy(() => import('@/pages/chart'));
@@ -58,6 +59,10 @@ const router = createBrowserRouter([
 					{
 						path: PATH.PODCASTS._,
 						element: <Podcasts />,
+					},
+					{
+						path: PATH.PODCASTS.DETAILS,
+						element: <PodcastsDetails />,
 					},
 					{
 						path: PATH.SEARCH,
