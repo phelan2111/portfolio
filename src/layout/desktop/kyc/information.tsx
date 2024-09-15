@@ -11,7 +11,7 @@ interface IInformationSignUpDesktopProps {
 
 function InformationSignUpDesktop(props: IInformationSignUpDesktopProps) {
 	return (
-		<div className='hidden lg:flex m-auto p-6 relative z-10 w-full'>
+		<div className='hidden lg:flex m-auto p-6 relative z-10 w-full h-full'>
 			<div className='flex flex-col bg-white/30 p-6 rounded-2xl backdrop-blur m-auto gap-6 max-w-96 w-full shadow-bootstrapLarge animate-translateRight select-none'>
 				<div className='flex justify-center flex-col items-center'>
 					<LogoComponent />

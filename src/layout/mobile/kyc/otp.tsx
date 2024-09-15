@@ -10,7 +10,7 @@ interface IOTPProps {
 
 function OTP(props: IOTPProps) {
 	return (
-		<div className='bg-white/10 px-10 py-4 rounded-md flex-col gap-10 w-full h-screen select-none flex'>
+		<div className='bg-white/10 px-10 py-4 rounded-md flex-col justify-center gap-10 w-full h-screen select-none flex'>
 			<div className='flex justify-center flex-col items-center animate-translateRight'>
 				<LogoComponent />
 				<div className='mt-2 px-2 py-2 rounded-sm text-center w-full'>
