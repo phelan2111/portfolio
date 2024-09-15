@@ -24,12 +24,12 @@ function PlaySong() {
 				<div className='flex gap-2 pb-6 pt-4 xl:pb-4'>
 					<img
 						className='w-12 h-12 object-cover rounded-sm'
-						src='https://i.pinimg.com/736x/e8/79/8d/e8798d217ab8817d1e89d42ba8accfaf.jpg'
-						alt='https://i.pinimg.com/736x/e8/79/8d/e8798d217ab8817d1e89d42ba8accfaf.jpg'
+						src='https://i.pinimg.com/564x/86/20/82/8620821ab7e20048acc4a30fa449e5d9.jpg'
+						alt='https://i.pinimg.com/564x/86/20/82/8620821ab7e20048acc4a30fa449e5d9.jpg'
 					/>
 					<div>
-						<h6>RISE</h6>
-						<p className='text-xs'>League of Legends</p>
+						<h6>Lâu Lâu Nhắc Lại</h6>
+						<p className='text-xs'>Hà Nhi</p>
 					</div>
 				</div>
 				<div className='hidden xl:block'>
