@@ -245,3 +245,173 @@ body {
 		background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
 	}
 }
+
+.loader {
+	position: relative;
+	width: 64px;
+	height: 64px;
+  }
+  
+  .loader div {
+	position: absolute;
+	border: 4px solid #454ade;
+	border-radius: 50%;
+	animation: loader8435 1s ease-out infinite;
+  }
+  
+  .loader div:nth-child(2) {
+	animation-delay: -0.5s;
+  }
+  
+  @keyframes loader8435 {
+	0% {
+	  top: 32px;
+	  left: 32px;
+	  width: 0;
+	  height: 0;
+	  opacity: 1;
+	}
+  
+	100% {
+	  top: 0;
+	  left: 0;
+	  width: 64px;
+	  height: 64px;
+	  opacity: 0;
+	}
+  }
+  
+
+.loader-character {
+	width: fit-content;
+	font-size: 40px;
+	font-family: monospace;
+	font-weight: bold;
+	text-transform: uppercase;
+	color: #0000;
+	-webkit-text-stroke: 1px #000;
+	background: linear-gradient(90deg, #0000 33%, #000 0 67%, #0000 0) 100%/300%
+	  100% no-repeat text;
+	animation: l12 4s steps(14) infinite;
+  }
+  .loader-character:before {
+	content: "LY MINH TAN - PHELAN";
+  }
+  @keyframes l12 {
+	to {
+	  background-position: 0;
+	}
+  }
+  
+  
+  .loader-character span {
+	position: absolute;
+	color: #fff;
+	transform: translate(-50%, -50%);
+	font-size: 52px;
+	letter-spacing: 5px;
+  }
+  
+  .loader-character span:nth-child(1) {
+	color: transparent;
+	-webkit-text-stroke: 0.3px white;
+  }
+  
+  .loader-character span:nth-child(2) {
+	color: white;
+	-webkit-text-stroke: 1px white;
+	animation: uiverse723 3s ease-in-out infinite;
+  }
+  
+  @keyframes uiverse723 {
+	0%, 100% {
+	  clip-path: polygon(0% 45%, 15% 44%, 32% 50%, 
+	   54% 60%, 70% 61%, 84% 59%, 100% 52%, 100% 100%, 0% 100%);
+	}
+  
+	50% {
+	  clip-path: polygon(0% 60%, 16% 65%, 34% 66%, 
+	   51% 62%, 67% 50%, 84% 45%, 100% 46%, 100% 100%, 0% 100%);
+	}
+  }
+
+  /* From Uiverse.io by LeonKohli */ 
+.glitch-container {
+	position: relative;
+	font-family: "Orbitron", sans-serif;
+	font-size: 50px;
+	font-weight: 900;
+	text-transform: uppercase;
+	color: #00ffff;
+	text-shadow:
+	  0.05em 0 0 #ff00ff,
+	  -0.03em -0.04em 0 #ffff00,
+	  0.025em 0.04em 0 #00ffff;
+	animation: glitch 725ms infinite;
+  }
+  
+  .glitch-container span {
+	position: absolute;
+	top: 0;
+	left: 0;
+  }
+  
+  .glitch-container span:first-child {
+	animation: glitch 500ms infinite;
+	clip-path: polygon(0 0, 100% 0, 100% 35%, 0 35%);
+	transform: translate(-0.04em, -0.03em);
+	opacity: 0.75;
+  }
+  
+  .glitch-container span:last-child {
+	animation: glitch 375ms infinite;
+	clip-path: polygon(0 65%, 100% 65%, 100% 100%, 0 100%);
+	transform: translate(0.04em, 0.03em);
+	opacity: 0.75;
+  }
+  
+  @keyframes glitch {
+	0% {
+	  text-shadow:
+		0.05em 0 0 #ff00ff,
+		-0.03em -0.04em 0 #ffff00,
+		0.025em 0.04em 0 #00ffff;
+	}
+	15% {
+	  text-shadow:
+		0.05em 0 0 #ff00ff,
+		-0.03em -0.04em 0 #ffff00,
+		0.025em 0.04em 0 #00ffff;
+	}
+	16% {
+	  text-shadow:
+		-0.05em -0.025em 0 #ff00ff,
+		0.025em 0.035em 0 #ffff00,
+		-0.05em -0.05em 0 #00ffff;
+	}
+	49% {
+	  text-shadow:
+		-0.05em -0.025em 0 #ff00ff,
+		0.025em 0.035em 0 #ffff00,
+		-0.05em -0.05em 0 #00ffff;
+	}
+	50% {
+	  text-shadow:
+		0.05em 0.035em 0 #ff00ff,
+		0.03em 0 0 #ffff00,
+		0 -0.04em 0 #00ffff;
+	}
+	99% {
+	  text-shadow:
+		0.05em 0.035em 0 #ff00ff,
+		0.03em 0 0 #ffff00,
+		0 -0.04em 0 #00ffff;
+	}
+	100% {
+	  text-shadow:
+		-0.05em 0 0 #ff00ff,
+		-0.025em -0.04em 0 #ffff00,
+		-0.04em -0.025em 0 #00ffff;
+	}
+  }
+  

@@ -1,6 +1,6 @@
 import 'styles/common/logo.scss';
 
-function LogoComponent() {
+function Logo() {
 	return (
 		<div className='scene'>
 			<div className='forest'>
@@ -116,4 +116,4 @@ function LogoComponent() {
 	);
 }
 
-export default LogoComponent;
+export default Logo;

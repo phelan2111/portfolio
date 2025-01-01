@@ -28,8 +28,8 @@
 	90%,
 	100% {
 		box-shadow: 0 0 0 5px #feffd2, 0 0 0 10px #ffeea9,
-			0 0 0 15px rgba(255, 238, 169, 0.6),
-			0 0 0 20px rgba(255, 238, 169, 0.3);
+			0 0 0 20px rgba(255, 238, 169, 0.6),
+			0 0 0 30px rgba(255, 238, 169, 0.3);
 	}
 
 	25%,
@@ -198,8 +198,8 @@
 	display: flex;
 	justify-content: center;
 	align-items: flex-end;
-	width: 200px;
-	height: 100px;
+	width: 800px;
+	height: 400px;
 	position: relative;
 }
 
@@ -748,14 +748,14 @@
 
 .time .day {
 	display: block;
-	width: 20px;
-	height: 20px;
+	width: 80px;
+	height: 80px;
 	position: absolute;
 	top: 20%;
 	left: 40%;
 	border-radius: 50%;
-	box-shadow: 0 0 0 25px #5ad6bd, 0 0 0 40px #4acead,
-		0 0 0 60px rgba(74, 206, 173, 0.6), 0 0 0 90px rgba(74, 206, 173, 0.3);
+	box-shadow: 0 0 0 50px #5ad6bd, 0 0 0 60px #4acead,
+		0 0 0 80px rgba(74, 206, 173, 0.6), 0 0 0 90px rgba(74, 206, 173, 0.3);
 	animation: sunrise 5s ease-in-out infinite;
 	background-color: #ef9431;
 }
@@ -816,8 +816,8 @@
 
 .time .night .moon {
 	display: block;
-	width: 25px;
-	height: 25px;
+	width: 80px;
+	height: 80px;
 	position: absolute;
 	bottom: 22%;
 	right: 33%;
