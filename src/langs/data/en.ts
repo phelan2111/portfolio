@@ -12,5 +12,13 @@ export const dataLocalizeEN: Record<string, string> = {
 	GO: 'Go',
 	RUN: 'Run',
 	TERMINAL: 'Terminal',
-	HELP: 'Help'
+	HELP: 'Help',
+	OUT_PUT: 'Output',
+	DEBUG_CONSOLE: 'Debug Console',
+	PORTS: 'Terminal',
+	GIT_LENS: 'Gitlens',
+	SPELL_CHECKER: 'Spell Checker',
+	DEVTOOLS: 'Devtools',
+	PROBLEMS: 'Problems',
+
 };

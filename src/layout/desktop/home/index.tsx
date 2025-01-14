@@ -13,11 +13,13 @@ import {
 	VscChevronDown,
 	VscChevronRight,
 	VscChromeRestore,
+	VscClose,
 	VscCollapseAll,
 	VscDebugAlt,
 	VscExtensions,
 	VscFiles,
 	VscGitCommit,
+	VscInfo,
 	VscLayout,
 	VscLayoutSidebarLeft,
 	VscLayoutSidebarLeftOff,
@@ -27,7 +29,10 @@ import {
 	VscRefresh,
 	VscSearch,
 	VscSourceControl,
+	VscVscode,
+	VscWand,
 } from 'react-icons/vsc';
+import ItemTerminal from '@/components/ui/items/terminal';
 export function handleStyleViewTool() {
 	const isViewTool = sliceToolControl.useGetState().open;
 	const sliceData = isViewTool ? 5 : 7;
@@ -215,6 +220,112 @@ function HomeDesktop() {
 									<div className='flex gap-1 items-center'>
 										<img src={reactTs} className='w-4' alt='' />
 										<p>index.tsx</p>
+									</div>
+								</div>
+							</div>
+							<div className='h-full'>
+								<div className='flex items-center w-full justify-center px-3'>
+									<VscVscode className='text-[240px]' />
+								</div>
+								<div className='h-full bg-[#232323] border-t border-primary_dark-20'>
+									<div className='flex justify-between items-center pt-3 px-4'>
+										<div className='flex gap-6'>
+											<ItemTerminal text='OUT_PUT' />
+											<ItemTerminal text='DEBUG_CONSOLE' />
+											<ItemTerminal total={6} isSelect text='TERMINAL' />
+											<ItemTerminal text='PORTS' />
+											<ItemTerminal text='GIT_LENS' />
+											<ItemTerminal text='SPELL_CHECKER' />
+											<ItemTerminal text='DEVTOOLS' />
+										</div>
+										<div className='size-6 flex items-center justify-center text-white'>
+											<VscClose />
+										</div>
+									</div>
+									<div className='w-full bg-primary_dark-20 grid grid-cols-2 px-3 py-1'>
+										<div className='flex items-center text-xs gap-1 text-white'>
+											<VscChevronDown />
+											<p className='uppercase'>{Localize('PROBLEMS')}</p>
+										</div>
+										<div className='flex items-center text-xs gap-1 text-white'>
+											<VscChevronDown />
+											<p className='uppercase'>{Localize('TERMINAL')}</p>
+										</div>
+									</div>
+									<div className='w-full grid grid-cols-2 px-3 py-1 h-full'>
+										<div>
+											<div className='flex items-start text-xs gap-1 text-white px-4'>
+												<VscChevronDown />
+												<img className='w-4' src={reactTs} alt='' />
+												<p>index.tsx</p>
+												<p>src/page</p>
+												<div className='size-4 bg-[#7D7C7C] flex items-center justify-center rounded-full'>
+													<p className='text-[10px]'>6</p>
+												</div>
+											</div>
+											<div className='px-4 py-2 flex flex-col gap-2'>
+												<div className='flex gap-1 items-end'>
+													<VscInfo className='text-[#0D92F4]' />
+													<p className='text-xs text-white'>
+														{`"reactts:"`} Unknown word. cSpell {`[Ln8, Col 39]`}
+													</p>
+												</div>
+												<div className='flex gap-1 items-end'>
+													<VscInfo className='text-[#0D92F4]' />
+													<p className='text-xs text-white'>
+														{`"childv:"`} Unknown word. cSpell {`[Ln168, Col 38]`}
+													</p>
+												</div>
+												<div className='flex gap-1 items-end'>
+													<VscInfo className='text-[#0D92F4]' />
+													<p className='text-xs text-white'>
+														{`"reactts:"`} Unknown word. cSpell {`[Ln171, Col 25]`}
+													</p>
+												</div>
+												<div className='flex gap-1 items-end'>
+													<VscInfo className='text-[#0D92F4]' />
+													<p className='text-xs text-white'>
+														{`"childv:"`} Unknown word. cSpell {`[Ln174, Col 22]`}
+													</p>
+												</div>
+												<div className='flex gap-1 items-end'>
+													<VscInfo className='text-[#0D92F4]' />
+													<p className='text-xs text-white'>
+														{`"reactts:"`} Unknown word. cSpell {`[Ln184, Col 23]`}
+													</p>
+												</div>
+												<div className='flex gap-1 items-end'>
+													<VscInfo className='text-[#0D92F4]' />
+													<p className='text-xs text-white'>
+														{`"reactts:"`} Unknown word. cSpell {`[Ln269, Col 18]`}
+													</p>
+												</div>
+											</div>
+										</div>
+										<div className='flex flex-col items-start text-xs gap-1 text-white border-l border-primary_dark-20 px-4 py-1'>
+											<p className='text-sm'>
+												<span className='text-[#16C47F] font-semibold'>minhtan@phelan-ly:</span>{' '}
+												<span className='text-[#0D92F4] font-semibold'>
+													~/Documents/project/portfolio
+												</span>
+												<span className='text-xs'>$</span> <span>npm install</span>
+											</p>
+											<div className='flex'>
+												<div className='w-6 py-1 flex justify-around items-center bg-white/80 text-primary_dark'>
+													<VscWand />
+												</div>
+												<div className='bg-[#0D92F4]/80 px-2 flex items-center text-primary_dark text-sm'>
+													History restored
+												</div>
+											</div>
+											<p className='text-sm'>
+												<span className='text-[#16C47F] font-semibold'>minhtan@phelan-ly:</span>{' '}
+												<span className='text-[#0D92F4] font-semibold'>
+													~/Documents/project/portfolio
+												</span>
+												<span className='text-xs'>$</span> <span>npm run dev</span>
+											</p>
+										</div>
 									</div>
 								</div>
 							</div>
