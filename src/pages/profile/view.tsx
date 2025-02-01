@@ -1,17 +1,12 @@
 import ScreenResponsive from '@/components/ui/responsive/screen';
-import HomeDesktop from '@/layout/desktop/home';
+import ProfileDesktop from '@/layout/desktop/profile';
 import HomeMobile from '@/layout/mobile/home';
 
 interface IViewProps {}
 
 function View(props: IViewProps) {
 	console.log('HomeView', props);
-	return (
-		<ScreenResponsive
-			mobile={() => <HomeMobile />}
-			desktop={() => <HomeDesktop />}
-		/>
-	);
+	return <ScreenResponsive mobile={() => <HomeMobile />} desktop={() => <ProfileDesktop />} />;
 }
 
 export default View;
