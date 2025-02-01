@@ -16,8 +16,7 @@ export default {
 				error: '#EE4E4E',
 			},
 			backgroundImage: {
-				gradientCard:
-					'linear-gradient(-45deg, #e81cff 0%, #40c9ff 100% )',
+				gradientCard: 'linear-gradient(-45deg, #e81cff 0%, #40c9ff 100% )',
 				vietNam: 'linear-gradient(to right, #cc2b5e, #753a88)',
 			},
 			borderRadius: {
@@ -27,23 +26,17 @@ export default {
 				error: '0px 0px 1px 1px',
 				white: '0px 0px 1px 1px',
 				insetAllSide: '0 0 10px 0 rgba(0,0,0,0.45) inset',
-				bootstrapLarge:
-					'0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23)',
+				bootstrapLarge: '0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23)',
 				insetTop: '0 20px 10px -20px rgba(0,0,0,0.45) inset',
-				insetTopBot:
-					'0 20px 10px -20px rgba(0,0,0,0.45) inset, 0 -20px 10px -20px rgba(0,0,0,0.45) inset',
-				insetBotRight:
-					'0 -20px 10px -20px rgba(0,0,0,0.45) inset, -20px 0 10px -20px rgba(0,0,0,0.45) inset',
-				materialDesign:
-					'0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24)',
+				insetTopBot: '0 20px 10px -20px rgba(0,0,0,0.45) inset, 0 -20px 10px -20px rgba(0,0,0,0.45) inset',
+				insetBotRight: '0 -20px 10px -20px rgba(0,0,0,0.45) inset, -20px 0 10px -20px rgba(0,0,0,0.45) inset',
+				materialDesign: '0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24)',
 				podcastsCard: '0 0 10px rgba(0,0,0,0.25)',
 				profile:
 					'inset 0 0 0 2px rgba(0, 0, 0, 0.15),  0 0 0 2px rgba(0, 0, 0, 0.15), inset 0 0 0.85rem #232323, 0 0 0.85rem  #232323',
 				glass: '0 4px 12px rgba(0, 0, 0, 0.1)',
-				navigateRight:
-					'13px 13px 10px #1c1c1c, -13px -13px 10px #262626',
-				navigateLeft:
-					'-13px 13px 10px #1c1c1c, -13px 13px 10px #262626',
+				navigateRight: '13px 13px 10px #1c1c1c, -13px -13px 10px #262626',
+				navigateLeft: '-13px 13px 10px #1c1c1c, -13px 13px 10px #262626',
 				card: '0 5px 20px 5px #00000044',
 			},
 			minHeight: {
@@ -102,22 +95,20 @@ export default {
 					'0% , 50%': { transform: 'translate(-50% , 0%)  scale(1)' },
 					'100%': { transform: 'translate(-50%, -100%) scale(0)' },
 				},
+				flicker: {
+					'0%, 100%': { opacity: 0 },
+					'50%': { opacity: 1 },
+				},
 			},
 			animation: {
 				translateBottom: 'translateBottom 0.4s  ease-in-out',
-				translateBottom_duration_0dot8:
-					'translateBottom 0.8s ease-in-out',
-				translateBottom_duration_1dot2:
-					'translateBottom 1.2s ease-in-out',
+				translateBottom_duration_0dot8: 'translateBottom 0.8s ease-in-out',
+				translateBottom_duration_1dot2: 'translateBottom 1.2s ease-in-out',
 				translateRight: 'translateRight 1s ease-in-out',
-				translateRight_duration_1dot3:
-					'translateRight 1.3s ease-in-out',
-				translateRight_duration_1dot6:
-					'translateRight 1.6s ease-in-out',
-				translateRight_duration_1dot9:
-					'translateRight 1.9s ease-in-out',
-				translateRight_duration_2dot2:
-					'translateRight 2.2s ease-in-out',
+				translateRight_duration_1dot3: 'translateRight 1.3s ease-in-out',
+				translateRight_duration_1dot6: 'translateRight 1.6s ease-in-out',
+				translateRight_duration_1dot9: 'translateRight 1.9s ease-in-out',
+				translateRight_duration_2dot2: 'translateRight 2.2s ease-in-out',
 				translateLeft_duration_2s: 'translateLeft 2s ease-in-out',
 				translateLeft_duration_2dot3s: 'translateLeft 2.3s ease-in-out',
 				bgScale: 'bgScale 1.5s  ease-in-out',
@@ -129,6 +120,7 @@ export default {
 				spin_dur_4s: 'spin 4s linear infinite',
 				push: 'push 2s infinite linear',
 				push_delay_0dot8: 'push 2s 0.5s infinite linear',
+				flicker: 'flicker 1s infinite',
 			},
 			backgroundSize: {
 				'125%': '125%',
@@ -145,4 +137,3 @@ export default {
 	darkMode: 'selector',
 	plugins: [],
 };
-

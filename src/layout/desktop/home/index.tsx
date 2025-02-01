@@ -3,8 +3,7 @@ import ItemTool from '@/components/ui/items/tool';
 import ResponsiveDesktop from '@/components/ui/responsive/desktop';
 import Localize from '@/langs';
 import { folders, headers, tabs } from '@/pages/home/data/headers';
-import { sliceToolControl } from '@/redux/slice';
-import { FaRegTimesCircle, FaRegWindowMinimize } from 'react-icons/fa';
+import { FaBattleNet, FaRegTimesCircle, FaRegWindowMinimize } from 'react-icons/fa';
 import reactTs from 'assets/file-type-reactts.svg';
 
 import {
@@ -33,16 +32,50 @@ import {
 	VscWand,
 } from 'react-icons/vsc';
 import ItemTerminal from '@/components/ui/items/terminal';
-export function handleStyleViewTool() {
-	const isViewTool = sliceToolControl.useGetState().open;
-	const sliceData = isViewTool ? 5 : 7;
-	const className = isViewTool ? '2xl:grid-cols-5' : '2xl:grid-cols-7';
-	return {
-		className,
-		sliceData,
-	};
-}
+import { KeyboardEvent, useEffect, useLayoutEffect, useState } from 'react';
+import { useRedirect } from '@/hooks/useRedirect';
+import { PATH } from '@/routes/config';
+
+const INITIAL_TIME = 100;
+const TIME_TIMEOUT = 1000;
+const END_TIME = 300;
+
 function HomeDesktop() {
+	const [startTime, setStartTime] = useState<number>(0);
+	const { redirectPage } = useRedirect();
+
+	const handleStartProject = (keyboard: unknown) => {
+		const events: KeyboardEvent = keyboard as KeyboardEvent;
+		if (events.key === 'Enter') {
+			setTimeout(() => {
+				setStartTime((prev) => prev + INITIAL_TIME);
+			}, TIME_TIMEOUT);
+		}
+	};
+
+	useLayoutEffect(() => {
+		document.addEventListener('keyup', handleStartProject);
+
+		return () => {
+			document.removeEventListener('keyup', handleStartProject);
+		};
+	}, []);
+
+	useEffect(() => {
+		const timer = setTimeout(() => {
+			if (startTime > 0 && startTime < END_TIME) {
+				setStartTime((prev) => prev + INITIAL_TIME);
+			}
+			if (startTime === END_TIME) {
+				setStartTime(0);
+				redirectPage(PATH.PROFILE);
+			}
+		}, TIME_TIMEOUT);
+		return () => {
+			clearTimeout(timer);
+		};
+	}, [redirectPage, startTime]);
+
 	return (
 		<ResponsiveDesktop>
 			<div className='bg-primary_dark select-none'>
@@ -323,7 +356,63 @@ function HomeDesktop() {
 												<span className='text-[#0D92F4] font-semibold'>
 													~/Documents/project/portfolio
 												</span>
+												<span className='text-xs'>$</span>{' '}
+												<span>You can press Enter to start project !!!</span>
+											</p>
+											<div className='text-sm flex gap-1 items-center'>
+												<span className='text-[#16C47F] font-semibold'>minhtan@phelan-ly:</span>{' '}
+												<span className='text-[#0D92F4] font-semibold'>
+													~/Documents/project/portfolio
+												</span>
 												<span className='text-xs'>$</span> <span>npm run dev</span>
+												<div className='animate-flicker h-4 w-2 bg-white'></div>
+											</div>
+											<p
+												className={`text-sm flex gap-1 transition-all duration-300 items-center pt-4 ${
+													startTime >= 100
+														? 'translate-x-0 opacity-100'
+														: '-translate-x-4 opacity-0'
+												}`}>
+												<VscChevronRight />
+												portfolio@0.0.0 dev
+											</p>
+											<p
+												className={`text-sm flex gap-1 transition-all duration-300 items-center pt-4 ${
+													startTime >= 100
+														? 'translate-x-0 opacity-100'
+														: '-translate-x-4 opacity-0'
+												}`}>
+												<VscChevronRight />
+												vite --host
+											</p>
+											<p
+												className={`text-sm flex gap-2 items-center py-6  transition-all duration-300  ${
+													startTime >= 200
+														? 'translate-x-0 opacity-100'
+														: '-translate-x-4 opacity-0'
+												}`}>
+												<span className='text-[#16C47F] font-semibold'>VITE </span>
+												<span className='text-[#16C47F] font-semibold'>v5.2.12</span>
+												ready in 7074 ms
+											</p>
+											<p
+												className={`text-sm flex gap-1 items-center text-[#0D92F4] transition-all duration-300 ${
+													startTime >= 300
+														? 'translate-x-0 opacity-100'
+														: '-translate-x-4 opacity-0'
+												}`}>
+												<FaBattleNet />
+												Local: http://localhost:<span className='text-[#A1E3F9]'>8000</span>/
+											</p>
+											<p
+												className={`text-sm flex gap-1 items-center text-[#0D92F4] transition-all duration-300 ${
+													startTime >= 300
+														? 'translate-x-0 opacity-100'
+														: '-translate-x-4 opacity-0'
+												}`}>
+												<FaBattleNet />
+												Network: http://192.168.1.174:
+												<span className='text-[#A1E3F9]'>8000</span>/
 											</p>
 										</div>
 									</div>
