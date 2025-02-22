@@ -12,10 +12,10 @@ const About = () => {
 				</video>
 			</div>
 			<div className='bg-black/50 w-full h-full absolute top-0 left-0'></div>
-			<div className='absolute top-0 left-0 w-full h-full pt-20'>
+			<article className='absolute top-0 left-0 w-full h-full pt-20'>
 				<div className='max-w-[1440px] m-auto gap-10 py-20 h-full flex flex-col justify-center'>
 					<div className='flex gap-5 justify-between'>
-						<div className='text-white text-6xl flex flex-col gap-8 justify-center'>
+						<section className='text-white text-6xl flex flex-col gap-8 justify-center'>
 							<div className='h-10 flex items-end'>
 								<div className='animate-about_intro overflow-hidden h-10'>
 									<p className='text-4xl'>Hi, {`I'm Minh Tan`}</p>
@@ -53,8 +53,8 @@ const About = () => {
 									</div>
 								</div>
 							</div>
-						</div>
-						<div className='flex gap-6'>
+						</section>
+						<section className='flex gap-6'>
 							<div className='flex justify-center pt-52'>
 								<div className='h-56 flex items-start'>
 									<div className='animate-about_block1 h-full w-full overflow-hidden'>
@@ -93,10 +93,10 @@ const About = () => {
 									</div>
 								</div>
 							</div>
-						</div>
+						</section>
 					</div>
 				</div>
-			</div>
+			</article>
 		</div>
 	);
 };

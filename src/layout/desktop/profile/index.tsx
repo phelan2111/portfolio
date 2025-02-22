@@ -1,12 +1,14 @@
 import Headers from '@/components/ui/common/headers/normal';
-import About from './about';
+// import About from './about';	
+import Personal from './personal';
 
 const ProfileDesktop = () => {
 	return (
-		<main className='w-screen h-screen relative'>
+		<div className='w-screen h-screen relative'>
 			<Headers />
-			<About />
-		</main>
+			{/* <About /> */}
+			<Personal />
+		</div>
 	);
 };
 
