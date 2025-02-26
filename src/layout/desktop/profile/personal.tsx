@@ -1,6 +1,7 @@
 import profileVideo from '@/assets/videos/profile.mp4';
 import { FaFacebookF, FaLinkedinIn, FaMailBulk, FaMapMarkerAlt, FaPhoneAlt } from 'react-icons/fa';
 import AvatarProfile from '../home/components/avatar';
+import { GrLinkNext } from 'react-icons/gr';
 
 const Personal = () => {
 	return (
@@ -10,8 +11,8 @@ const Personal = () => {
 				<track kind='captions' src='sampleCaptions.vtt' srcLang='en' />
 			</video>
 			<article className='absolute top-0 left-0 w-full h-full pt-20 text-white'>
-				<div className='max-w-[1440px] m-auto gap-10 py-20 h-full flex justify-center items-center'>
-					<div className='flex flex-col gap-16 items-center'>
+				<div className='max-w-[1440px] w-full m-auto gap-10 py-20 h-full flex justify-center items-center'>
+					<div className='flex flex-col gap-16 items-center w-full'>
 						<section className='flex flex-col gap-16 items-center'>
 							<div
 								style={{
@@ -95,6 +96,34 @@ const Personal = () => {
 								</ul>
 							</div>
 						</section>
+					</div>
+				</div>
+			</article>
+			<article className='fixed bottom-[55px] right-[0%]'>
+				<div className='flex group items-end bg-primary_dark-20 hover:bg-primary_dark-20/70 transition-all duration-700 cursor-pointer w-fit rotate-90 py-8 px-5 rounded-l-full'>
+					<div className='text-white w-full h-full'>
+						<div className='transition-all duration-500 cursor-pointer rounded-full pl-4 flex items-center gap-2 relative'>
+							<p className='text-lg text-nowrap group-hover:translate-x-2 transition-all duration-500 italic'>
+								Scroll to work
+							</p>
+							<div className='group-hover:translate-x-3 transition-all duration-500'>
+								<GrLinkNext className='text-xl' />
+							</div>
+						</div>
+					</div>
+				</div>
+			</article>
+			<article className='fixed top-[136px] left-[0%]'>
+				<div className='flex group items-end bg-primary_dark-20  hover:bg-primary_dark-20/70 transition-all duration-700 cursor-pointer w-fit rotate-90 py-8 pr-7 pl-4 rounded-r-full'>
+					<div className='text-white w-full h-full'>
+						<div className=' transition-all duration-500 cursor-pointer rounded-full pl-4 flex items-center gap-2 relative'>
+							<div className='group-hover:-translate-x-3 transition-all rotate-180 duration-500'>
+								<GrLinkNext className='text-xl' />
+							</div>
+							<p className='text-lg text-nowrap group-hover:-translate-x-2 transition-all duration-500 italic'>
+								Scroll to home
+							</p>
+						</div>
 					</div>
 				</div>
 			</article>
