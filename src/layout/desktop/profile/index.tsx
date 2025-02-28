@@ -1,7 +1,8 @@
 import Headers from '@/components/ui/common/headers/normal';
 // import About from './about';	
 // import Personal from './personal';
-import Work from './work';
+import Skill from './skill';
+// import Work from './work';
 
 const ProfileDesktop = () => {
 	return (
@@ -9,7 +10,8 @@ const ProfileDesktop = () => {
 			<Headers />
 			{/* <About /> */}
 			{/* <Personal /> */}
-			<Work />
+			{/* <Work /> */}
+			<Skill />
 		</div>
 	);
 };

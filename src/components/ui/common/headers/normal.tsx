@@ -14,10 +14,10 @@ const Headers = () => {
 							<p>WORKS</p>
 						</li>
 						<li className='w-32 text-center cursor-pointer text-sm opacity-60 hover:opacity-100 transition-opacity duration-500'>
-							<p>PROJECTS</p>
+							<p>SKILLS</p>
 						</li>
 						<li className='w-32 text-center cursor-pointer text-sm opacity-60 hover:opacity-100 transition-opacity duration-500'>
-							<p>CONTACT</p>
+							<p>PROJECTS</p>
 						</li>
 					</ul>
 				</div>

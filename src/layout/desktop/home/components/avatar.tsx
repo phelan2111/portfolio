@@ -6,7 +6,7 @@ const AvatarProfile = () => {
 			<div className='absolute top-0 left-0'>
 				<div className='loader-avatar'></div>
 			</div>
-			<img className='size-60 object-cover rounded-full relative' src={avatarI} alt='avatar' />
+			<img className='size-64 min-w-6size-64 object-cover rounded-full relative' src={avatarI} alt='avatar' />
 		</div>
 	);
 };
