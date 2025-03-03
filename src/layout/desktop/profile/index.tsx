@@ -1,7 +1,8 @@
 import Headers from '@/components/ui/common/headers/normal';
-// import About from './about';	
+import Project from './project';
+// import About from './about';
 // import Personal from './personal';
-import Skill from './skill';
+// import Skill from './skill';
 // import Work from './work';
 
 const ProfileDesktop = () => {
@@ -11,7 +12,8 @@ const ProfileDesktop = () => {
 			{/* <About /> */}
 			{/* <Personal /> */}
 			{/* <Work /> */}
-			<Skill />
+			{/* <Skill /> */}
+			<Project />
 		</div>
 	);
 };
