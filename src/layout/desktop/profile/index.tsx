@@ -1,11 +1,18 @@
 import Headers from '@/components/ui/common/headers/normal';
 import Project from './project';
+import { ProjectItem } from '@/pages/profile/types';
 // import About from './about';
 // import Personal from './personal';
 // import Skill from './skill';
 // import Work from './work';
 
-const ProfileDesktop = () => {
+type ProfileDesktopProps = {
+	projectsWeb: ProjectItem[];
+	projectsZalo: ProjectItem[];
+	projectsPersonal: ProjectItem[];
+};
+
+const ProfileDesktop = (props: ProfileDesktopProps) => {
 	return (
 		<div className='w-screen h-screen relative'>
 			<Headers />
@@ -13,7 +20,11 @@ const ProfileDesktop = () => {
 			{/* <Personal /> */}
 			{/* <Work /> */}
 			{/* <Skill /> */}
-			<Project />
+			<Project
+				projectsZalo={props.projectsZalo}
+				projectsWeb={props.projectsWeb}
+				projectsPersonal={props.projectsPersonal}
+			/>
 		</div>
 	);
 };
