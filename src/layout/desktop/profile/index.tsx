@@ -1,10 +1,9 @@
-import Headers from '@/components/ui/common/headers/normal';
-// import Project from './project';
+import Project from './project';
 import { ProjectItem } from '@/pages/profile/types';
 import About from './about';
 import Personal from './personal';
 import { IViewProps } from '@/pages/profile/view';
-// import Skill from './skill';
+import Skill from './skill';
 import Work from './work';
 
 interface ProfileDesktopProps extends IViewProps {
@@ -17,16 +16,15 @@ const ProfileDesktop = (props: ProfileDesktopProps) => {
 	console.log('props', props);
 	return (
 		<div className='relative'>
-			<Headers />
 			<About />
 			<Personal />
 			<Work />
-			{/* <Skill />
+			<Skill />
 			<Project
 				projectsZalo={props.projectsZalo}
 				projectsWeb={props.projectsWeb}
 				projectsPersonal={props.projectsPersonal}
-			/> */}
+			/>
 		</div>
 	);
 };

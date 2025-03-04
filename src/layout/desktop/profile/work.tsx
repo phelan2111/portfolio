@@ -13,10 +13,20 @@ function Work() {
 			elementWork?.classList.add('-translate-y-full');
 		}
 	};
+	const onScrollToSkill = () => {
+		const elementSkill = document.querySelector('#skill');
+		const elementWork = document.querySelector('#work');
+		if (elementWork && elementSkill) {
+			elementWork?.classList.remove('-translate-y-[200%]');
+			elementWork?.classList.add('-translate-y-[300%]');
+			elementSkill.classList.remove('-translate-y-[200%]');
+			elementSkill.classList.add('-translate-y-[300%]');
+		}
+	};
 
 	return (
-		<div id='work' className='bg-primary_dark w-screen h-screen -translate-y-full transition-all duration-[2s]'>
-			<article className='max-w-[1440px] w-full m-auto gap-10 py-20 h-full'>
+		<div id='work' className='bg-primary_dark w-screen h-screen -translate-y-full transition-all duration-[2.5s]'>
+			<article className='max-w-[1440px] w-full m-auto gap-10 h-full'>
 				<div className='py-20 flex flex-col gap-20'>
 					<ProcessWork timeEnd='The current' timeStart='July, 2022'>
 						<div className='flex flex-col gap-10'>
@@ -91,11 +101,14 @@ function Work() {
 				</div>
 			</article>
 			<article className='fixed bottom-[90px] translate-x-[20%] right-[0%]'>
-				<div className='flex group items-end bg-gradient-to-r from-primary_dark-20 transition-all duration-700 cursor-pointer w-fit rotate-90 py-8 px-5 rounded-l-full'>
+				<div
+					aria-hidden
+					onClick={onScrollToSkill}
+					className='flex group items-end bg-gradient-to-r from-primary_dark-20 transition-all duration-700 cursor-pointer w-fit rotate-90 py-8 px-5 rounded-l-full'>
 					<div className='text-white w-full h-full'>
 						<div className='transition-all duration-500 cursor-pointer rounded-full pl-4 flex items-center gap-6 relative'>
 							<p className='text-sm uppercase text-nowrap tracking-[10px] group-hover:translate-x-2 transition-all duration-500 italic'>
-								<span className='font-bold text-lg'>project</span>
+								<span className='font-bold text-lg'>skills</span>
 							</p>
 							<div className='group-hover:translate-x-3 transition-all duration-500'>
 								<GrLinkNext className='text-xl' />
@@ -104,7 +117,7 @@ function Work() {
 					</div>
 				</div>
 			</article>
-			<article className='fixed top-[140px] left-0'>
+			<article className='fixed top-20 left-0'>
 				<div
 					aria-hidden
 					onClick={onScrollToAbout}

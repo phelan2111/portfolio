@@ -13,7 +13,7 @@ const About = () => {
 	};
 
 	return (
-		<div id='about' className='w-screen transition-all duration-[2s] h-screen relative'>
+		<div id='about' className='w-screen transition-all duration-[2.5s] h-screen relative'>
 			<div>
 				<video className='w-full' muted autoPlay loop>
 					<source src={videoWay} type='video/mp4' />
@@ -21,7 +21,7 @@ const About = () => {
 				</video>
 			</div>
 			<div className='bg-black/50 w-full h-full absolute top-0 left-0'></div>
-			<article className='absolute top-0 left-0 w-full h-full pt-20'>
+			<article className='absolute top-0 left-0 w-full h-full '>
 				<div className='max-w-[1440px] m-auto gap-10 py-20 h-full flex flex-col justify-center'>
 					<div className='flex gap-5 justify-between'>
 						<section className='text-white text-6xl flex flex-col gap-8 justify-center'>

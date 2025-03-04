@@ -22,18 +22,19 @@ const Personal = () => {
 			elementPersonal?.classList.remove('-translate-y-full');
 			elementPersonal?.classList.add('-translate-y-[200%]');
 			elementWork?.classList.add('-translate-y-[200%]');
+			elementWork?.classList.remove('-translate-y-full');
 		}
 	};
 
 	return (
 		<div
 			id='personal'
-			className='bg-primary_dark transition-all duration-[2s] w-screen h-screen overflow-hidden -translate-y-full translate-x-full'>
+			className='bg-primary_dark transition-all duration-[2.5s] w-screen h-screen overflow-hidden -translate-y-full translate-x-full'>
 			<video className='w-full' muted autoPlay loop>
 				<source src={profileVideo} type='video/mp4' />
 				<track kind='captions' src='sampleCaptions.vtt' srcLang='en' />
 			</video>
-			<article className='absolute top-0 left-0 w-full h-full pt-20 text-white'>
+			<article className='absolute top-0 left-0 w-full h-full  text-white'>
 				<div className='max-w-[1440px] w-full m-auto gap-10 py-20 h-full'>
 					<div className='flex flex-col gap-16 items-center w-full'>
 						<div className='flex flex-col items-center gap-8 justify-center'>

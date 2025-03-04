@@ -28,13 +28,14 @@ import {
 	VscRefresh,
 	VscSearch,
 	VscSourceControl,
-	VscVscode,
 	VscWand,
 } from 'react-icons/vsc';
 import ItemTerminal from '@/components/ui/items/terminal';
 import { KeyboardEvent, useEffect, useLayoutEffect, useState } from 'react';
 import { useRedirect } from '@/hooks/useRedirect';
 import { PATH } from '@/routes/config';
+import LoaderPixel from '@/components/ui/loader/pixel';
+import AnimaMinBotCat from '@/components/ui/anim/minBotCat';
 
 const INITIAL_TIME = 100;
 const TIME_TIMEOUT = 1000;
@@ -257,8 +258,13 @@ function HomeDesktop() {
 								</div>
 							</div>
 							<div className='h-full'>
-								<div className='flex items-center w-full justify-center px-3'>
-									<VscVscode className='text-[240px]' />
+								<div className='flex items-center w-full justify-center px-3 relative'>
+									<div className='absolute bottom-36 left-20 z-20'>
+										<LoaderPixel />
+									</div>
+									<div className='h-[240px]'>
+										<AnimaMinBotCat />
+									</div>
 								</div>
 								<div className='h-full bg-[#232323] border-t border-primary_dark-20'>
 									<div className='flex justify-between items-center pt-3 px-4'>
@@ -351,14 +357,6 @@ function HomeDesktop() {
 													History restored
 												</div>
 											</div>
-											<p className='text-sm'>
-												<span className='text-[#16C47F] font-semibold'>minhtan@phelan-ly:</span>{' '}
-												<span className='text-[#0D92F4] font-semibold'>
-													~/Documents/project/portfolio
-												</span>
-												<span className='text-xs'>$</span>{' '}
-												<span>You can press Enter to start project !!!</span>
-											</p>
 											<div className='text-sm flex gap-1 items-center'>
 												<span className='text-[#16C47F] font-semibold'>minhtan@phelan-ly:</span>{' '}
 												<span className='text-[#0D92F4] font-semibold'>

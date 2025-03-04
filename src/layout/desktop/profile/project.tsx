@@ -4,6 +4,7 @@ import ZaloProject from '@/components/ui/cards/zaloProject';
 import LoaderNicePanda from '@/components/ui/loader/nicePanda';
 import { ProjectItem } from '@/pages/profile/types';
 import { Helper } from '@/utils/helper';
+import { GrLinkNext } from 'react-icons/gr';
 
 type ProjectProps = {
 	projectsWeb: ProjectItem[];
@@ -12,9 +13,22 @@ type ProjectProps = {
 };
 
 const Project = (props: ProjectProps) => {
+	const onScrollToSkill = () => {
+		const elementSkill = document.querySelector('#skill');
+		const elementProject = document.querySelector('#project');
+		if (elementProject && elementSkill) {
+			elementSkill?.classList.remove('-translate-y-[400%]');
+			elementSkill?.classList.add('-translate-y-[300%]');
+			elementProject.classList.remove('-translate-y-[400%]');
+			elementProject.classList.add('-translate-y-[300%]');
+		}
+	};
+
 	return (
-		<div className='bg-primary_dark w-screen h-screen'>
-			<article className='max-w-[1440px] w-full m-auto gap-10 py-20 h-full flex overflow-y-scroll scrollHiddenY'>
+		<div
+			id='project'
+			className='bg-primary_dark w-screen h-screen -translate-y-[300%] transition-transform duration-[2.5s]'>
+			<article className='max-w-[1440px] w-full m-auto gap-10 h-full flex overflow-y-scroll scrollHiddenY'>
 				<div className='px-2'>
 					<div className='py-20 w-full flex flex-col gap-20'>
 						<section className='h-fit flex flex-col gap-10'>
@@ -52,6 +66,23 @@ const Project = (props: ProjectProps) => {
 								))}
 							</div>
 						</section>
+					</div>
+				</div>
+			</article>
+			<article className='fixed top-20 left-0'>
+				<div
+					aria-hidden
+					onClick={onScrollToSkill}
+					className='flex group items-end bg-gradient-to-l from-primary_dark-20 transition-all duration-700 cursor-pointer w-fit rotate-90 py-8 pr-7 pl-4 rounded-r-full'>
+					<div className='text-white w-full h-full'>
+						<div className=' transition-all duration-500 cursor-pointer rounded-full pl-4 flex items-center gap-6 relative'>
+							<div className='group-hover:-translate-x-3 transition-all rotate-180 duration-500'>
+								<GrLinkNext className='text-xl' />
+							</div>
+							<p className='text-sm uppercase text-nowrap leading-10 tracking-[10px] group-hover:-translate-x-2 transition-all duration-500 italic'>
+								<span className='font-bold text-lg'>skills</span>
+							</p>
+						</div>
 					</div>
 				</div>
 			</article>

@@ -2,8 +2,32 @@ import LoaderFresh from '@/components/ui/loader/fresh';
 import { GrLinkNext } from 'react-icons/gr';
 
 const Skill = () => {
+
+	const onScrollToWork = () => {
+		const elementSkill = document.querySelector('#skill');
+		const elementWork = document.querySelector('#work');
+		if (elementWork && elementSkill) {
+			elementWork?.classList.add('-translate-y-[200%]');
+			elementWork?.classList.remove('-translate-y-[300%]');
+			elementSkill.classList.add('-translate-y-[200%]');
+			elementSkill.classList.remove('-translate-y-[300%]');
+		}
+	};
+	const onScrollToProject = () => {
+		const elementSkill = document.querySelector('#skill');
+		const elementProject = document.querySelector('#project');
+		if (elementProject && elementSkill) {
+			elementSkill?.classList.add('-translate-y-[400%]');
+			elementSkill?.classList.remove('-translate-y-[300%]');
+			elementProject.classList.add('-translate-y-[400%]');
+			elementProject.classList.remove('-translate-y-[300%]');
+		}
+	};
+
 	return (
-		<div className='bg-primary_dark w-screen h-screen'>
+		<div
+			id='skill'
+			className='bg-primary_dark w-screen h-screen -translate-y-[200%] transition-all duration-[2.5s]'>
 			<article className='max-w-[1440px] w-full m-auto gap-10 py-20 h-full flex'>
 				<div className='py-10 px-10 grid grid-cols-2 w-full gap-y-10'>
 					<div className='flex items-start justify-between gap-20'>
@@ -62,7 +86,10 @@ const Skill = () => {
 				</div>
 			</article>
 			<article className='fixed bottom-[90px] translate-x-[10%] right-[0%]'>
-				<div className='flex group items-end bg-gradient-to-r from-primary_dark-20 transition-all duration-700 cursor-pointer w-fit rotate-90 py-8 px-5 rounded-l-full'>
+				<div
+					aria-hidden
+					onClick={onScrollToProject}
+					className='flex group items-end bg-gradient-to-r from-primary_dark-20 transition-all duration-700 cursor-pointer w-fit rotate-90 py-8 px-5 rounded-l-full'>
 					<div className='text-white w-full h-full'>
 						<div className='transition-all duration-500 cursor-pointer rounded-full pl-4 flex items-center gap-6 relative'>
 							<p className='text-sm uppercase text-nowrap tracking-[10px] group-hover:translate-x-2 transition-all duration-500 italic'>
@@ -75,8 +102,11 @@ const Skill = () => {
 					</div>
 				</div>
 			</article>
-			<article className='fixed top-[140px] left-0'>
-				<div className='flex group items-end bg-gradient-to-l from-primary_dark-20 transition-all duration-700 cursor-pointer w-fit rotate-90 py-8 pr-7 pl-4 rounded-r-full'>
+			<article className='fixed top-20 left-0'>
+				<div
+					aria-hidden
+					onClick={onScrollToWork}
+					className='flex group items-end bg-gradient-to-l from-primary_dark-20 transition-all duration-700 cursor-pointer w-fit rotate-90 py-8 pr-7 pl-4 rounded-r-full'>
 					<div className='text-white w-full h-full'>
 						<div className=' transition-all duration-500 cursor-pointer rounded-full pl-4 flex items-center gap-6 relative'>
 							<div className='group-hover:-translate-x-3 transition-all rotate-180 duration-500'>
