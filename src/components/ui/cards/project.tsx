@@ -39,7 +39,7 @@ const CardProject = (props: CardProjectProps) => {
 				</div>
 			</HoverCard>
 			<div
-				className={`fixed top-0 transition-opacity duration-700 left-0 w-full z-20 bg-gradient-to-br from-primary_dark-20 h-full ${
+				className={`fixed top-0 transition-opacity duration-700 left-0 w-full bg-gradient-to-br from-primary_dark-20 h-full ${
 					isToggle ? 'opacity-100 z-10' : 'opacity-0 -z-20'
 				}`}>
 				<div className='w-full h-full flex flex-col justify-center items-center gap-6'>

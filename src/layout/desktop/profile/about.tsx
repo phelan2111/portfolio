@@ -3,8 +3,17 @@ import AnimBlock from '@/components/ui/anim/block';
 import { GrLinkNext } from 'react-icons/gr';
 
 const About = () => {
+	const onScrollToAbout = () => {
+		const elementAbout = document.querySelector('#about');
+		const elementPersonal = document.querySelector('#personal');
+		if (elementAbout && elementPersonal) {
+			elementAbout?.classList.add('-translate-x-full');
+			elementPersonal?.classList.remove('translate-x-full');
+		}
+	};
+
 	return (
-		<div className='w-screen h-screen relative'>
+		<div id='about' className='w-screen transition-all duration-[2s] h-screen relative'>
 			<div>
 				<video className='w-full' muted autoPlay loop>
 					<source src={videoWay} type='video/mp4' />
@@ -42,7 +51,10 @@ const About = () => {
 								</div>
 							</div>
 							<div className='flex items-end h-32'>
-								<div className='animate-about_scroll overflow-hidden w-full h-full'>
+								<div
+									aria-hidden
+									onClick={onScrollToAbout}
+									className='animate-about_scroll overflow-hidden w-full h-full'>
 									<div className='size-32 group hover:bg-white/10 transition-all duration-500 cursor-pointer rounded-full pl-4 flex items-center gap-2 relative before:absolute before:top-0 before:left-0 before:border-t before:w-full before:h-full before:rounded-t-full after:absolute after:top-0 after:left-0 after:border-b after:w-full after:h-full after:rounded-b-full'>
 										<p className='text-lg text-nowrap group-hover:translate-x-4 transition-all duration-500'>
 											Scroll to About

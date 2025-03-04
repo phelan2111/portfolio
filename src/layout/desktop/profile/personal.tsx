@@ -4,9 +4,31 @@ import AvatarProfile from '../home/components/avatar';
 import { GrLinkNext } from 'react-icons/gr';
 import LoaderNicePanda from '@/components/ui/loader/nicePanda';
 
+
 const Personal = () => {
+	const onScrollToHome = () => {
+		const elementAbout = document.querySelector('#about');
+		const elementPersonal = document.querySelector('#personal');
+		if (elementAbout && elementPersonal) {
+			elementAbout?.classList.remove('-translate-x-full');
+			elementPersonal?.classList.add('translate-x-full');
+			elementPersonal?.classList.add('translate-x-full');
+		}
+	};
+	const onScrollToWork = () => {
+		const elementPersonal = document.querySelector('#personal');
+		const elementWork = document.querySelector('#work');
+		if (elementWork && elementPersonal) {
+			elementPersonal?.classList.remove('-translate-y-full');
+			elementPersonal?.classList.add('-translate-y-[200%]');
+			elementWork?.classList.add('-translate-y-[200%]');
+		}
+	};
+
 	return (
-		<div className='bg-primary_dark w-screen h-screen overflow-hidden'>
+		<div
+			id='personal'
+			className='bg-primary_dark transition-all duration-[2s] w-screen h-screen overflow-hidden -translate-y-full translate-x-full'>
 			<video className='w-full' muted autoPlay loop>
 				<source src={profileVideo} type='video/mp4' />
 				<track kind='captions' src='sampleCaptions.vtt' srcLang='en' />
@@ -117,7 +139,10 @@ const Personal = () => {
 				</div>
 			</article>
 			<article className='fixed bottom-[70px] right-[0%]'>
-				<div className='flex group items-end bg-gradient-to-r from-primary_dark-20 transition-all duration-700 cursor-pointer w-fit rotate-90 py-8 px-5 rounded-l-full'>
+				<div
+					aria-hidden
+					onClick={onScrollToWork}
+					className='flex group items-end bg-gradient-to-r from-primary_dark-20 transition-all duration-700 cursor-pointer w-fit rotate-90 py-8 px-5 rounded-l-full'>
 					<div className='text-white w-full h-full'>
 						<div className='transition-all duration-500 cursor-pointer rounded-full pl-4 flex items-center gap-6 relative'>
 							<p className='text-sm uppercase text-nowrap tracking-[10px] group-hover:translate-x-2 transition-all duration-500 italic'>
@@ -130,15 +155,15 @@ const Personal = () => {
 					</div>
 				</div>
 			</article>
-			<article className='fixed top-[140px] left-0'>
-				<div className='flex group items-end bg-gradient-to-l from-primary_dark-20 transition-all duration-700 cursor-pointer w-fit rotate-90 py-8 pr-7 pl-4 rounded-r-full'>
-					<div className='text-white w-full h-full'>
-						<div className=' transition-all duration-500 cursor-pointer rounded-full pl-4 flex items-center gap-6 relative'>
-							<div className='group-hover:-translate-x-3 transition-all rotate-180 duration-500'>
-								<GrLinkNext className='text-xl' />
+			<article className='fixed top-[140px] left-[10%]'>
+				<div aria-hidden onClick={onScrollToHome} className='flex items-end h-32'>
+					<div aria-hidden className='w-full h-full'>
+						<div className='size-32 group hover:bg-white/10 transition-all duration-500 cursor-pointer rounded-full flex items-center gap-2 relative before:absolute before:top-0 before:left-0 before:border-t before:w-full before:h-full before:rounded-t-full after:absolute after:top-0 after:left-0 after:border-b after:w-full after:h-full after:rounded-b-full'>
+							<div className='group-hover:-translate-x-16 transition-all -translate-x-12 duration-500 rotate-180'>
+								<GrLinkNext className='text-xl text-white' />
 							</div>
-							<p className='text-sm uppercase text-nowrap leading-10 tracking-[10px] group-hover:-translate-x-2 transition-all duration-500 italic'>
-								<span className='font-bold text-lg'>home</span>
+							<p className='text-lg text-white text-nowrap group-hover:-translate-x-16 -translate-x-12 transition-all duration-500'>
+								Scroll to Home
 							</p>
 						</div>
 					</div>

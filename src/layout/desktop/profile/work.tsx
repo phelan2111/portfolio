@@ -3,8 +3,19 @@ import { FaMapMarkerAlt } from 'react-icons/fa';
 import { GrLinkNext } from 'react-icons/gr';
 
 function Work() {
+	const onScrollToAbout = () => {
+		const elementPersonal = document.querySelector('#personal');
+		const elementWork = document.querySelector('#work');
+		if (elementWork && elementPersonal) {
+			elementPersonal?.classList.add('-translate-y-full');
+			elementPersonal?.classList.remove('-translate-y-[200%]');
+			elementWork?.classList.remove('-translate-y-[200%]');
+			elementWork?.classList.add('-translate-y-full');
+		}
+	};
+
 	return (
-		<div className='bg-primary_dark w-screen h-screen'>
+		<div id='work' className='bg-primary_dark w-screen h-screen -translate-y-full transition-all duration-[2s]'>
 			<article className='max-w-[1440px] w-full m-auto gap-10 py-20 h-full'>
 				<div className='py-20 flex flex-col gap-20'>
 					<ProcessWork timeEnd='The current' timeStart='July, 2022'>
@@ -94,7 +105,10 @@ function Work() {
 				</div>
 			</article>
 			<article className='fixed top-[140px] left-0'>
-				<div className='flex group items-end bg-gradient-to-l from-primary_dark-20 transition-all duration-700 cursor-pointer w-fit rotate-90 py-8 pr-7 pl-4 rounded-r-full'>
+				<div
+					aria-hidden
+					onClick={onScrollToAbout}
+					className='flex group items-end bg-gradient-to-l from-primary_dark-20 transition-all duration-700 cursor-pointer w-fit rotate-90 py-8 pr-7 pl-4 rounded-r-full'>
 					<div className='text-white w-full h-full'>
 						<div className=' transition-all duration-500 cursor-pointer rounded-full pl-4 flex items-center gap-6 relative'>
 							<div className='group-hover:-translate-x-3 transition-all rotate-180 duration-500'>
