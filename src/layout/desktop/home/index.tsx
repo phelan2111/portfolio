@@ -38,7 +38,7 @@ import LoaderPixel from '@/components/ui/loader/pixel';
 import AnimaMinBotCat from '@/components/ui/anim/minBotCat';
 
 const INITIAL_TIME = 100;
-const TIME_TIMEOUT = 1000;
+const TIME_TIMEOUT = 500;
 const END_TIME = 300;
 
 function HomeDesktop() {
